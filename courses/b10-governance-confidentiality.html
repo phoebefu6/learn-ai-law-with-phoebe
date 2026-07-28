@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 10 · Governance, confidentiality &amp; safe practice - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 10 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 10 of 10</div>
+    <h1>Governance, confidentiality &amp; safe practice: <span class="accent">the rails that keep the whole toolkit safe</span></h1>
+    <p class="sub">You have built ten sessions of AI legal skill. This finale is the one that protects all of it: the safe-practice risk stack that has already sanctioned lawyers and breached privilege, the controls that stop each risk, and a checklist you run against a real workflow before you trust it on a client matter. The loudest session of the course, on purpose - every citation verified, every confidence guarded, every output owned by a lawyer.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Practitioner track</span>
+      <span class="chip audience">Practitioners: all lawyers + legal ops</span>
+      <span class="chip audience">Vetted AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-21 · The risk stack + controls</span>
+      <span class="a3" style="flex:5">21-42 · Build-along: checklist + spec</span>
+      <span class="a4" style="flex:1">42-45 · Close</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The session that protects the other nine</h2>
+    </div>
+    <p class="lede">This is the practitioner mirror of the leader sessions a3 (ethics, confidentiality, professional responsibility) and a5 (risk, malpractice, governance) - the same duties, from the hands-on lawyer's chair. Everything you have built in b1-b9 gets its speed from AI; this session gives it its safety. We make the rails loud tonight because the failures here are the ones that end careers: an unverified citation filed with a court, privileged data pasted into the wrong tool, an AI output that nobody actually owned. A clear note before anything else: this is education for legal professionals, not legal advice, and the rules of professional conduct vary by jurisdiction - verify against your bar.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A safe-practice checklist run against one real workflow you built earlier - confidential tool, every cite verified, disclosed where required, a lawyer owning it - plus your own confidentiality + verification + disclosure spec: the standing rules for using AI on client matters. The two artifacts that make the whole toolkit safe to use.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE RISK STACK ============ -->
+  <section class="section" id="risk-stack">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the safe-practice risk canon</span>
+      <h2>The safe-practice risk stack <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Legal-AI risk is not one thing - it is a stack, and a workflow is only as safe as its weakest layer. Filing unverified output gets you sanctioned. Pasting privileged data into the wrong tool breaches confidentiality. Over-reliance deskills the team. Missing disclosure breaks candor. No audit trail leaves you unable to defend any of it. Every control tonight maps to one of these five.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A secure legal-AI workflow with control gates: confidentiality check, then verification, then disclosure, then sign-off - each gate stops one risk in the safe-practice stack">
+        <defs>
+          <marker id="b10Ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#D8C7CC"/></marker>
+        </defs>
+        <style>
+          .b10T { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b10I { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b10X { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b10Xi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b10N { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="24" y="52" width="150" height="200" rx="12" fill="#4A0E1F"/>
+        <text class="b10T" x="99" y="86" text-anchor="middle">Gate 1</text>
+        <text class="b10T" x="99" y="108" text-anchor="middle">Confidential?</text>
+        <text class="b10X" x="99" y="150" text-anchor="middle">vetted tool +</text>
+        <text class="b10X" x="99" y="168" text-anchor="middle">proper terms</text>
+        <text class="b10X" x="99" y="200" text-anchor="middle">stops privilege</text>
+        <text class="b10X" x="99" y="218" text-anchor="middle">breach</text>
+        <line x1="174" y1="152" x2="206" y2="152" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b10Ah)"/>
+        <rect x="210" y="52" width="150" height="200" rx="12" fill="#7B1E3B"/>
+        <text class="b10T" x="285" y="86" text-anchor="middle">Gate 2</text>
+        <text class="b10T" x="285" y="108" text-anchor="middle">Verified?</text>
+        <text class="b10X" x="285" y="150" text-anchor="middle">every cite +</text>
+        <text class="b10X" x="285" y="168" text-anchor="middle">fact checked</text>
+        <text class="b10X" x="285" y="200" text-anchor="middle">stops the</text>
+        <text class="b10X" x="285" y="218" text-anchor="middle">sanction</text>
+        <line x1="360" y1="152" x2="392" y2="152" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b10Ah)"/>
+        <rect x="396" y="52" width="150" height="200" rx="12" fill="#A84C64"/>
+        <text class="b10T" x="471" y="86" text-anchor="middle">Gate 3</text>
+        <text class="b10T" x="471" y="108" text-anchor="middle">Disclosed?</text>
+        <text class="b10X" x="471" y="150" text-anchor="middle">client / court</text>
+        <text class="b10X" x="471" y="168" text-anchor="middle">where required</text>
+        <text class="b10X" x="471" y="200" text-anchor="middle">stops candor</text>
+        <text class="b10X" x="471" y="218" text-anchor="middle">failure</text>
+        <line x1="546" y1="152" x2="578" y2="152" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b10Ah)"/>
+        <rect x="582" y="52" width="150" height="200" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b10I" x="657" y="86" text-anchor="middle">Gate 4</text>
+        <text class="b10I" x="657" y="108" text-anchor="middle">Signed off?</text>
+        <text class="b10Xi" x="657" y="150" text-anchor="middle">a lawyer</text>
+        <text class="b10Xi" x="657" y="168" text-anchor="middle">owns it</text>
+        <text class="b10Xi" x="657" y="200" text-anchor="middle">stops over-</text>
+        <text class="b10Xi" x="657" y="218" text-anchor="middle">reliance</text>
+        <line x1="732" y1="152" x2="764" y2="152" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b10Ah)"/>
+        <rect x="768" y="92" width="88" height="120" rx="12" fill="#A84C64"/>
+        <text class="b10T" x="812" y="146" text-anchor="middle">Safe to</text>
+        <text class="b10T" x="812" y="166" text-anchor="middle">file</text>
+        <rect x="24" y="296" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b10N" x="48" y="308">Every gate is logged - the audit trail is the fifth control, running under all four.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the secure workflow: confidentiality, verification, disclosure, sign-off, all logged</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The five risks - and the one that ended in sanctions<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Read this stack as the list of ways a lawyer gets hurt by AI, worst first. Each one is a live case, not a hypothetical.</p>
+        <ul>
+          <li><strong>Filing unverified output - the sanctions.</strong> The 2023 fabricated-citation cases and every one since started here: an AI output filed without a human pulling and reading the actual case. This is the loudest rail in the course.</li>
+          <li><strong>Confidentiality / privilege breach via the wrong tool.</strong> Privileged or client-confidential data pasted into a consumer tool that may retain and train on it - a potential breach and privilege waiver before the output is even used.</li>
+          <li><strong>Over-reliance and deskilling.</strong> A team that stops checking because AI is usually right loses the judgment to catch it when it is wrong - and it will be wrong.</li>
+          <li><strong>Missing disclosure.</strong> Not disclosing AI use to a client or court where the rules or an order require it - a candor failure.</li>
+          <li><strong>No audit trail.</strong> No record of what tool, what prompt, what was verified, who signed - so nothing is defensible after the fact.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The brief that cited cases that never existed.</strong> Immaculate Bluebook citations, plausible holdings, confident prose - and not one of the cases was real. Sanctions, a public order, and a career dent followed. The tool failed confidently, which is worse than failing loudly. Gate two - verify every cite before filing - exists to stop exactly this, and it never relaxes.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why a stack, not a checklist item<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A workflow can pass four gates and fail the fifth, and the failure is the whole risk. A perfectly verified brief filed from a tool that leaked the client's privileged facts is still a breach. A confidential, verified, disclosed output that no lawyer actually read and owned is still malpractice waiting to surface. That is why safe practice is a stack you run in full - every layer, every time - not a single box you tick. The controls in Part 2 map one-to-one onto these five layers.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE CONTROLS ============ -->
+  <section class="section" id="controls">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the professional-responsibility controls</span>
+      <h2>The controls <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Each risk in the stack has a control that stops it. Together they are the standing rules for AI on client matters: vetted tools with confidentiality terms, mandatory verification of every citation and fact, disclosure where required, supervision of every output, an audit trail, and a review cadence so the whole thing stays current as tools and rules move.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Each risk maps to a control: wrong tool to vetted tools, unverified output to mandatory verification, missing disclosure to disclosure, unowned output to supervision, no record to an audit trail plus review cadence">
+        <style>
+          .b10yT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b10yI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b10yX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b10yXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b10yN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="30" y="46" width="255" height="60" rx="12" fill="#4A0E1F"/>
+        <text class="b10yT" x="50" y="72">Confidentiality breach</text>
+        <text class="b10yX" x="50" y="92">-&gt; vetted tools + proper terms</text>
+        <rect x="30" y="116" width="255" height="60" rx="12" fill="#7B1E3B"/>
+        <text class="b10yT" x="50" y="142">Sanctions risk</text>
+        <text class="b10yX" x="50" y="162">-&gt; verify every cite + fact</text>
+        <rect x="30" y="186" width="255" height="60" rx="12" fill="#A84C64"/>
+        <text class="b10yT" x="50" y="212">Candor failure</text>
+        <text class="b10yX" x="50" y="232">-&gt; disclose where required</text>
+        <rect x="310" y="46" width="255" height="60" rx="12" fill="#A84C64"/>
+        <text class="b10yT" x="330" y="72">Over-reliance</text>
+        <text class="b10yX" x="330" y="92">-&gt; supervise every output</text>
+        <rect x="310" y="116" width="255" height="60" rx="12" fill="#7B1E3B"/>
+        <text class="b10yT" x="330" y="142">Nothing defensible</text>
+        <text class="b10yX" x="330" y="162">-&gt; keep an audit trail</text>
+        <rect x="310" y="186" width="255" height="60" rx="12" fill="#4A0E1F"/>
+        <text class="b10yT" x="330" y="212">Tools + rules drift</text>
+        <text class="b10yX" x="330" y="232">-&gt; a review cadence</text>
+        <rect x="590" y="86" width="260" height="120" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b10yI" x="610" y="120">The standing rules</text>
+        <text class="b10yXi" x="610" y="146">six controls, one per</text>
+        <text class="b10yXi" x="610" y="164">risk - run them on</text>
+        <text class="b10yXi" x="610" y="182">every client matter</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - risk to control, one line each: the six standing rules for AI on client work</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Risk to control - the mapping you run on every matter<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>The risk</th><th>The control that stops it</th></tr></thead>
+          <tbody>
+            <tr><td>Privileged data in the wrong tool</td><td>Vetted tools with confidentiality terms for all client data - never a consumer tool</td></tr>
+            <tr><td>Filing a fabricated or miscited authority</td><td>Mandatory verification of every citation and fact against primary law</td></tr>
+            <tr><td>Undisclosed AI use where rules require it</td><td>Disclosure to the client or court where required by rule or order</td></tr>
+            <tr><td>An output nobody actually owned</td><td>Supervision - a responsible lawyer reviews and signs every AI output</td></tr>
+            <tr><td>Unable to defend the process later</td><td>An audit trail: tool, prompt, what was verified, who signed</td></tr>
+            <tr><td>Tools, rules, and risks moving on</td><td>A review cadence that revisits the standing rules on a schedule</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>Confidentiality and verification are non-negotiable</strong>
+          Two controls never flex, on any matter, for any deadline: no client-confidential or privileged data goes into an unvetted tool, and no AI citation or fact gets filed until a lawyer has verified it against the source. Everything else is judgment; these two are duties.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The controls in one paragraph each<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Vetted tools + confidentiality terms.</strong> Client data goes only into tools cleared for it, under terms that bar retention and training on your data. This is the confidentiality duty (Model Rule 1.6) made operational.</li>
+          <li><strong>Mandatory verification.</strong> Every citation, quote, holding, and fact from AI is checked against primary law before it is relied on or filed. Competence + candor (Rules 1.1, 3.3). No exceptions for deadlines.</li>
+          <li><strong>Disclosure where required.</strong> Where a rule, court order, or client expectation requires it, disclose that AI was used. Candor to the tribunal governs.</li>
+          <li><strong>Supervision.</strong> A responsible lawyer reviews and owns every AI output - the same duty as supervising a junior (Rule 5.3). "The AI generated it" is no defence.</li>
+          <li><strong>Audit trail + review cadence.</strong> Record what tool, what prompt, what was verified, and who signed; revisit the standing rules on a schedule as tools and rules change.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE CHECKLIST + SIGN-OFF ============ -->
+  <section class="section" id="checklist-signoff">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · who confirms, and what happens when something slips</span>
+      <h2>The safe-practice checklist + sign-off <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">A stack of controls needs a single accountable person and a plan for when a control fails - because one will. This is the practitioner version of the governance in leader sessions a3 and a5: the responsible lawyer confirms every gate, and a correction plan catches anything that slips before it reaches a client or a court.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Who confirms, and the correction plan when something slips<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Governance without a named owner is a suggestion. Every matter that uses AI has a responsible lawyer who confirms the checklist and signs - not the tool, not a paralegal, not "the process". And because controls fail, you decide in advance what happens when one does.</p>
+        <ul>
+          <li><strong>The responsible lawyer confirms.</strong> One named lawyer runs the checklist - confidential tool, every cite verified, disclosed where required, output owned - and signs. Accountability does not diffuse across a team.</li>
+          <li><strong>A correction plan for slips.</strong> If an unverified cite or a confidentiality slip is caught, you know the steps: pull it back, notify who needs to know, correct the record with the court or client, and log the fix. Decided calm, not in a panic.</li>
+          <li><strong>Ties back to a3 and a5.</strong> The leader track sets the ethics and malpractice-governance frame; this checklist is how a practicing lawyer runs it on a live matter.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "Confidential tool, every cite verified, disclosed where required, and I - a lawyer - own it and sign it." That sentence is the whole safe-practice checklist, and it is the spine of the entire practitioner track.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Not legal advice - and the jurisdiction note<span class="mini">1 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Everything in this course is education for legal professionals, not legal advice, and it does not create an attorney-client relationship. The rules of professional conduct - competence, confidentiality, candor, supervision, and disclosure - are jurisdiction-specific, and the sanctions record and tooling move fast. Verify against your bar's rules and your regulator before you rely on any of this on a real matter. The safe-practice discipline itself is universal; the exact rule text is not.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Run the safe-practice checklist against one real workflow <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Take one workflow you actually built earlier in the track - research (b2), review (b4), or a memo (b6) - and run it through all four gates. This is the finale's whole point: prove one of your own workflows is safe to trust on a client matter.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick one workflow you built earlier and write down each step where AI touched the work - what you pasted in, what it produced.</p></div>
+      <div class="step"><p><strong>Gate 1 - confidential tool?</strong> Was any client-confidential or privileged data involved, and if so, was the tool vetted with proper confidentiality terms? If not, that workflow is not safe as-is.</p></div>
+      <div class="step"><p><strong>Gate 2 - every cite verified?</strong> Was every citation, quote, and fact checked against primary law before use? Mark any that was not.</p></div>
+      <div class="step"><p><strong>Gate 3 - disclosed?</strong> Did any rule, order, or client expectation require disclosing AI use - and did you? <strong>Gate 4 - lawyer owns it?</strong> Did a named responsible lawyer review and sign?</p></div>
+      <div class="step"><p>Log the result: tool, prompt, what was verified, who signed. Any gate you cannot answer "yes" is a fix before this workflow runs on a real matter.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">The workflow to distrust (gates skipped)</span>Fast research memo: pasted the client's confidential facts into a free consumer chatbot, used its three cited cases directly in the draft, sent it to the partner - no cite pulled, no disclosure, no sign-off logged.</div>
+
+    <div class="prompt-box good"><span class="label">★ The safe-practice checklist to run</span>For this workflow, confirm each gate before it touches a client matter:
+1) Confidentiality - any client/privileged data used only a vetted tool with proper terms?
+2) Verification - every citation, quote, and fact checked against primary law?
+3) Disclosure - AI use disclosed to client/court wherever a rule or order requires it?
+4) Sign-off - a named responsible lawyer reviewed and owns the output?
+5) Audit trail - tool, prompt, verification, and signer all logged?
+Any "no" is a blocker to fix, not a risk to accept.</div>
+
+    <div class="callout tip">
+      <strong>Why this is demo one</strong>
+      This is the session, and the track, in one exercise. If you can run all five gates against a workflow you built and answer "yes" to each, you can use AI in legal practice safely. That reflex - never trust a workflow until it clears the stack - is what the whole course was for.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write your confidentiality + verification + disclosure spec <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Turn the controls into your standing rules - the short document that says how AI may be used on client matters, so the decision is made once, calmly, not re-argued under every deadline. You draft it with AI and edit it hard, which is rail one in miniature.</p>
+
+    <div class="steps">
+      <div class="step"><p>Give AI the three anchors: confidentiality (vetted tools only for client data), verification (every cite and fact against primary law before filing), and disclosure (where a rule or order requires it).</p></div>
+      <div class="step"><p>Ask for a one-page spec with clear "must" statements, the named responsible role that signs off, and what to do when a control slips.</p></div>
+      <div class="step"><p>Edit it hard: add your jurisdiction's rules, your firm's vetted tools, and your matter types. The AI draft is the skeleton; your judgment is the substance.</p></div>
+      <div class="step"><p>Add the audit-trail line and a review cadence, then circulate. This spec is the standing rule the whole toolkit runs under.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The standing-rules spec prompt</span>Draft a one-page "AI on client matters" spec for a legal team.
+Build it on three non-negotiable controls:
+1) Confidentiality - client/privileged data only in vetted tools with proper terms; never
+   a consumer tool.
+2) Verification - every citation, quote, and fact verified against primary law before it is
+   relied on or filed; no exceptions for deadlines.
+3) Disclosure - disclose AI use to the client or court wherever a rule or order requires it.
+Add: a named responsible lawyer signs every output; keep an audit trail (tool, prompt,
+verification, signer); review these rules on a set cadence; correction steps when a control slips.
+Note this is internal guidance and our jurisdiction's rules control - not legal advice.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The one rule at the top of the page.</strong> A firm rolled out AI across its practice with a single line above everything else: no AI citation gets filed until a human has pulled and read the actual case, and no client data goes into an unvetted tool. It slowed nothing that mattered and stopped the two things that end careers. The spec was cheaper than the sanction - and the breach - it prevented.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the safe-practice checklist against a second workflow you built in the track. Fix any gate you cannot answer "yes" to.</li>
+      <li>Finalize your confidentiality + verification + disclosure spec and circulate it to your team as the standing rule for AI on client matters.</li>
+      <li>Confirm which tools you are actually cleared to use for privileged or client-confidential data. If the answer is "none yet", raise it - that is a gap, not a detail.</li>
+      <li>Set a review cadence for the spec - a date on the calendar to revisit it as tools, rules, and the sanctions record move.</li>
+      <li>Optional: revisit the b1 verification protocol you wrote in session one and fold it into this spec. The course closes where it opened - verify, and own the work.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the professional-responsibility canon and public legal-security guidance. Jurisdiction-specific rules of professional conduct, the evolving sanctions record, and CLE credit stay with your bar and accredited providers. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">ABA Model Rules 1.1 / 1.6 / 3.3 / 5.3 (competence, confidentiality, candor, supervision)</span><span class="note">Parts 1-3 · the risk stack, the controls, sign-off; leader depth in a3/a5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The fabricated-citation sanctions canon (2023 onward)</span><span class="note">Part 1 · filing unverified output is the loudest risk</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Legal data-security + confidentiality guidance (vetted tools, terms)</span><span class="note">Part 2 · the confidentiality control and the audit trail</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">AI-disclosure practice (rules + standing court orders)</span><span class="note">Part 2-3 · disclosure where required; verify against your court</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Legal-AI risk is best understood as...</p>
+      <button class="qopt" type="button">A · One risk - fabricated citations - that verification alone solves</button>
+      <button class="qopt" type="button">B · A stack: unverified filing, confidentiality breach, over-reliance, missing disclosure, no audit trail</button>
+      <button class="qopt" type="button">C · A tooling problem the vendor handles for you</button>
+      <p class="qwhy">The risk stack. A workflow is only as safe as its weakest layer - a perfectly verified brief filed from a leaky tool is still a breach. You run the whole stack, every layer, every time.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Which two controls never flex, on any matter, for any deadline?</p>
+      <button class="qopt" type="button">A · Disclosure and the review cadence</button>
+      <button class="qopt" type="button">B · The audit trail and supervision</button>
+      <button class="qopt" type="button">C · Confidentiality (vetted tools for client data) and verification (every cite against primary law)</button>
+      <p class="qwhy">These two are duties, not judgment calls. No client-confidential data in an unvetted tool, and no AI citation or fact filed until a lawyer has verified it against the source - never relaxed for a deadline.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Who confirms the checklist and owns the AI output on a client matter?</p>
+      <button class="qopt" type="button">A · A named responsible lawyer who reviews, signs, and owns it</button>
+      <button class="qopt" type="button">B · The AI tool, since it produced the work</button>
+      <button class="qopt" type="button">C · Whoever happens to be free - accountability can float</button>
+      <p class="qwhy">Governance needs a named owner. One responsible lawyer runs the gates and signs; "the AI generated it" is no defence, and accountability does not diffuse across a team.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 10 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The risk stack</b><span>unverified filing, confidentiality breach, over-reliance, missing disclosure, no audit trail.</span></div>
+      <div class="cheat-item"><b>Gate 1 - confidential?</b><span>client + privileged data only in vetted tools with proper terms. Never a consumer tool.</span></div>
+      <div class="cheat-item"><b>Gate 2 - verified?</b><span>every citation, quote, and fact against primary law before filing. The sanctions rail. No exceptions.</span></div>
+      <div class="cheat-item"><b>Gate 3 - disclosed?</b><span>disclose AI use to client or court wherever a rule or order requires it. Candor governs.</span></div>
+      <div class="cheat-item"><b>Gate 4 - owned?</b><span>a named responsible lawyer reviews, signs, and owns it. "The AI did it" is no defence.</span></div>
+      <div class="cheat-item"><b>Audit trail + cadence</b><span>log tool, prompt, verification, signer; revisit the rules as tools and rules move.</span></div>
+      <div class="cheat-item"><b>When a control slips</b><span>pull it back, notify, correct the record, log the fix. Plan it calm, not in a panic.</span></div>
+      <div class="cheat-item"><b>Not legal advice</b><span>education for legal professionals; rules are jurisdiction-specific - verify against your bar.</span></div>
+    </div>
+    <p class="lede" style="margin-top:1.2rem"><strong>🎉 You built your AI legal-practice toolkit - practitioner track complete.</strong> Ten sessions from foundations to safe practice: research, drafting, review, diligence, memos, client comms, litigation support, compliance, and the rails that keep all of it safe. One duty carried through every session - AI assists, you verify every citation and fact, you guard the privilege, and a lawyer owns the work. That reflex is the whole toolkit. Go use AI's speed without ever staking your license on it - and keep verifying.</p>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 10 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b9-compliance-policy.html">← Previous: Compliance &amp; policy work</a> &nbsp;·&nbsp; <a href="../index.html">← Back to all sessions</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

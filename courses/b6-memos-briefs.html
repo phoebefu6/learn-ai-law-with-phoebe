@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 6 · Legal memos & briefs - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 6 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 6 of 10</div>
+    <h1>Legal memos &amp; briefs: <span class="accent">a structured first draft you sharpen and stand behind</span></h1>
+    <p class="sub">AI is genuinely good at structuring legal analysis and turning research you have grounded into a clean first draft - IRAC on demand, tighter prose in seconds. But a memo or brief is a piece of written work product with your name on it, and every authority in it is a promise. Tonight you draft a short memo from grounded research, then run a citation-verification pass, and you keep the rule that never bends: no AI-supplied cite ships unverified.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Practitioner track</span>
+      <span class="chip audience">Practitioners: litigation · advisory · in-house</span>
+      <span class="chip audience">Vetted AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Set the frame</span>
+      <span class="a2" style="flex:4">3-24 · Structure, cites, and editing</span>
+      <span class="a3" style="flex:5">24-45 · Build-along: draft, then verify</span>
+      <span class="a4" style="flex:1">Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The memo is where research becomes work product</h2>
+    </div>
+    <p class="lede">Sessions b2 taught you to ground legal research and verify every citation. Tonight that discipline moves into written work product: the memo and the brief. AI can structure the analysis, draft from research you have already grounded, and tighten the prose - which is real leverage on a slow, high-stakes task. But the reasoning is yours, every citation is yours, and the argument that goes to a partner or a court is yours. This session sits on top of b2: no cite ships that you have not verified exists, holds what you claim, and is still good law.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A structured memo draft - IRAC, built from research you grounded on a non-confidential question - plus a citation-verification pass that runs every authority through the three checks. Two reusable prompts, and the editor's discipline that makes the AI draft yours.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: STRUCTURE THE ANALYSIS ============ -->
+  <section class="section" id="structure">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers legal-analysis structure and the research-to-memo flow</span>
+      <h2>Structure the analysis <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">AI is good at scaffolding legal reasoning into the forms lawyers already use - IRAC or CREAC - and drafting a memo or brief from research you have grounded. It gives you a clean skeleton and a fast first draft to react to. What it does not give you is the reasoning or the authority: you own the analysis, and you verify every cite before it goes in.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A research-to-memo pipeline: grounded research flows into an IRAC structure - issue, rule, application, conclusion - through a verify-every-cite gate, then to a memo you own">
+        <style>
+          .b6xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b6xI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b6xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b6xXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b6xN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="24" y="52" width="150" height="70" rx="12" fill="#4A0E1F"/>
+        <text class="b6xT" x="44" y="82">Grounded</text>
+        <text class="b6xT" x="44" y="100">research</text>
+        <text class="b6xX" x="44" y="118">from b2 - verified</text>
+        <path d="M180 87 L206 87" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b6xAh)"/>
+        <rect x="212" y="40" width="140" height="42" rx="10" fill="#7B1E3B"/>
+        <text class="b6xT" x="232" y="66">Issue</text>
+        <rect x="212" y="92" width="140" height="42" rx="10" fill="#7B1E3B"/>
+        <text class="b6xT" x="232" y="118">Rule</text>
+        <rect x="212" y="144" width="140" height="42" rx="10" fill="#A84C64"/>
+        <text class="b6xT" x="232" y="170">Application</text>
+        <rect x="212" y="196" width="140" height="42" rx="10" fill="#A84C64"/>
+        <text class="b6xT" x="232" y="222">Conclusion</text>
+        <path d="M358 139 L392 139" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b6xAh)"/>
+        <rect x="398" y="96" width="200" height="86" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b6xI" x="418" y="128">Verify-cite gate</text>
+        <text class="b6xXi" x="418" y="150">every authority checked</text>
+        <text class="b6xXi" x="418" y="168">before it goes in</text>
+        <path d="M604 139 L638 139" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b6xAh)"/>
+        <rect x="644" y="96" width="212" height="86" rx="12" fill="#E0B3C0"/>
+        <text class="b6xI" x="664" y="128">Memo you own</text>
+        <text class="b6xXi" x="664" y="150">your reasoning, your</text>
+        <text class="b6xXi" x="664" y="168">argument, your cites</text>
+        <rect x="24" y="256" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b6xN" x="48" y="268">AI structures and drafts; you verify every cite and own the argument. No cite passes the gate unchecked.</text>
+        <defs>
+          <marker id="b6xAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#D8C7CC"/></marker>
+        </defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - research to memo through the verify-every-cite gate</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>IRAC on demand - what AI structures well<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Structure is where AI earns its place in memo work. Give it the issue and your grounded research and it will lay out a clean IRAC or CREAC skeleton, draft each section, and keep the analysis organized - the scaffolding that a blank page makes slow. You then fill in the judgment and check the law.</p>
+        <ul>
+          <li><strong>Issue.</strong> A crisp statement of the legal question - refine what the AI proposes so it frames exactly what you were asked.</li>
+          <li><strong>Rule.</strong> The governing law, drawn from research you grounded - every authority here gets verified before it stays.</li>
+          <li><strong>Application.</strong> The reasoning that applies rule to facts. This is your analysis; the AI's draft is a starting point to sharpen, not accept.</li>
+          <li><strong>Conclusion.</strong> The answer and its limits. You own the bottom line the reader will act on.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The blank page beaten in a minute.</strong> An associate with three grounded cases and a Friday deadline gave the AI the issue and the research and asked for an IRAC skeleton. In a minute she had a structured draft to react to instead of a blank screen - the hard part, the application section, now had a shape to argue with. She spent her hours sharpening the analysis and checking every cite, not fighting the outline. The draft saved the setup, not the thinking.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Ground first, draft second - the tie to b2<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The order matters. AI drafts well from research you have already grounded and verified; it fabricates when asked to supply the law itself. So the memo workflow is: ground the research (b2), verify the authorities, then let AI structure and draft from that verified material - never the reverse.</p>
+        <ul>
+          <li><strong>Feed it verified authorities.</strong> Paste the research you have grounded and confirmed. Do not ask the AI to find the cases - that is where the fabrication lives.</li>
+          <li><strong>Watch for smuggled cites.</strong> Even drafting from your material, an AI can add an authority you did not give it. Every cite in the output gets checked, including ones you think you recognize.</li>
+          <li><strong>The draft is 70%.</strong> Structure and prose come fast; the reasoning, the judgment, and the verification are the 30% that is the actual lawyering.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CITATION DISCIPLINE ============ -->
+  <section class="section" id="citation-discipline">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the citation-verification duty in written work product</span>
+      <h2>Citation discipline <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Every authority in a memo or brief is a promise to the reader - and to the court - that it exists, says what you claim, and is still good law. This is the b2 verification duty applied to written work product: no AI-supplied cite ships unverified. The 2023 sanctions were exactly this failure, in a filing.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The three checks every cite has to pass<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>For every citation in the draft - whether the AI supplied it or you did - run the same three checks before it stays in the document. If a cite fails any one of them, it comes out. There is no volume exception and no deadline exception.</p>
+        <table class="clean">
+          <thead><tr><th>The check</th><th>What you confirm</th></tr></thead>
+          <tbody>
+            <tr><td>It exists</td><td>The case, statute, or source is real - found in a genuine reporter or database, not a plausible invention</td></tr>
+            <tr><td>It holds what you claim</td><td>You read the actual opinion and it stands for the proposition the memo uses it for - not a miscited holding</td></tr>
+            <tr><td>It is still good law</td><td>Not overruled, reversed, superseded, or distinguished away for your jurisdiction and question</td></tr>
+            <tr><td>The pin cite is right</td><td>The quoted language and pinpoint page actually appear where the citation says they do</td></tr>
+            <tr><td>It fits the jurisdiction</td><td>The authority is binding or persuasive for the court and question at hand, not a mismatch</td></tr>
+          </tbody>
+        </table>
+        <p>The first three are the core test from b2. The last two are what a written filing adds. All five are yours to confirm before the memo leaves your desk.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why a filing raises the stakes<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>In research, an unverified cite is a private mistake you can still catch. In a memo it misleads a colleague; in a brief it goes to a court under your signature, where candor to the tribunal (Model Rule 3.3) applies and a fabricated citation is sanctionable. Written work product is where the verification duty has teeth.</p>
+        <ul>
+          <li><strong>Candor to the tribunal.</strong> A brief is a representation to the court. "The AI generated it" has never been accepted as a defence.</li>
+          <li><strong>A memo becomes reliance.</strong> A partner or client acts on your memo. A wrong or invented cite propagates into decisions and later filings.</li>
+          <li><strong>Verification is the signature.</strong> Signing the document means you stand behind every authority in it. That is the professional act, not the drafting.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: DRAFT, THEN BE THE EDITOR ============ -->
+  <section class="section" id="be-the-editor">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the mindset that makes the AI draft yours</span>
+      <h2>Draft, then be the editor <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">The AI gives you a structured first draft. Your job is not to accept it - it is to be its hardest editor: sharpen the analysis, check the law, cut the filler, and own the argument. The value you add moved from producing the draft to interrogating it.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Editing is the lawyering now<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A first draft used to cost hours and prove effort. Now it is cheap, so the effort that counts shifts entirely to the edit: is the analysis actually right, is every authority real and on point, is the argument the strongest one available? That is where a lawyer's judgment lives, and it is exactly what AI cannot do for you.</p>
+        <ul>
+          <li><strong>Sharpen the analysis.</strong> AI drafts to the average. The distinctive argument, the best framing, the counterargument it missed - those are yours to add.</li>
+          <li><strong>Check the law.</strong> Run the citation pass. Confirm the rule statement. Read the cases that carry weight. The draft's confidence is not evidence of its accuracy.</li>
+          <li><strong>Own the argument.</strong> When the memo is done it reflects your reasoning and your name. There is no shared credit and no shared blame with the tool.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The draft that read well and argued weakly.</strong> An AI memo was fluent, organized, and made the obvious argument competently - and missed the stronger one that turned on a distinction in the facts. The associate who merely polished the prose would have filed a mediocre memo. The one who edited as a lawyer found the better argument the draft never reached. Same starting draft, entirely different work product. The edit was the value.</p>
+        </div>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "AI drafts, I verify every cite, I sharpen the analysis, I own the argument." That is the memo-and-brief discipline in a sentence.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Draft a short IRAC memo from grounded research <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Turn research you have grounded into a structured memo. Pick a non-confidential legal question, feed the AI your verified authorities, and get an IRAC draft to sharpen. This is research-to-memo, done safely.</p>
+
+    <div class="steps">
+      <div class="step"><p>Choose a non-confidential legal question and gather two or three authorities you have already grounded and verified (from b2, or supplied). Do not ask the AI to find the cases.</p></div>
+      <div class="step"><p>Paste the question and your verified authorities, and ask for a short IRAC memo: issue, rule, application, conclusion.</p></div>
+      <div class="step"><p>Read the draft as an editor. Is the issue framed right? Is the application actually your reasoning, or a generic one? What argument did it miss?</p></div>
+      <div class="step"><p>Sharpen it. Rewrite the application in your own analysis, add the counterargument, tighten the conclusion and its limits.</p></div>
+      <div class="step"><p>Mark every citation in the draft for the verification pass in demo 2 - including any the AI added that you did not supply.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The IRAC-memo prompt (grounded research only)</span>Draft a short legal memo in IRAC format on this question: [non-confidential question].
+
+Use ONLY the authorities I paste below - I have grounded and verified them. Do not add,
+find, or invent any case, statute, or citation I have not given you. If you think an
+authority is missing, say so in a note - do not supply it.
+
+Structure: Issue, Rule (from my authorities), Application, Conclusion. Keep the application
+tight and flag any place where my reasoning needs to go further. Plain, precise prose.
+
+Authorities: [paste your verified research here]</div>
+
+    <div class="callout tip">
+      <strong>The draft is the setup, not the memo</strong>
+      A clean IRAC skeleton in a minute is real leverage - but it is the starting line. The memo becomes yours in the edit: the application in your words, the counterargument it missed, and every cite verified. Ship the AI draft as-is and you have shipped the average.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Run a citation-verification pass on the memo <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Take the memo from demo 1 and put every authority in it through the three checks. This is the pass that keeps you out of the 2023 headlines - and it is non-negotiable before any memo or brief ships.</p>
+
+    <div class="steps">
+      <div class="step"><p>List every citation in the memo - cases, statutes, quotes, pin cites. Include any the AI slipped in that you did not supply.</p></div>
+      <div class="step"><p>For each one, confirm it <em>exists</em> in a real reporter or database. Any you cannot find in a genuine source comes out immediately.</p></div>
+      <div class="step"><p>Confirm it <em>holds what you claim</em>. Open the actual opinion and read the proposition the memo relies on it for - not the AI's summary of it.</p></div>
+      <div class="step"><p>Confirm it is <em>still good law</em> for your jurisdiction and question - not overruled, reversed, or distinguished away. Check the pin cite and quote too.</p></div>
+      <div class="step"><p>Only cites that pass all three stay. The verified memo - not the first draft - is the work product you sign and stand behind.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The citation-verification checklist prompt</span>List every legal authority cited in the memo below - cases, statutes, quotes, and pin cites -
+in a table. For each, leave three empty columns for me to fill by hand:
+1) Exists? (found in a real reporter/database)
+2) Holds what the memo claims? (I read the opinion)
+3) Still good law + right jurisdiction?
+
+Do not tell me whether they are valid - I verify each one myself against primary sources.
+Flag any citation you are unsure you generated correctly so I check it first.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The pass that caught the smuggled cite.</strong> A verification pass on an otherwise solid brief turned up one citation the drafter did not remember adding - the AI had introduced it while tightening a paragraph. The case was real but stood for the opposite of what the sentence claimed. Ten minutes of checking removed a cite that would have handed opposing counsel the argument. The draft was 95% right; the verification found the 5% that mattered.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Draft a full IRAC memo from grounded research on a non-confidential question. Edit the application in your own words and add the strongest counterargument the AI missed.</li>
+      <li>Run the citation-verification pass on every authority - the three checks plus pin cite and jurisdiction. Count how many needed a fix.</li>
+      <li>Note any citation the AI added that you did not supply. That is the smuggled-cite risk, felt first-hand.</li>
+      <li>Write your one-line rule for written work product: no AI-supplied cite ships until it passes all three checks. Pin it above your desk.</li>
+      <li>Optional: turn the memo into a short brief section and re-run the verification pass under the candor-to-the-tribunal standard. Bring one question to b7.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the legal-drafting canon, public legal-AI curricula, and the professional-responsibility rules. CLE credit and jurisdiction-specific rules stay with accredited providers and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Legal-drafting canon - IRAC / CREAC structure and memo/brief craft</span><span class="note">Part 1 · structuring the analysis</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Citation-verification discipline (ties to b2 research grounding)</span><span class="note">Part 2 · the three checks in written work product</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ABA Model Rule 3.3 (candor to the tribunal) + the 2023 sanctions canon</span><span class="note">Part 2 · why a filing raises the stakes</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Research.com drafting + vetted legal-tool documentation</span><span class="note">Part 1-3 · draft-then-edit and grounding</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What is AI genuinely good at in memo and brief work?</p>
+      <button class="qopt" type="button">A · Finding the controlling authorities for you from its own knowledge</button>
+      <button class="qopt" type="button">B · Structuring the analysis (IRAC) and drafting from research you have grounded</button>
+      <button class="qopt" type="button">C · Making the final legal judgment so you can sign faster</button>
+      <p class="qwhy">AI scaffolds the analysis and drafts fast from verified material you supply - real leverage. It does not supply the law (that is where it fabricates) or make the judgment. You own the reasoning and every cite.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A citation in your AI-drafted brief looks perfect. What has to happen before it ships?</p>
+      <button class="qopt" type="button">A · Nothing - a properly formatted cite from a legal tool is dependable</button>
+      <button class="qopt" type="button">B · A quick skim to confirm the case name sounds right</button>
+      <button class="qopt" type="button">C · It passes all three checks - exists, holds what you claim, still good law - or it comes out</button>
+      <p class="qwhy">The b2 duty applied to written work product: no AI-supplied cite ships unverified. A brief invokes candor to the tribunal - the 2023 sanctions were exactly this failure. Verify every authority yourself.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The AI hands you a fluent, well-organized memo draft. What is your job?</p>
+      <button class="qopt" type="button">A · Be its hardest editor - sharpen the analysis, check the law, own the argument</button>
+      <button class="qopt" type="button">B · Polish the prose and forward it - the structure proves it is sound</button>
+      <button class="qopt" type="button">C · Trust it, since a legal tool drafted it from your research</button>
+      <p class="qwhy">The draft is cheap now; the value moved to the edit. AI drafts to the average and can miss the stronger argument. Sharpen the reasoning, run the citation pass, and own the argument you sign.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>AI structures well</b><span>IRAC / CREAC skeletons and first drafts from research you grounded. Beats the blank page, not the thinking.</span></div>
+      <div class="cheat-item"><b>Ground first, draft second</b><span>feed it verified authorities from b2; never ask it to find the cases - that is where it fabricates.</span></div>
+      <div class="cheat-item"><b>The three checks</b><span>every cite: it exists, it holds what you claim, it is still good law. Plus pin cite + jurisdiction.</span></div>
+      <div class="cheat-item"><b>No cite ships unverified</b><span>the b2 duty in written work product. A brief invokes candor to the tribunal (Rule 3.3).</span></div>
+      <div class="cheat-item"><b>Watch smuggled cites</b><span>AI can add an authority you did not supply while editing. Check every cite, including familiar-looking ones.</span></div>
+      <div class="cheat-item"><b>Editing is the lawyering</b><span>the draft is cheap; the edit is the value. Sharpen the analysis, check the law, cut the filler.</span></div>
+      <div class="cheat-item"><b>Own the argument</b><span>the signed memo reflects your reasoning and your name. No shared credit or blame with the tool.</span></div>
+      <div class="cheat-item"><b>One-line discipline</b><span>AI drafts, I verify every cite, I sharpen the analysis, I own the argument. Not legal advice - verify against your bar.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 6 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b5-due-diligence-doc-review.html">← Previous: Due diligence &amp; document review</a> &nbsp;·&nbsp; <a href="b7-client-communication-intake.html">Next: Client communication &amp; intake →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

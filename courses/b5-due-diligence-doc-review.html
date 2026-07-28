@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 5 · Due diligence & document review - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 5 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 5 of 10</div>
+    <h1>Due diligence &amp; document review: <span class="accent">read a thousand documents fast, own every conclusion</span></h1>
+    <p class="sub">Diligence is where AI's speed over large document sets is most tempting - and where a careless paste can breach the most sensitive data a matter holds. Tonight you run an extraction and summarization pass over a supplied document set, then a privilege-flagging pass, and you keep the one rule that makes it safe: only vetted tools touch diligence data, and the lawyer verifies before any finding is relied on.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">Practitioners: M&amp;A · litigation · in-house</span>
+      <span class="chip audience">Vetted AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Set the frame</span>
+      <span class="a2" style="flex:4">3-24 · AI over large document sets</span>
+      <span class="a3" style="flex:5">24-45 · Build-along: extract, summarize, flag</span>
+      <span class="a4" style="flex:1">Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why diligence is the high-stakes use case</h2>
+    </div>
+    <p class="lede">Due diligence is reading at scale: hundreds or thousands of contracts, board minutes, leases, and emails, hunting for the terms and risks that change a deal or a case. AI can extract, summarize, and categorize across that whole set in minutes, which is a genuine leap. But diligence data is the most sensitive material a matter holds - it is confidential, often privileged, and disclosed to you under strict terms. So the confidentiality frame comes first, before any tool touches a single file: diligence data goes only into vetted tools with proper terms, and the lawyer verifies every conclusion. This session ties back to b1's rails and forward to the safe-practice finale in b10.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      An extraction-and-summarization pass over a small supplied document set - key terms pulled and a summary per document - plus a privilege-and-sensitivity flagging approach where AI surfaces candidates and you confirm each. Two reusable prompts, and the confidentiality discipline that keeps diligence data safe.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: AI OVER LARGE DOCUMENT SETS ============ -->
+  <section class="section" id="doc-sets">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Research.com document review at scale</span>
+      <h2>AI over large document sets <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Point AI at a document set and it does the reading-at-scale work fast: it extracts key terms, summarizes each document, categorizes them by type or issue, and surfaces the items that need a human eye. What it does not do is decide. It hands you a fast, structured first pass; you verify the conclusions and own the diligence that goes to the client or the deal team.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A due diligence pipeline: a supplied document set flows into AI extraction, summarization, and categorization, then to lawyer review and verification, then to findings - the human owns the conclusions">
+        <style>
+          .b5pT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b5pI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b5pX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b5pXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b5pN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="24" y="60" width="150" height="96" rx="12" fill="#4A0E1F"/>
+        <text class="b5pT" x="44" y="98">Document set</text>
+        <text class="b5pX" x="44" y="120">contracts, minutes,</text>
+        <text class="b5pX" x="44" y="138">leases, emails</text>
+        <path d="M180 108 L206 108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b5pAh)"/>
+        <rect x="212" y="60" width="180" height="96" rx="12" fill="#7B1E3B"/>
+        <text class="b5pT" x="232" y="92">AI first pass</text>
+        <text class="b5pX" x="232" y="114">extract terms · summarize</text>
+        <text class="b5pX" x="232" y="132">· categorize · flag issues</text>
+        <path d="M398 108 L424 108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b5pAh)"/>
+        <rect x="430" y="60" width="180" height="96" rx="12" fill="#A84C64"/>
+        <text class="b5pT" x="450" y="92">Lawyer review</text>
+        <text class="b5pX" x="450" y="114">verify each finding</text>
+        <text class="b5pX" x="450" y="132">against the source doc</text>
+        <path d="M616 108 L642 108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b5pAh)"/>
+        <rect x="648" y="60" width="208" height="96" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b5pI" x="668" y="92">Findings</text>
+        <text class="b5pXi" x="668" y="114">relied on only after a</text>
+        <text class="b5pXi" x="668" y="132">human owns them</text>
+        <rect x="430" y="176" width="180" height="30" rx="8" fill="#E0B3C0"/>
+        <text class="b5pI" x="450" y="196">the human owns it</text>
+        <path d="M520 176 L520 158" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b5pAh)"/>
+        <rect x="24" y="252" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b5pN" x="48" y="264">AI does the reading at scale; the lawyer does the deciding. No finding ships unverified.</text>
+        <defs>
+          <marker id="b5pAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#D8C7CC"/></marker>
+        </defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - the diligence pipeline: AI extracts and summarizes at scale, the human owns the conclusions</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What AI is genuinely good at across a document set<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The value is speed and consistency across volume - reading every page with the same attention, which humans cannot sustain over a thousand documents. But speed multiplies both good and bad: a wrong categorization applied consistently across the set is a consistent error. That is why the lawyer verifies.</p>
+        <ul>
+          <li><strong>Extraction.</strong> Pull the same fields from every document - parties, dates, change-of-control, assignment, termination - into a structured list you can scan.</li>
+          <li><strong>Summarization.</strong> A short summary per document so you triage what to read in full, instead of opening all thousand.</li>
+          <li><strong>Categorization.</strong> Group by type, counterparty, or issue - useful for organizing the review, not for concluding it.</li>
+          <li><strong>Issue-spotting.</strong> Surface the clauses and documents that look unusual or risky as leads to investigate, never as settled findings.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The change-of-control sweep.</strong> A deal team faced 600 supplier contracts and one question: which ones let the counterparty walk if the target is acquired? AI pulled the change-of-control language from every contract in minutes and flagged 40 candidates. A lawyer then read those 40 and confirmed 11 real triggers. The AI did the reading; the lawyer did the finding. Neither number could have been reached the other's way in time.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why verification is not optional at scale<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>At document-set scale the risk is not one wrong answer - it is a systematic one. If the model misreads what "change of control" covers, it misreads it the same way across every contract, and a plausible summary hides the gap. The lawyer's job is to sample and verify against the source documents until the pass is trustworthy, then own the conclusions.</p>
+        <ul>
+          <li><strong>Verify against the source, not the summary.</strong> A summary that reads well can still miss or invert a term. Open the underlying document for anything that matters to the deal.</li>
+          <li><strong>Sample deliberately.</strong> Check the flagged items, a slice of the unflagged, and the edge cases - not just what the AI surfaced.</li>
+          <li><strong>The finding is yours.</strong> What goes into the diligence report is your conclusion, reached with AI's help, not the AI's output passed through.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: EXTRACTION + PRIVILEGE REVIEW ============ -->
+  <section class="section" id="extraction-privilege">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers extraction, summarization, and privilege flagging</span>
+      <h2>Extraction and privilege review <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Two workflows sit at the centre of diligence. The first pulls key terms and summarizes each document. The second flags documents that may be privileged or sensitive so they get human eyes before they go anywhere. In both, AI assists and the human confirms - the pattern is the same, the confirmation is non-negotiable.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The task-and-check table - who does what<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>For every AI task in diligence there is a matching human check. The AI accelerates; the human decides. Keep this split explicit so nothing the AI produced is ever treated as a conclusion on its own.</p>
+        <table class="clean">
+          <thead><tr><th>AI does the task</th><th>The human check that owns it</th></tr></thead>
+          <tbody>
+            <tr><td>Extract key terms (change-of-control, assignment, term dates)</td><td>Confirm each extracted term against the source clause</td></tr>
+            <tr><td>Summarize each document in a few lines</td><td>Read the underlying document for anything deal-relevant</td></tr>
+            <tr><td>Categorize documents by type or issue</td><td>Spot-check the buckets; recategorize the misfiled</td></tr>
+            <tr><td>Flag documents as possibly privileged or sensitive</td><td>Confirm privilege on each flagged item; never auto-release</td></tr>
+            <tr><td>Surface unusual or risky clauses as leads</td><td>Investigate the lead; decide if it is a real finding</td></tr>
+          </tbody>
+        </table>
+        <p>The left column is tonight's two demos. The right column is why a lawyer is still in the room.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Privilege flagging - a filter, never a decision<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI can help find the documents that are likely privileged or sensitive - anything to or from counsel, marked confidential, or discussing legal strategy - and pull them out of the pile for review. That is a triage filter that saves hours. It is not a privilege determination. Privilege is a legal judgment about who was communicating, for what purpose, and whether it was waived - and only a lawyer makes it.</p>
+        <ul>
+          <li><strong>AI narrows, the lawyer decides.</strong> A flag means "look at this", not "this is privileged". Over-trusting the flag is how privileged material gets produced or waived.</li>
+          <li><strong>False negatives are the danger.</strong> A privileged document the AI did not flag can slip through. Sampling the unflagged set is part of the job.</li>
+          <li><strong>Document the call.</strong> For each flagged item, record the human decision - privileged, not privileged, or needs a second look. That log is your defence.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: CONFIDENTIALITY IS PARAMOUNT (LOUD) ============ -->
+  <section class="section" id="confidentiality">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the rail that governs this entire session</span>
+      <h2>Confidentiality is paramount <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Read this before you open a single document. Diligence and review data is among the most confidential material you will ever handle - it is disclosed to you under strict terms, it is often privileged, and a careless paste into the wrong tool is a breach you cannot take back. This rail is louder here than anywhere else in the track.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Vetted tools only - the hard line for diligence data<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Diligence data never goes into a consumer AI tool. Full stop. It goes only into tools your firm has vetted, with confidentiality terms that fit client and deal work, ideally where data is not retained or trained on. The convenience of a general chatbot is not worth the confidentiality breach, the privilege waiver, or the disclosed-under-NDA violation it can cause.</p>
+        <ul>
+          <li><strong>Confidentiality (Model Rule 1.6)</strong> covers everything in the data room. A consumer tool may retain and train on what you paste - a breach before you have read the output.</li>
+          <li><strong>Privilege can be waived by disclosure.</strong> Putting privileged documents into an unvetted tool can waive the very protection your client is relying on.</li>
+          <li><strong>Disclosure terms bind you.</strong> Diligence data usually comes under an NDA or clean-team agreement. The tool you choose has to honour those terms too.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The one question before any document goes near a tool</strong>
+          "Is this tool vetted for diligence-grade confidential data, with terms that fit?" If you cannot answer yes with certainty, the document does not go in. When in doubt, it stays out.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Over-trust is the other failure - verify before you rely<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The second danger is quieter: trusting the AI's categorization because it looks organized and complete. A clean, well-formatted output invites you to skip the verification - and that is exactly when a miscategorized document or a missed privileged item slips through. The lawyer verifies before any conclusion is relied on, every time.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The tidy summary that was wrong.</strong> An associate accepted an AI summary that a lease had no assignment restriction - it read clean, so no one opened the lease. The restriction was in a rider the summary skipped. The deal closed on a wrong assumption and the problem surfaced later, expensively. The output looked finished, which is precisely why it was not checked. Tidy is not the same as verified.</p>
+        </div>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "Vetted tools only, and I verify before I rely." On diligence data, that is the whole discipline in one line.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Extract key terms and summarize a document set <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Run the core diligence pass on a small supplied set of synthetic documents - nothing confidential. AI extracts the key terms and summarizes each; you verify against the source. This is the reading-at-scale workflow in miniature.</p>
+
+    <div class="steps">
+      <div class="step"><p>Take the supplied synthetic document set (three to five short contracts, provided - not real client data). Confirm it is non-confidential before it goes anywhere near a tool.</p></div>
+      <div class="step"><p>Ask the AI to extract the same fields from every document into a table: parties, effective date, term, change-of-control, assignment, termination.</p></div>
+      <div class="step"><p>Ask for a two-line summary of each document alongside the extraction, so you can triage which to read in full.</p></div>
+      <div class="step"><p>Now verify. Open each source document and confirm the extracted terms match. Note anything the AI missed, inverted, or invented.</p></div>
+      <div class="step"><p>Correct the table by hand. The verified table - not the AI's first draft - is the diligence artifact. You own it.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The extraction + summary prompt (synthetic docs only)</span>You are helping with a first-pass document review. For each document I paste below,
+produce one row in a table with these columns: Document, Parties, Effective date, Term,
+Change-of-control clause (quote it or "none found"), Assignment clause (quote or "none"),
+Termination triggers.
+
+Then add a two-line plain-language summary of each document.
+
+Rules: quote the exact clause text where a column asks for it, so I can verify against
+the source. If a field is not present, say "none found" - do not infer or guess. Flag any
+clause you are unsure about for my review. These are synthetic training documents.</div>
+
+    <div class="callout tip">
+      <strong>The verify step is the point</strong>
+      The extraction looks authoritative because it is a neat table - which is exactly why you open every source document and confirm. A miscopied date or a missed clause, applied across a set, is a real diligence error. The table becomes trustworthy only after you have checked it.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>A privilege and sensitivity flagging pass <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Run the triage filter: AI flags documents that may be privileged or sensitive, and you confirm each one. The AI narrows the pile; the privilege call stays yours.</p>
+
+    <div class="steps">
+      <div class="step"><p>Using the same synthetic set (plus a couple of supplied documents seeded to look privileged - to/from "counsel", marked confidential), ask the AI to flag candidates for review.</p></div>
+      <div class="step"><p>Ask it to give a reason for each flag - who is communicating, why it looks privileged or sensitive - and to list what it did <em>not</em> flag, so you can sample that too.</p></div>
+      <div class="step"><p>Go through every flagged item and make the human call: privileged, not privileged, or needs a closer look. The flag is a lead, not a decision.</p></div>
+      <div class="step"><p>Sample the unflagged set. Confirm nothing privileged slipped through unflagged - false negatives are the real risk.</p></div>
+      <div class="step"><p>Log each decision. That record of who decided and why is your defence if a privilege question is ever raised.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The privilege-flagging prompt (you confirm each call)</span>Review the synthetic documents below and flag any that may be privileged or sensitive -
+communications to or from counsel, documents marked confidential or legal, or anything
+discussing legal strategy.
+
+For each flag, give: the document, a one-line reason, and your confidence (low/medium/high).
+Then list the documents you did NOT flag, so I can sample them.
+
+Do not make a privilege determination - only surface candidates for my review. I will
+confirm each call myself. These are synthetic training documents.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The flag that saved a waiver.</strong> During a document production, an AI pass flagged an email chain the review team had queued to produce - it spotted a lawyer copied deep in the thread. A human confirmed it was privileged legal advice and pulled it. Produced, it would have waived privilege on the whole subject. The AI did not decide; it surfaced the candidate in time for a lawyer to decide. That is the pattern, exactly.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the extraction-and-summary pass on the full supplied synthetic set. Verify every extracted term against its source and count what the AI missed or inverted.</li>
+      <li>Run the privilege-flagging pass and confirm each flag yourself. Then sample the unflagged set - did anything privileged slip through?</li>
+      <li>Write your team's one-line diligence rule: which vetted tools are cleared for diligence-grade data, and which are never used. If the answer is "none cleared yet", raise it.</li>
+      <li>Draft your privilege-decision log format - document, decision, who decided, why - so it is ready before a real review.</li>
+      <li>Optional: on a past diligence matter, estimate how long the extraction pass would have saved, and where a human check would still have been essential. Bring it to b6.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public legal-AI curricula, document-review practice guidance, and the professional-responsibility canon. CLE credit and jurisdiction-specific rules stay with accredited providers and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Research.com - document review at scale (extraction, summarization, categorization)</span><span class="note">Part 1-2 · the reading-at-scale workflow</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Privilege and sensitivity review practice (triage vs determination)</span><span class="note">Part 2 · AI flags, the lawyer confirms</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ABA Model Rule 1.6 (confidentiality) + privilege / waiver doctrine</span><span class="note">Part 3 · the confidentiality rail; full depth in b10</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Vetted legal-tool documentation + data-room / NDA terms</span><span class="note">Part 3 · why diligence data needs vetted tools only</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · AI extracts key terms from 500 diligence contracts into a clean table. What is your next move?</p>
+      <button class="qopt" type="button">A · Rely on the table - a structured extraction is dependable enough to file</button>
+      <button class="qopt" type="button">B · Skim it once and forward it to the deal team</button>
+      <button class="qopt" type="button">C · Verify the extracted terms against the source documents, then own the findings</button>
+      <p class="qwhy">AI reads at scale; the lawyer decides. A neat table can hide a systematic misread applied across every contract. Verify against the source before any finding is relied on - the conclusion is yours.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · An AI privilege pass flags 30 documents as possibly privileged. What is a flag?</p>
+      <button class="qopt" type="button">A · A privilege determination you can act on directly</button>
+      <button class="qopt" type="button">B · A candidate for review - you confirm each call yourself and sample the unflagged set</button>
+      <button class="qopt" type="button">C · Proof those 30 are privileged and the rest are safe to produce</button>
+      <p class="qwhy">AI narrows the pile; privilege is a legal judgment only a lawyer makes. Confirm each flag, and sample what was not flagged - a missed privileged document is the real risk. Log every decision.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Where can diligence and document-review data go?</p>
+      <button class="qopt" type="button">A · Only into vetted tools with confidentiality terms that fit - never a consumer chatbot</button>
+      <button class="qopt" type="button">B · Any AI tool, as long as you delete the chat afterward</button>
+      <button class="qopt" type="button">C · A free consumer tool is fine for a quick first pass under time pressure</button>
+      <p class="qwhy">Diligence data is the most sensitive a matter holds - confidential, often privileged, disclosed under strict terms. A consumer tool can breach confidentiality and waive privilege. Vetted tools only, no exceptions.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Diligence = reading at scale</b><span>hundreds of documents; AI extracts, summarizes, categorizes, and flags fast. The lawyer decides.</span></div>
+      <div class="cheat-item"><b>Confidentiality first</b><span>diligence data is the most sensitive a matter holds - vetted tools with proper terms only, never a consumer chatbot.</span></div>
+      <div class="cheat-item"><b>Extraction</b><span>pull the same fields from every doc - parties, dates, change-of-control, assignment, termination - into a table.</span></div>
+      <div class="cheat-item"><b>Verify the source</b><span>check extracted terms against the underlying document, not the summary. Tidy is not the same as verified.</span></div>
+      <div class="cheat-item"><b>Privilege = a filter</b><span>AI flags candidates; the lawyer confirms every call and samples the unflagged set. Log each decision.</span></div>
+      <div class="cheat-item"><b>Over-trust is the trap</b><span>a clean, organized output invites skipping the check. That is when a missed clause or privileged doc slips through.</span></div>
+      <div class="cheat-item"><b>Human owns conclusions</b><span>what goes in the diligence report is your finding, reached with AI's help - never the AI's output passed through.</span></div>
+      <div class="cheat-item"><b>One-line discipline</b><span>vetted tools only, and I verify before I rely. Not legal advice - verify against your bar.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 5 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b4-contract-review-redlining.html">← Previous: Contract review &amp; redlining</a> &nbsp;·&nbsp; <a href="b6-memos-briefs.html">Next: Legal memos &amp; briefs →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

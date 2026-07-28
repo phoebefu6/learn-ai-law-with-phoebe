@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 1 · AI foundations for lawyers - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 1 of 10</div>
+    <h1>AI foundations for lawyers: <span class="accent">a fast associate you must double-check</span></h1>
+    <p class="sub">Before you point AI at a single matter, one honest hour: what AI is genuinely useful for in legal work, the one thing it does that has already gotten lawyers sanctioned - it invents case law with total confidence - and the rails that keep you competent, confidential, and out of trouble. By the end you can use AI's speed without ever staking your license on it.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Practitioner track</span>
+      <span class="chip audience">Practitioners: lawyers · legal professionals</span>
+      <span class="chip audience">Vetted AI tools · no code</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · What AI does for a lawyer</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: the fake-case test</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Ten sessions, all hands-on, all on real legal work: research, contract drafting and review, due diligence, memos and briefs, client communication, litigation support, and compliance. Tonight you learn what the tool is; then b2 covers research with a live simulator that shows the fabricated-case trap, and b3-b10 build the rest of the practice toolkit. One duty runs through all ten: you verify, and you own the work. A note before anything else: this is education for legal professionals, not legal advice, and the rules of professional conduct vary by jurisdiction - verify against your bar.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A clear model of what AI can and cannot be trusted to do in legal work, a first-hand look at the fabricated-citation trap that got a lawyer sanctioned, the two rails (verify-and-own + confidentiality) you will use every session, and your own one-page AI verification protocol.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT AI IS FOR A LAWYER ============ -->
+  <section class="section" id="what-ai-is">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Research.com AI-for-legal + the hallucination canon</span>
+      <h2>What AI actually is - for a lawyer <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A large language model predicts the most likely next words. For a lawyer that makes it a fast, tireless junior associate for drafting, summarizing, and structuring - and a dangerous one, because it will confidently state law that does not exist. It is genuinely useful over documents you give it; it is a liability the moment you trust it for the law itself.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What to trust AI with in legal work: strong at drafting, summarizing, and reasoning over documents you supply; dangerous at law, citations, and facts from memory - verify those">
+        <style>
+          .b1cT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b1cI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b1cX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b1cXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b1cN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="30" y="46" width="195" height="96" rx="12" fill="#7B1E3B"/>
+        <text class="b1cT" x="52" y="84">Draft &amp; summarize</text>
+        <text class="b1cX" x="52" y="106">memos, clauses, letters -</text>
+        <text class="b1cX" x="52" y="124">a first draft to edit</text>
+        <rect x="240" y="46" width="195" height="96" rx="12" fill="#A84C64"/>
+        <text class="b1cT" x="262" y="84">Reason over YOUR</text>
+        <text class="b1cT" x="262" y="102">docs</text>
+        <text class="b1cX" x="262" y="124">summarize what you give it</text>
+        <rect x="450" y="46" width="195" height="96" rx="12" fill="#E0B3C0"/>
+        <text class="b1cI" x="472" y="84">Structure &amp; organize</text>
+        <text class="b1cXi" x="472" y="106">chronologies, outlines,</text>
+        <text class="b1cXi" x="472" y="124">issue lists</text>
+        <rect x="660" y="46" width="195" height="96" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b1cI" x="682" y="84">Law + cites ✗</text>
+        <text class="b1cXi" x="682" y="106">invents cases - never</text>
+        <text class="b1cXi" x="682" y="124">trust, always verify</text>
+        <rect x="30" y="250" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b1cN" x="54" y="262">The rule: AI output is a draft, never authority. Verify every citation against primary law.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the legal reliability map: three you can use, one you must always verify</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The fabricated-case trap - the failure that got lawyers sanctioned<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Because the model generates the most likely-sounding text, "what case supports this?" produces a case that sounds exactly right - correct-looking name, reporter, court, year - and does not exist. In 2023 a New York lawyer filed a brief with ChatGPT-generated citations to cases that were never decided, and was sanctioned. It has happened repeatedly since. Legal-specific tools reduce the risk; none eliminate it. Verification is not a best practice here - it is a professional duty.</p>
+        <ul>
+          <li><strong>Confidence is not authority.</strong> A fluent citation tells you nothing about whether the case is real or says what the AI claims.</li>
+          <li><strong>It fabricates holdings too.</strong> Even a real case can be miscited for a proposition it never stood for. Read the actual opinion.</li>
+          <li><strong>The duty is on you.</strong> Competence (Model Rule 1.1) and candor to the tribunal (3.3) mean you own every authority you file - "the AI generated it" is no defence.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any general chat AI) - watch it invent</span>Give me three leading cases, with full citations, holding that a party can rescind a contract for a unilateral mistake. Be specific and confident.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The brief that cited cases that never existed.</strong> The filing looked immaculate - proper Bluebook citations, plausible holdings, confident prose. Opposing counsel could not find a single case, because none were real. Sanctions, a public order, and a career dent followed. The tool did not fail quietly; it failed confidently, which is worse. That is the exact behaviour the rest of this course is built to defend against.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The can / cannot table - pin this to your monitor<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Use it to...</th><th>Never trust it to (verify independently)</th></tr></thead>
+          <tbody>
+            <tr><td>Draft a first-pass memo, clause, or letter</td><td>State the law or cite a case from memory</td></tr>
+            <tr><td>Summarize a document you supply</td><td>Confirm a quote, holding, or citation</td></tr>
+            <tr><td>Build a chronology or issue list</td><td>Give legal advice or exercise judgment</td></tr>
+            <tr><td>Reword dense law into plain language</td><td>Be a substitute for a lawyer</td></tr>
+            <tr><td>Spot issues to investigate (as leads, not conclusions)</td><td>Handle privileged or confidential data in a consumer tool</td></tr>
+          </tbody>
+        </table>
+        <p>The left column is a build-along later in this track. The right column is why every session keeps a lawyer verifying and owning the work.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE TOOL LANDSCAPE ============ -->
+  <section class="section" id="tool-landscape">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the 2026 legal-AI tool landscape</span>
+      <h2>The legal AI tool landscape, 2026 <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The right first question is not "which tool" but "is this safe for privileged, confidential client information - and does it ground its answers in real law?" There are two layers, separated by a hard confidentiality line.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two layers of legal AI tools: general assistants and legal-specific platforms - separated by a confidentiality and privilege line; verification applies to both">
+        <style>
+          .b1sT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b1sI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b1sX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b1sXi { font: 400 12.5px Inter, sans-serif; fill: #6E5B60; }
+          .b1sN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="30" y="60" width="540" height="70" rx="12" fill="#7B1E3B"/>
+        <text class="b1sT" x="54" y="90">Legal-specific platforms</text>
+        <text class="b1sX" x="54" y="112">CoCounsel · Harvey · Lexis+AI · Spellbook - legal-trained, confidential-by-terms</text>
+        <rect x="30" y="150" width="540" height="70" rx="12" fill="#4A0E1F"/>
+        <text class="b1sT" x="54" y="180">General assistants</text>
+        <text class="b1sX" x="54" y="202">ChatGPT · Claude - drafting over YOUR text only, never client-confidential data</text>
+        <rect x="610" y="90" width="240" height="140" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b1sI" x="632" y="118">The confidentiality line</text>
+        <text class="b1sXi" x="632" y="142">Privileged + client data</text>
+        <text class="b1sXi" x="632" y="160">-&gt; vetted legal tools with</text>
+        <text class="b1sXi" x="632" y="178">confidentiality terms only.</text>
+        <text class="b1sXi" x="632" y="202">General public text -&gt; a</text>
+        <text class="b1sXi" x="632" y="220">general assistant is fine.</text>
+        <rect x="30" y="284" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b1sN" x="54" y="296">Legal tools reduce hallucination - none remove it. Verify on every tool, every time.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - two tool layers, one confidentiality line, verification on both</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>General vs legal-specific - the setting that matters most<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The capability gap matters less than the confidentiality gap and the grounding gap.</p>
+        <ul>
+          <li><strong>General assistants</strong> (ChatGPT, Claude) - fine for drafting and rewording over non-confidential text you supply. Never for privileged or client-confidential material, and never as a source of law.</li>
+          <li><strong>Legal-specific platforms</strong> (CoCounsel, Harvey, Lexis+AI, Spellbook) - trained on legal data, grounded in real databases, and offered under confidentiality terms suited to client work. They cut hallucination substantially - but not to zero.</li>
+          <li><strong>Verification is universal.</strong> On any tool, a cited case is a lead to read, not a fact to file. The tool's marketing does not lift the duty off you.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>One-question test before you paste</strong>
+          "Is this privileged or client-confidential?" Yes - a vetted legal tool with proper confidentiality terms only. No, general public text - a general assistant is fine for drafting. Either way, verify the law yourself. That is rail two, and it never relaxes.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The 2026 landscape at a glance<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Research + drafting:</strong> Lexis+AI, Westlaw AI, CoCounsel, Harvey - grounded in legal databases with citations you still confirm.</li>
+          <li><strong>Contracts:</strong> Spellbook, and in-house tools like GC AI - drafting and review against a playbook (sessions b3-b4).</li>
+          <li><strong>General assistants:</strong> ChatGPT, Claude - useful for non-confidential drafting and plain-language rewrites only.</li>
+          <li><strong>The market signal:</strong> about 80% of firms are investing in AI, but only ~35% of lawyers feel AI-ready. The skill this course builds - using AI without abdicating the duty - is exactly the gap.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE RAILS ============ -->
+  <section class="section" id="two-rails">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the duties every later session assumes</span>
+      <h2>The rails: verify and own it, and guard the privilege <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Everything else in this course is technique. These rails are professional duties, not preferences, and they are what separate a lawyer who gets leverage from AI from one who becomes the next cautionary opinion.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 1 - AI assists, the lawyer verifies and owns it<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI drafts, summarizes, and suggests. You verify every citation and fact against primary law, exercise the legal judgment, and own everything that leaves your desk or is filed with a court. Competence now includes competence with the technology; candor means never presenting an unverified AI output as authority.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Verification is the billable skill now.</strong> The value a lawyer adds is no longer the first draft - AI produces that in seconds. It is the judgment to know what is wrong, the diligence to check every cite, and the ownership to stand behind the result. Treat AI as a brilliant, confident, occasionally lying junior associate, and supervise it exactly that closely.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 2 - guard confidentiality, privilege, and the UPL line<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Never put privileged or client-confidential information into a consumer AI tool. Use vetted legal tools with confidentiality terms for client work, and remember that AI is not a lawyer - it does not give legal advice, and it cannot substitute for professional judgment.</p>
+        <ul>
+          <li><strong>Confidentiality (Model Rule 1.6)</strong> applies to what you paste. A consumer tool may retain and train on it - a potential breach before you have even used the output.</li>
+          <li><strong>Privilege</strong> can be waived by careless disclosure. The tool you choose is a privilege decision, not just a convenience one.</li>
+          <li><strong>Unauthorized practice of law</strong> - AI output is not legal advice, and letting it stand in for a lawyer's judgment (yours or, worse, a non-lawyer's) crosses a line.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "AI assists, I verify, I own it, and I guard the privilege." That sentence is the spine of the whole practitioner track.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>The fake-case test - see it invent law, then catch it <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The single most important habit in the course, in one experiment. Ask a general AI for supporting case law, then verify - and watch confident, immaculate citations turn out to be fiction.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open any general chat AI. Ask for leading cases with full citations on a specific, slightly unusual proposition (nothing confidential).</p></div>
+      <div class="step"><p>Note how authoritative the output looks - real reporters, plausible courts, confident holdings.</p></div>
+      <div class="step"><p>Now verify each citation in a real database or official source. Check that the case exists, and that it actually says what was claimed.</p></div>
+      <div class="step"><p>Count how many were fabricated or miscited. For most unusual propositions, it will be some or all. That is the trap, felt first-hand.</p></div>
+      <div class="step"><p>Repeat the ask in a legal-specific tool if you have one. Fewer fabrications - but verify anyway. The duty does not change with the tool.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">The output to distrust (confident fiction)</span>The leading authority is Caldwell v. Brighton Mutual, 219 F.3d 883 (7th Cir. 2004), holding that... [full, plausible, and quite possibly invented citation]</div>
+
+    <div class="prompt-box good"><span class="label">★ The habit to build - verify before you rely</span>Treat every AI-supplied citation as a lead, not a fact:
+1) Does the case exist in a real reporter or database?
+2) Does the opinion actually hold what the AI claims, for this jurisdiction?
+3) Is it still good law (not overruled or distinguished away)?
+Only what survives all three may be relied on or filed. You own that check.</div>
+
+    <div class="callout tip">
+      <strong>Why this is demo one</strong>
+      Every later session rests on this reflex: AI output is a draft to verify, never authority to file. Research (b2), memos (b6), and briefs live or die on it. Feel the trap once tonight so you never fall into it on a real matter.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write your AI verification protocol <span class="tag demo">★ 10 min · build your own</span></h2>
+    </div>
+    <p class="lede">A reusable artifact you will actually keep: a short "how we use AI safely" protocol. You draft it with AI, then edit it - which is rail one in miniature.</p>
+
+    <div class="steps">
+      <div class="step"><p>Give the AI the two rails and your context: your practice area, the tools you have (or have not) vetted, and the data you handle.</p></div>
+      <div class="step"><p>Ask for a one-page protocol with three lists: <em>Green light</em> (safe uses - drafting and summarizing over supplied, non-confidential text), <em>Red light</em> (never: privileged data in consumer tools, filing an unverified citation, AI as legal advice), and <em>Always</em> (verify every cite against primary law, use vetted tools for client data, a lawyer owns the output).</p></div>
+      <div class="step"><p>Edit it hard. Add your jurisdiction's specifics and your firm's approved tools. The AI draft is 70%; your professional judgment is the 30% that matters.</p></div>
+      <div class="step"><p>Circulate it. You will refine it in the leader session a3 (ethics) and the practitioner finale b10 (safe practice).</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The verification-protocol prompt</span>Draft a one-page "AI verification protocol" for a legal team.
+Context: practice area [X]; vetted tools are [list, or "none yet"]; we handle privileged
+and client-confidential data.
+
+Build it around two rails:
+1) AI assists, the lawyer verifies every citation and fact against primary law and owns
+   the output - competence + candor duties apply; never file an unverified citation.
+2) Guard confidentiality + privilege: no client data in consumer tools; vetted legal tools
+   only for client work; AI is not legal advice (UPL).
+
+Format: three short lists - Green light, Red light, Always. Plain language, one page.
+Add a line that this is internal guidance, and that our jurisdiction's rules control.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The protocol that prevented the headline.</strong> A firm rolled out AI with one rule at the top of the page: no AI citation gets filed until a human has pulled and read the actual case. It slowed nothing that mattered and stopped the one thing that could end a career. The rule was cheaper than the sanction it prevented.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the fake-case test if you did not complete it live. Verifying fabricated citations yourself is the lesson no summary can replace.</li>
+      <li>Run the same research question in a general assistant and, if available, a legal-specific tool. Compare fabrication rates - and verify both.</li>
+      <li>Finalise your one-page AI verification protocol and circulate it to a colleague.</li>
+      <li>Confirm which tools you are cleared to use for privileged or client-confidential data. If the answer is "none yet", that is a critical thing to raise - the leader session a4 helps.</li>
+      <li>Optional: skim your jurisdiction's guidance on AI and professional conduct. Bring one open question to session b2.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public legal-AI curricula, vendor documentation, and the professional-responsibility canon. CLE credit and jurisdiction-specific rules stay with accredited providers and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Research.com - AI for Legal Professionals (GenAI)</span><span class="note">Part 1-2 · what AI does across legal work; the tool landscape</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The fabricated-citation canon (2023 sanctions onward)</span><span class="note">Part 1 · the hallucination trap and the verification duty</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ABA Model Rules 1.1 / 1.6 / 3.3 (competence, confidentiality, candor)</span><span class="note">Part 3 · the rails; full depth in leader session a3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Legal-specific tool documentation (CoCounsel, Harvey, Lexis+AI, Spellbook)</span><span class="note">Part 2 · grounding + confidentiality terms</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · An AI gives you a case with a perfect-looking citation supporting your position. What do you know?</p>
+      <button class="qopt" type="button">A · It is reliable because the citation is properly formatted</button>
+      <button class="qopt" type="button">B · Nothing until you verify it exists and says what is claimed - it may be fabricated</button>
+      <button class="qopt" type="button">C · Legal-specific tools never fabricate, so it is safe there</button>
+      <p class="qwhy">AI invents confident, real-looking citations - the failure that got lawyers sanctioned. Confidence is not authority. Verify every cite against primary law; no tool is zero-risk.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · You want to summarize a privileged client contract with AI. What do you do?</p>
+      <button class="qopt" type="button">A · Paste it into a free consumer chatbot to save time</button>
+      <button class="qopt" type="button">B · Let the AI's summary stand as the final analysis</button>
+      <button class="qopt" type="button">C · Use a vetted legal tool with confidentiality terms, and review the summary yourself</button>
+      <p class="qwhy">Rail two: privileged and client-confidential material goes only in vetted tools with proper terms - a consumer tool risks a confidentiality breach and privilege waiver. And you still own the analysis.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What is the lawyer's value now that AI drafts in seconds?</p>
+      <button class="qopt" type="button">A · Verification, judgment, and owning the result - supervising AI like a confident junior who sometimes lies</button>
+      <button class="qopt" type="button">B · Producing more first drafts, faster</button>
+      <button class="qopt" type="button">C · Trusting the tool so you can move on</button>
+      <p class="qwhy">Rail one. The first draft is now cheap; the diligence to catch what is wrong, the judgment, and the ownership are the professional value - and the duty.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>AI for a lawyer</b><span>a fast junior associate - drafts, summarizes, structures over your documents. Never a source of law.</span></div>
+      <div class="cheat-item"><b>The fabricated-case trap</b><span>AI invents confident, real-looking citations that do not exist. It got lawyers sanctioned in 2023 and since.</span></div>
+      <div class="cheat-item"><b>Confidence ≠ authority</b><span>a fluent cite says nothing about whether the case is real or on point. Read the actual opinion.</span></div>
+      <div class="cheat-item"><b>Use it to</b><span>draft, summarize supplied docs, build chronologies, plain-language rewrites, surface issues to investigate.</span></div>
+      <div class="cheat-item"><b>Never trust unverified</b><span>the law, citations, holdings, quotes, advice, or judgment. Verify every cite against primary law.</span></div>
+      <div class="cheat-item"><b>Tools</b><span>general assistants (non-confidential drafting) vs legal-specific (grounded, confidential). Verify on both.</span></div>
+      <div class="cheat-item"><b>Rail 1 - verify + own</b><span>AI assists, the lawyer verifies and owns it. Competence + candor duties. "The AI generated it" is no defence.</span></div>
+      <div class="cheat-item"><b>Rail 2 - guard privilege</b><span>no client data in consumer tools; vetted legal tools only; AI is not legal advice (UPL). Not legal advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 1 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-legal-research.html">Next: Legal research with AI →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

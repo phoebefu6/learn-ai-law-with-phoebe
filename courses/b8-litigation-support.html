@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 8 · Litigation support - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 8 of 10</div>
+    <h1>Litigation support: <span class="accent">AI scaffolds, the lawyer owns the strategy</span></h1>
+    <p class="sub">Litigation buries you in documents, dates, and testimony. AI is built for exactly that grind: triaging discovery, building chronologies, drafting deposition question outlines, and analyzing case and witness materials at speed. What it cannot do is decide the theory of the case. This session uses AI as scaffolding while the lawyer owns strategy and verifies every fact and cite against the record. By the end you can move faster through the litigation grind without handing over a single judgment call.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">Practitioners: litigation · disputes</span>
+      <span class="chip audience">Vetted AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-21 · Scaffolding, discovery &amp; keeping strategy human</span>
+      <span class="a3" style="flex:5">21-42 · Build-along: chronology + deposition outline</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this session sits</h2>
+    </div>
+    <p class="lede">Litigation is where document volume and time pressure collide hardest, and where AI's ability to read, extract, and organise at speed pays off most. It is also where a fabricated fact or an unchecked cite can cost a case. Tonight AI builds the scaffolding - a chronology and a deposition outline from supplied materials - while you verify against the record and own the strategy. A reminder before anything else: this is education for legal professionals, not legal advice, and the rules of professional conduct vary by jurisdiction - verify against your bar.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A case chronology built from a small supplied (synthetic) document set and verified against the record, plus a deposition question outline drafted from supplied materials and refined by you for strategy - AI doing the assembly, the lawyer owning every conclusion.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: AI AS SCAFFOLDING ============ -->
+  <section class="section" id="scaffolding">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the litigation-tech canon - AI as scaffolding</span>
+      <h2>AI as litigation scaffolding <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Think of AI as the scaffolding around the case, not the case itself. It triages discovery, builds chronologies, drafts deposition question outlines, and analyzes case and witness materials - fast, tireless, and good at structure. The lawyer owns the strategy and every conclusion, and verifies each fact against the record before it counts.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Litigation pipeline: documents flow into AI extract, organize and summarize, then to lawyer analysis and strategy, then to work product - the lawyer owns strategy">
+        <defs>
+          <marker id="b8yAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#D8C7CC"/>
+          </marker>
+        </defs>
+        <style>
+          .b8yT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b8yI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b8yX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b8yXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b8yN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="24" y="60" width="180" height="96" rx="12" fill="#7B1E3B"/>
+        <text class="b8yT" x="44" y="98">Documents</text>
+        <text class="b8yX" x="44" y="120">discovery, exhibits,</text>
+        <text class="b8yX" x="44" y="138">statements, the record</text>
+        <line x1="204" y1="108" x2="240" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b8yAh)"/>
+        <rect x="244" y="60" width="180" height="96" rx="12" fill="#A84C64"/>
+        <text class="b8yT" x="264" y="90">AI: extract,</text>
+        <text class="b8yT" x="264" y="108">organize, summarize</text>
+        <text class="b8yX" x="264" y="138">chronologies, outlines</text>
+        <line x1="424" y1="108" x2="460" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b8yAh)"/>
+        <rect x="464" y="60" width="180" height="96" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b8yI" x="484" y="90">Lawyer: analysis</text>
+        <text class="b8yI" x="484" y="108">+ strategy</text>
+        <text class="b8yXi" x="484" y="138">owns strategy, verifies</text>
+        <line x1="644" y1="108" x2="680" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b8yAh)"/>
+        <rect x="684" y="60" width="172" height="96" rx="12" fill="#E0B3C0"/>
+        <text class="b8yI" x="704" y="98">Work product</text>
+        <text class="b8yXi" x="704" y="120">verified, strategic,</text>
+        <text class="b8yXi" x="704" y="138">the lawyer's own</text>
+        <rect x="24" y="250" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b8yN" x="48" y="262">AI assembles fast. The lawyer owns strategy and verifies every fact against the record.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the litigation pipeline: AI organizes, the lawyer owns strategy and verifies</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Scaffolding, not the building<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The scaffolding metaphor holds all the way through litigation. AI puts up the structure - it reads thousands of pages, pulls out dates and actors, orders events, and drafts question outlines. The building - the theory of the case, which witness to press, which document wins the motion - is the lawyer's. Fast assembly is real leverage, but it is only leverage if you verify what was assembled.</p>
+        <ul>
+          <li><strong>It reads at a scale you cannot.</strong> AI can triage a discovery set overnight and surface what looks relevant - a starting point for your review, not a substitute for it.</li>
+          <li><strong>It structures well, decides nothing.</strong> A clean chronology or outline is genuinely useful; the strategic weight of each entry is your call.</li>
+          <li><strong>Every fact traces to the record.</strong> An AI-asserted date or quote is a lead until you have pulled the source document. In litigation, an unverified fact is a liability.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The chronology that saved a week - after it was checked.</strong> A team fed a synthetic discovery set to AI and had a first-pass chronology in minutes instead of days. Then an associate traced every entry to its source document and caught two dates the AI had transposed. The scaffolding saved the week; the verification saved the argument that rested on those dates.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where AI helps across a litigation matter<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Discovery triage</strong> - first-pass relevance and privilege sorting across a large document set, for a human to review.</li>
+          <li><strong>Chronology-building</strong> - extract dates, actors, and events into an ordered timeline you verify.</li>
+          <li><strong>Summarization</strong> - condense long documents, transcripts, or statements into briefs you check against the source.</li>
+          <li><strong>Deposition prep</strong> - draft question outlines and flag inconsistencies in witness materials as leads.</li>
+          <li><strong>Witness-statement analysis</strong> - surface gaps and contradictions to investigate, never conclusions to rely on.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: DISCOVERY + DEPOSITION PREP ============ -->
+  <section class="section" id="discovery">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers discovery + deposition prep</span>
+      <h2>Discovery + deposition prep <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Two of litigation's heaviest lifts are where AI helps most: sifting discovery and preparing to depose. It can triage and summarize an e-discovery set, build the chronology, draft deposition outlines, and analyze witness statements. Each pairs with a human check - and every fact gets verified against the record, on vetted tools only.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The task and the human check, side by side<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI does the volume; the lawyer keeps the judgment. Each row is a place AI accelerates litigation and the check that keeps it safe.</p>
+        <table class="clean">
+          <thead><tr><th>Litigation task</th><th>The human check</th></tr></thead>
+          <tbody>
+            <tr><td>Triage + summarize an e-discovery set</td><td>Review relevance + privilege calls yourself; AI sorts, you decide</td></tr>
+            <tr><td>Build a chronology from documents</td><td>Trace every date + event back to its source document</td></tr>
+            <tr><td>Draft a deposition question outline</td><td>Refine for strategy - order, pressure points, what to hold back</td></tr>
+            <tr><td>Analyze witness statements for inconsistencies</td><td>Confirm each against the actual statement; treat as leads</td></tr>
+            <tr><td>Any of the above with case documents</td><td>Vetted tools with confidentiality terms only</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>Verify against the record, always</strong>
+          A chronology entry, a quoted line of testimony, a "the witness contradicted themselves here" - each is a lead until you have pulled the source and confirmed it. In litigation the record is the truth, not the AI's summary of it.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Discovery, privilege, and confidentiality<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Case documents are confidential.</strong> Discovery material and witness statements go into vetted tools with confidentiality terms - never a consumer chatbot.</li>
+          <li><strong>Privilege review stays human-supervised.</strong> AI can flag likely-privileged material, but a wrong call risks waiver. The lawyer confirms every privilege designation.</li>
+          <li><strong>Inconsistencies are leads.</strong> An AI-spotted contradiction is a starting point for your questioning, not a fact to assert until you have checked the underlying statements.</li>
+          <li><strong>The record governs.</strong> Anything you rely on, cite, or put to a witness must trace to the actual document - not the summary.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: STRATEGY STAYS HUMAN ============ -->
+  <section class="section" id="strategy-human">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the rail for this session</span>
+      <h2>Strategy stays human <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">AI drafts the scaffolding fast - that is real, and it is a genuine time saving. But the theory of the case, the strategy, and the judgment calls are the lawyer's, and they do not delegate. And every fact and cite you rely on gets verified against the record. Scaffolding accelerates the work; it never authors the argument.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the judgment cannot be handed over<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A chronology does not tell you which two events win the motion. An outline does not tell you which question breaks the witness. AI orders the facts; you decide what they mean and how to use them. That is the part that is legal work, and it stays with a lawyer who is accountable for it - and who has checked that the underlying facts are real.</p>
+        <ul>
+          <li><strong>Theory of the case is yours.</strong> The narrative that ties the facts together is judgment, not extraction. AI cannot supply it and should not be trusted to.</li>
+          <li><strong>Strategy is yours.</strong> What to emphasise, what to concede, when to depose, what to hold for trial - all lawyer calls.</li>
+          <li><strong>Verify every fact and cite against the record.</strong> The same rail that runs through the whole course is sharpest here: an unverified fact in litigation can lose the case, or draw sanctions if it is a fabricated cite.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "AI scaffolds the litigation; I own the strategy and I verify every fact against the record." That sentence is the spine of this session.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The line between assembly and argument<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Assembly (AI helps):</strong> reading, extracting, ordering, summarizing, drafting outlines - the volume work.</li>
+          <li><strong>Argument (lawyer owns):</strong> theory of the case, strategy, which facts matter, how to question, what to file.</li>
+          <li><strong>Verification (lawyer always):</strong> every fact traced to the record, every cite confirmed - no exceptions in litigation.</li>
+          <li><strong>Confidentiality (lawyer always):</strong> case material in vetted tools only; privilege calls human-confirmed.</li>
+          <li><strong>Remember:</strong> this is education for legal professionals, not legal advice; your bar's rules control.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Build a case chronology from a supplied set <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Take a small supplied (synthetic) document set and have AI build a chronology - then verify every entry against the record as the lawyer. This is the scaffolding-plus-verification loop in one build.</p>
+
+    <div class="steps">
+      <div class="step"><p>Use the supplied synthetic document set - a handful of dated items: emails, a memo, a statement. Nothing from a live matter.</p></div>
+      <div class="step"><p>Ask the AI to build a chronology: date, event, actor, and the source document for each entry, in order.</p></div>
+      <div class="step"><p>Verify against the record. Open each source and confirm the date, the event, and the quote. Watch for transposed dates and events attributed to the wrong document.</p></div>
+      <div class="step"><p>Mark each entry verified or corrected. An entry AI could not source is a gap to investigate, not a fact to keep.</p></div>
+      <div class="step"><p>Note how much faster the assembly was - and that the verification is what makes the chronology usable in the matter.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">The entry to distrust (unverified)</span>March 3 - defendant admits the defect in an email to the plaintiff. [Source: Exhibit 4.] Looks solid - but Exhibit 4 is dated March 30, and the "admission" is the AI's paraphrase, not a quote. Trace it before you rely on it.</div>
+
+    <div class="prompt-box good"><span class="label">★ The chronology prompt</span>Build a case chronology from the documents I supply.
+For each event give: date, what happened, who was involved, and the exact source
+document (and page/line if available). Order chronologically.
+Quote the source rather than paraphrasing where a quote matters.
+Flag any event you inferred rather than found stated, and any date you were unsure of.
+This is a draft for a lawyer to verify against the record - every entry must trace to a source.</div>
+
+    <div class="callout win">
+      <strong>★ You just built</strong>
+      A case chronology assembled by AI and verified entry-by-entry against the record - fast scaffolding, every fact checked, the strategy still yours.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Draft a deposition question outline <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Have AI draft a deposition question outline from the supplied materials, then refine it for strategy - the order, the pressure points, and what to hold back. AI supplies the scaffold; you supply the plan.</p>
+
+    <div class="steps">
+      <div class="step"><p>Using the supplied synthetic materials, ask the AI for a deposition question outline covering the key topics and any inconsistencies it noticed in the statements.</p></div>
+      <div class="step"><p>Read it as strategy, not a script. AI groups questions by topic; you decide the order, where to press, and where to leave room.</p></div>
+      <div class="step"><p>Treat every flagged inconsistency as a lead. Confirm it against the actual statement before you build a line of questioning on it.</p></div>
+      <div class="step"><p>Refine for the plan: what to establish early, what to hold for impeachment, what to keep out of the room. That sequencing is the lawyer's judgment.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The deposition-outline prompt</span>Draft a deposition question outline from the supplied materials.
+- Group questions by topic and cover the key events in the chronology.
+- Flag any inconsistencies between statements as leads for me to verify, not conclusions.
+- Keep questions open where I want the witness to talk, tighter where I want to pin a fact.
+- Note which questions depend on a document so I can have it ready.
+This is a draft for a lawyer to refine for strategy and verify against the record.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The outline that got the sequence right - after the lawyer resequenced it.</strong> AI produced a thorough, topic-ordered set of deposition questions in a minute. The lawyer kept the coverage, but moved the impeachment questions to the end, held back one document, and cut a line that would have tipped the theory early. The AI gave breadth; the strategy - the order and the restraint - was entirely human.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the chronology build if you did not complete it live, and trace every entry to its source. The verification is the lesson, not the assembly.</li>
+      <li>Take a small synthetic or non-confidential document set and produce both a chronology and a deposition outline. Time the assembly versus the verification.</li>
+      <li>On the outline, resequence for strategy: mark what you would establish early, hold for impeachment, or keep out of the room.</li>
+      <li>Pick one AI-flagged inconsistency and confirm it against the underlying statement. Note whether it held up.</li>
+      <li>Optional: write your own one-line litigation rule - "AI scaffolds, I own the strategy and verify every fact against the record" - for your matter checklist.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the public litigation-technology canon and the professional-responsibility rails. Litigation tooling moves fast - re-verify capabilities before you rely on any product. CLE credit and jurisdiction-specific rules stay with accredited providers and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Litigation-tech canon - discovery, deposition prep, chronologies</span><span class="note">Part 1-2 · scaffolding across a litigation matter (re-verify - moves fast)</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Verify-against-the-record + fabricated-citation canon</span><span class="note">Part 3 · every fact + cite traced to the source; sanctions lesson</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">E-discovery + privilege-review practice</span><span class="note">Part 2 · human-supervised relevance + privilege calls</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Confidentiality (Model Rule 1.6) for case materials</span><span class="note">Part 2 · vetted tools with confidentiality terms only</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · AI builds you a clean chronology and a deposition outline in minutes. What is the lawyer's job?</p>
+      <button class="qopt" type="button">A · Accept them - AI is good at structure, so the work is done</button>
+      <button class="qopt" type="button">B · Use them as the filed work product with a quick skim</button>
+      <button class="qopt" type="button">C · Own the strategy and every conclusion - AI scaffolds, the lawyer decides what the facts mean</button>
+      <p class="qwhy">AI is scaffolding: it assembles fast but decides nothing. The theory of the case, the strategy, and every conclusion are the lawyer's. Fast assembly is leverage only when the lawyer owns the judgment on top of it.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · An AI chronology lists a key admission on a specific date, citing an exhibit. Before you rely on it?</p>
+      <button class="qopt" type="button">A · Rely on it - it named the exhibit, so it is sourced</button>
+      <button class="qopt" type="button">B · Trace it to the actual exhibit and confirm the date, event, and quote against the record</button>
+      <button class="qopt" type="button">C · Rely on it if the exhibit number looks right</button>
+      <p class="qwhy">Verify against the record, always. AI transposes dates and paraphrases as if quoting. Every fact you rely on, cite, or put to a witness must trace to the actual document - an unverified fact in litigation is a liability.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · You want AI to help triage a discovery set of case documents. What is the rule?</p>
+      <button class="qopt" type="button">A · Use a vetted tool with confidentiality terms, and confirm relevance + privilege calls yourself</button>
+      <button class="qopt" type="button">B · Paste the documents into a free consumer chatbot to save time</button>
+      <button class="qopt" type="button">C · Let the AI's privilege designations stand as final</button>
+      <p class="qwhy">Case documents are confidential - vetted tools with confidentiality terms only, never a consumer chatbot. AI can flag likely-privileged material, but a wrong call risks waiver, so the lawyer confirms every privilege designation.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>AI is scaffolding</b><span>it triages discovery, builds chronologies, drafts deposition outlines, analyzes witness materials - fast assembly, not the argument.</span></div>
+      <div class="cheat-item"><b>Lawyer owns strategy</b><span>theory of the case, what to emphasise, which witness to press, what to file - all lawyer calls, not delegable.</span></div>
+      <div class="cheat-item"><b>Discovery triage</b><span>AI sorts relevance + privilege across a large set; the lawyer reviews and decides every call.</span></div>
+      <div class="cheat-item"><b>Chronology-building</b><span>AI extracts dates, actors, events; trace every entry to its source document.</span></div>
+      <div class="cheat-item"><b>Inconsistencies = leads</b><span>an AI-spotted contradiction is a starting point to verify, never a fact to assert.</span></div>
+      <div class="cheat-item"><b>Verify against the record</b><span>every fact, quote, and cite traces to the actual document. An unverified fact loses cases.</span></div>
+      <div class="cheat-item"><b>Confidentiality</b><span>case documents in vetted tools with confidentiality terms only - never a consumer chatbot; privilege calls human-confirmed.</span></div>
+      <div class="cheat-item"><b>Strategy stays human</b><span>AI scaffolds the litigation; the lawyer owns strategy and every judgment call. Not legal advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 8 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-client-communication-intake.html">← Previous: Client communication &amp; intake</a> &nbsp;·&nbsp; <a href="b9-compliance-policy.html">Next: Compliance &amp; policy work →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

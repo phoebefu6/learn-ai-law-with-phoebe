@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 4 · Contract review &amp; redlining - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 4 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 4 of 10</div>
+    <h1>Contract review &amp; redlining: <span class="accent">AI flags, the lawyer decides</span></h1>
+    <p class="sub">Reviewing a contract against your playbook is exactly the kind of patient, comparison-heavy work AI is good at - and exactly the kind where judgment cannot be delegated. Tonight you learn to have AI compare an agreement to YOUR playbook, flag deviations, risks, and missing terms, and draft redlines to your fallback positions - while you adjudicate each flag. Faster triage, same lawyer's call on what matters.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Practitioner track</span>
+      <span class="chip audience">Practitioners: transactional · in-house · commercial</span>
+      <span class="chip audience">Vetted AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-21 · Playbook review + risk-spotting</span>
+      <span class="a3" style="flex:5">21-42 · Build-along: review + draft redlines</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why review is a decision, not a scan</h2>
+    </div>
+    <p class="lede">In b3 you drafted from your playbook. Review is the mirror image: instead of writing to your standards, you measure someone else's contract against them. AI is strong here - it compares tirelessly, spots the clause that is missing, and drafts a redline in seconds. But flagging is not deciding. The model can tell you a liability cap deviates from your fallback; it cannot tell you whether this deviation is worth fighting over on this deal. That call is yours, on every flag. A reminder before we start: this is education for legal professionals, not legal advice, and professional-conduct rules vary by jurisdiction - verify against your bar.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A playbook-based risk review of a sample contract - the AI flagging deviations, risks, and missing terms while you adjudicate each - plus drafted redlines pulled to your fallback positions on two flagged clauses, finalized by you.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: PLAYBOOK-BASED REVIEW ============ -->
+  <section class="section" id="playbook-review">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers GC AI playbook review + Spellbook redlining</span>
+      <h2>Playbook-based review <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A playbook review is a comparison: this contract, against your standards. Give AI both and it does the tedious part fast - flagging where the agreement deviates from your positions, where it carries risk, and where an expected term is simply missing. Then it can draft the redlines. Every arrow in this flow points forward, but one box in the middle is the whole point: the lawyer decides each flag.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A review flow: the contract and your playbook feed AI, which flags deviations, risks, and missing terms; the lawyer decides each; then redlines are drafted and taken to negotiation">
+        <style>
+          .b4rT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b4rI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b4rX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b4rXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b4rN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+          .b4rA { font: 700 18px Inter, sans-serif; fill: #A84C64; }
+        </style>
+        <rect x="20" y="60" width="150" height="96" rx="12" fill="#7B1E3B"/>
+        <text class="b4rT" x="38" y="98">Contract +</text>
+        <text class="b4rT" x="38" y="116">playbook</text>
+        <text class="b4rX" x="38" y="140">their terms vs</text>
+        <text class="b4rX" x="38" y="154">your standards</text>
+        <text class="b4rA" x="178" y="114">-&gt;</text>
+        <rect x="206" y="60" width="160" height="96" rx="12" fill="#A84C64"/>
+        <text class="b4rT" x="224" y="90">AI flags</text>
+        <text class="b4rX" x="224" y="114">deviations, risks,</text>
+        <text class="b4rX" x="224" y="132">missing terms</text>
+        <text class="b4rA" x="374" y="114">-&gt;</text>
+        <rect x="402" y="60" width="160" height="96" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b4rI" x="420" y="90">Lawyer decides</text>
+        <text class="b4rXi" x="420" y="114">materiality +</text>
+        <text class="b4rXi" x="420" y="132">what to fight for</text>
+        <text class="b4rA" x="570" y="114">-&gt;</text>
+        <rect x="598" y="60" width="130" height="96" rx="12" fill="#E0B3C0"/>
+        <text class="b4rI" x="616" y="98">Redlines</text>
+        <text class="b4rXi" x="616" y="122">drafted to your</text>
+        <text class="b4rXi" x="616" y="140">fallbacks</text>
+        <text class="b4rA" x="736" y="114">-&gt;</text>
+        <rect x="764" y="60" width="96" height="96" rx="12" fill="#4A0E1F"/>
+        <text class="b4rT" x="782" y="106">Negotiate</text>
+        <rect x="20" y="250" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b4rN" x="44" y="262">The lawyer decides each flag. AI surfaces and drafts; materiality and strategy are the lawyer's call.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the review flow: AI flags, the lawyer decides each, redlines follow</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What AI flags well - and what it cannot judge<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Given the contract and your playbook, AI is genuinely good at surfacing what a tired human eye misses at midnight: the indemnity that runs one way, the cap that is missing, the termination notice that is thirty days short of your standard. What it cannot do is weigh those flags against the deal in front of you. A deviation that is fatal on one transaction is a rounding error on another. That weighing is the lawyer's work.</p>
+        <ul>
+          <li><strong>Flagging is comparison; deciding is judgment.</strong> "This deviates from your fallback" is a fact the model can find. "This deviation kills the deal" is a call only you can make.</li>
+          <li><strong>Missing terms are the hardest to see and the easiest for AI to catch.</strong> A clause that is not there does not jump off the page - but AI comparing to your playbook notices the gap.</li>
+          <li><strong>The model can be wrong too.</strong> It can miss a buried cross-reference or misread a defined term. Verify that the flags are right and that nothing was missed - your review sits on top of its review.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (vetted tool, sample contract) - flag against a playbook</span>Compare this services agreement against our playbook below. Flag every clause that deviates from our standard, every material risk, and every term we expect that is missing. For each flag, give the clause, our standard, the deviation, and a risk level. Do not redline yet - just surface, so I can decide.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The missing clause the AI caught.</strong> A reviewer ran a vendor's "clean" agreement against the firm's playbook. The AI flagged what was not there: no limitation-of-liability clause at all, which under the governing law left the client exposed without a cap. A fast human read had skimmed past the absence - you notice bad clauses, not missing ones. The lawyer decided it was material, and the redline added the cap. AI found the gap; the lawyer judged it and fixed it.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Review against a playbook vs review from scratch<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The playbook is what turns AI review from a generic risk-scan into your review.</p>
+        <ul>
+          <li><strong>From scratch,</strong> the model flags what a median contract would worry about - useful, but not aligned to your client or your positions.</li>
+          <li><strong>Against your playbook,</strong> it flags what deviates from what you would have drafted - your standards become the yardstick, and the flags are actionable.</li>
+          <li><strong>The playbook you built in b3 is the same one you review with.</strong> Standard clauses, fallback positions, party notes - drafting and review share one source of truth.</li>
+          <li><strong>Legal-specific tools help.</strong> Platforms like GC AI and Spellbook review against a loaded playbook and draft redlines - but the adjudication stays with you.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: RISK-SPOTTING + REDLINING ============ -->
+  <section class="section" id="risk-redlining">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers risk flags, triage, and redlining to fallbacks</span>
+      <h2>Risk-spotting + redlining <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Most review time goes to the same handful of clauses, because that is where the risk lives. Knowing the standard flags lets you triage a stack of agreements by risk before you read a word closely - and lets you draft redlines straight to the fallback positions in your playbook.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The standard risk flags - and triaging a stack by risk<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Point AI at these areas first; they carry the most exposure across almost every commercial agreement.</p>
+        <table class="clean">
+          <thead><tr><th>Risk area</th><th>What to check against your playbook</th></tr></thead>
+          <tbody>
+            <tr><td>Liability</td><td>Is there a cap? Is it mutual? Is the number and the carve-out list within your fallback?</td></tr>
+            <tr><td>Indemnity</td><td>Which way does it run, how broad is the trigger, and is it capped or uncapped?</td></tr>
+            <tr><td>Termination</td><td>Notice period, termination for convenience, cure rights, and what survives?</td></tr>
+            <tr><td>IP</td><td>Ownership of deliverables, license scope, and any assignment of background IP?</td></tr>
+            <tr><td>Data</td><td>Data protection, security obligations, breach notice, and cross-border terms?</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>Triage before you read</strong>
+          Feed a stack of agreements and ask AI to rank them by risk against your playbook - which have uncapped liability, one-way indemnities, or missing data terms. Read the high-risk ones closely first. You still read them; AI just tells you where to point your attention, so the riskiest contract is not the one you review last at 2am.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Drafting redlines to your fallback positions<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Redline to the fallback, not the standard.</strong> On review you are negotiating - open at your standard where you can, but the redline the model drafts should land at the fallback line you will accept.</li>
+          <li><strong>Keep the counterparty's structure where you can.</strong> A redline that rewrites their whole clause invites a fight; one that surgically pulls the term to your fallback moves faster.</li>
+          <li><strong>Draft the fallback rationale too.</strong> Ask the model for a one-line reason for each redline - useful in the negotiation, and a check that the change is justified.</li>
+          <li><strong>You finalize every redline.</strong> The model drafts the markup; you decide the wording, the ask, and the order you will concede in.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE HUMAN DECIDES ============ -->
+  <section class="section" id="human-decides">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the judgment AI cannot supply</span>
+      <h2>The human decides <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">AI surfaces and drafts. Everything that follows a flag - is it material, is it worth negotiating, what do we accept - is judgment, and judgment is the lawyer's. And because the model reviews imperfectly, part of your judgment is checking that it did not miss or misread.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Materiality, strategy, and verifying the review<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three things stay with you on every flag.</p>
+        <ul>
+          <li><strong>Materiality.</strong> Not every deviation matters. You weigh each flag against the deal - value, leverage, relationship, risk appetite - and decide which are worth raising and which you let go.</li>
+          <li><strong>Negotiation strategy.</strong> What you accept, what you trade, and the order you concede in is legal and commercial judgment. The model does not know your client's priorities; you do.</li>
+          <li><strong>Verify the review itself.</strong> Confirm the flags are accurate and, harder, that nothing was missed. A missed cross-reference or a misread defined term is the model's failure that becomes your problem if you do not catch it. Your review sits on top of its review.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "AI flags, I decide each - materiality, strategy, and whether it missed anything." That sentence is the spine of AI-assisted review. The tool makes you faster; it does not make the call.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Review a sample contract - adjudicate each flag <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The core skill, done once. Take a supplied sample contract and a supplied playbook, have AI flag every deviation and gap, then go flag by flag and decide each one. Use only the non-confidential sample material provided - no client data.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open a vetted tool. Paste the sample contract and the supplied playbook (standard clauses + fallback positions + which party you act for).</p></div>
+      <div class="step"><p>Ask AI to flag every deviation from the playbook, every material risk, and every missing term - with the clause, your standard, the deviation, and a risk level for each. No redlines yet.</p></div>
+      <div class="step"><p>Go flag by flag. For each, decide: is this material on this deal? Accept, negotiate, or let go. Mark your call and a one-line reason.</p></div>
+      <div class="step"><p>Verify the review. Spot-check that the flags are right, and read the contract yourself for anything the model missed - especially a missing term or a buried cross-reference.</p></div>
+      <div class="step"><p>You now have a decided review: every flag adjudicated, nothing accepted blindly. That is the deliverable - AI flagged, you decided.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The playbook-review prompt</span>Review this [contract type] against our playbook below. For every clause that
+deviates from our standard, every material risk, and every expected term that is
+missing, give me:
+- the clause (or note it is missing)
+- our standard / fallback for it
+- how it deviates
+- a risk level (high / medium / low)
+We act for the [party]. Do not draft redlines yet - just surface, so I decide each.
+Then list anything you were unsure about or could not check.
+Playbook: [paste standard clauses + fallbacks].</div>
+
+    <div class="callout tip">
+      <strong>Why this is demo one</strong>
+      Adjudicating flags is the habit that makes AI review safe. Do it once here on sample material and the reflex carries into due diligence (b5) and every real review: let AI flag fast, decide each flag yourself, and verify it did not miss anything.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Draft redlines to your fallbacks <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Turn two decided flags into markup. Take two clauses you flagged in Demo 1, have AI draft redlines that pull them to your fallback positions, then finalize the wording yourself - the model drafts the change, you own the ask.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick two flags you decided to negotiate in Demo 1 - say a one-way indemnity and a missing liability cap.</p></div>
+      <div class="step"><p>For each, give AI the current clause and your fallback, and ask it to draft a redline that pulls the term to your fallback while keeping the counterparty's structure where it can.</p></div>
+      <div class="step"><p>Ask for a one-line rationale per redline - the reason you will give in negotiation, and a check that the change is justified.</p></div>
+      <div class="step"><p>Finalize each redline yourself: the wording, how hard you open, and the fallback you will settle at. You own the markup that goes back to the other side. You will reuse this reflex in b6 and refine the guardrails in b10.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The redline-to-fallback prompt</span>Draft a redline for this clause to move it to our fallback position.
+Current clause: [paste].
+Our fallback (the least we will accept): [paste].
+Rules: pull the term to our fallback; keep the counterparty's structure where you can;
+do not add terms we did not ask for; mark every change.
+Output: the redlined clause (changes marked), then a one-line rationale I can use
+in negotiation. I will finalize the wording and the ask.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The surgical redline that closed faster.</strong> A team let AI draft two redlines to their fallbacks instead of rewriting the counterparty's clauses wholesale. Each change was small, marked, and justified in a line - the other side accepted both in one pass, because nothing looked like a power grab. The lawyer had decided what to fight for and finalized every word; the AI just drafted the markup to the fallback. Fast triage, surgical asks, lawyer's judgment on top.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the sample review if you did not complete it live. Adjudicating each flag yourself is the skill no summary replaces.</li>
+      <li>Run the same contract twice: once with no playbook, once against your playbook. Compare how much more actionable the playbook flags are.</li>
+      <li>Draft redlines to your fallbacks on two flagged clauses, then finalize the wording. Notice where your judgment overrode the model's draft.</li>
+      <li>Try the triage move: feed three sample agreements and have AI rank them by risk. Confirm the ranking matches your own read.</li>
+      <li>Confirm which vetted tool you are cleared to use for real client contracts. Review-along stays on sample material until that is settled.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public legal-AI review curricula and contract-tool documentation. CLE credit and jurisdiction-specific rules stay with accredited providers and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GC AI - AI contract review + playbook-based review guides (2026)</span><span class="note">Part 1-2 · playbook review, risk-spotting, triage</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Spellbook - AI redlining against a playbook</span><span class="note">Part 2 · drafting redlines to fallback positions</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The rails - verify + own, the human decides (competence + candor)</span><span class="note">Part 3 · materiality, strategy, verifying the review; full depth in b10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What makes AI review your review rather than a generic risk-scan?</p>
+      <button class="qopt" type="button">A · Using the most advanced model available</button>
+      <button class="qopt" type="button">B · Comparing the contract against your playbook - your standards become the yardstick for every flag</button>
+      <button class="qopt" type="button">C · Asking it to flag anything that looks unusual</button>
+      <p class="qwhy">From scratch the model flags what a median contract would worry about. Against your playbook it flags what deviates from what you would have drafted - aligned to your client and actionable.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · AI flags a liability cap that deviates from your fallback. What is the AI's role and yours?</p>
+      <button class="qopt" type="button">A · The AI decides it is material and drafts the final position</button>
+      <button class="qopt" type="button">B · You accept the flag and move on, since the model found it</button>
+      <button class="qopt" type="button">C · The AI surfaces the deviation; you decide materiality, strategy, and what to accept</button>
+      <p class="qwhy">Flagging is comparison; deciding is judgment. "This deviates" is a fact the model finds; "this deviation matters on this deal" is a call only the lawyer makes, on every flag.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Beyond adjudicating the flags it raised, what else must you verify?</p>
+      <button class="qopt" type="button">A · That the model did not miss or misread anything - your review sits on top of its review</button>
+      <button class="qopt" type="button">B · Nothing - if it flagged clauses, it caught everything</button>
+      <button class="qopt" type="button">C · Only that the redlines are formatted correctly</button>
+      <p class="qwhy">The model reviews imperfectly - a missed cross-reference or misread defined term becomes your problem if you do not catch it. Part of your judgment is confirming nothing was missed.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Playbook-based review</b><span>AI compares the contract to YOUR playbook - flags deviations, risks, and missing terms you can act on.</span></div>
+      <div class="cheat-item"><b>The review flow</b><span>contract + playbook -&gt; AI flags -&gt; lawyer decides each -&gt; redlines -&gt; negotiate. The decide box is the point.</span></div>
+      <div class="cheat-item"><b>Flagging ≠ deciding</b><span>"this deviates" is a fact AI finds; "this matters on this deal" is a call only the lawyer makes.</span></div>
+      <div class="cheat-item"><b>Standard risk flags</b><span>liability, indemnity, termination, IP, data - point AI here first; that is where exposure lives.</span></div>
+      <div class="cheat-item"><b>Triage by risk</b><span>rank a stack against your playbook; read the high-risk agreements closely first, not last at 2am.</span></div>
+      <div class="cheat-item"><b>Redline to fallbacks</b><span>draft markup to the fallback line, keep the counterparty's structure, one-line rationale each. You finalize.</span></div>
+      <div class="cheat-item"><b>Verify the review</b><span>confirm the flags are right AND that nothing was missed - a missed clause is the model's failure, your problem.</span></div>
+      <div class="cheat-item"><b>The human decides</b><span>materiality, strategy, what to accept - the lawyer's judgment on every flag. Not legal advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 4 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b3-contract-drafting.html">← Previous: Contract drafting</a> &nbsp;·&nbsp; <a href="b5-due-diligence-doc-review.html">Next: Due diligence &amp; document review →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

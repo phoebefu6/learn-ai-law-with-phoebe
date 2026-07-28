@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 2 · The use-case + risk map: score the bets - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Leader session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Leader track · Session 2 of 6</div>
+    <h1>The use-case + risk map: <span class="accent">score the bets before you place them</span></h1>
+    <p class="sub">Not every AI use-case in legal work is a good first bet. This session gives you the scoring grid that separates the quick wins from the career risks: value on one axis, risk on the other, every legal use-case plotted honestly. You bring the map from a1; you walk out with a scored shortlist and a defensible first move. No code, ever.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Leaders: GCs · partners · legal leaders</span>
+      <span class="chip audience">No code, ever</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · The scoring grid</span>
+      <span class="a3" style="flex:4">20-38 · Inventory + sequencing</span>
+      <span class="a4" style="flex:2">38-45 · Score your five</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>From map to scored bets</h2>
+    </div>
+    <p class="lede">In a1 you mapped where AI helps and where verification is critical across your practice. Tonight you turn that map into decisions. The tool is simple and it is the same one good investors use: score each use-case on the value it creates and the risk it carries, then sequence so you earn trust before you climb. The point is not to say yes or no to AI - your lawyers already use it - but to say yes to the right things first. A reminder before we score anything: this is education for legal professionals, not legal advice, and rules of professional conduct vary by jurisdiction - verify against your bar.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Questions for your team</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A scored shortlist of AI legal use-cases for your function, a shared vocabulary for the risk axis (hallucination, privilege, UPL, malpractice), a defensible first bet, and a sequencing rule that keeps ambition and risk in proportion.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE SCORING GRID ============ -->
+  <section class="section" id="scoring-grid">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers GC AI use-case guidance + risk canon</span>
+      <h2>Value vs risk: the scoring grid <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Two axes. Value is how much time and leverage a use-case creates for your lawyers. Risk is the chance and cost of it going wrong - and in legal work that means four specific things: hallucinated law and citations, privilege and confidentiality exposure, unauthorized practice of law, and the malpractice tail behind all of them. Plot each use-case and the shape of your strategy becomes obvious: start high-value and low-risk, and keep the two "avoid" corners off the board entirely.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A two-by-two grid with risk from low to high on the horizontal axis and value from low to high on the vertical axis. Summarizing supplied documents and drafting from a playbook sit high-value low-risk as quick wins. Legal research sits high-value high-risk, needing verification. Putting client-confidential data in a consumer tool, and using AI as legal advice, sit in the avoid zone.">
+        <style>
+          .a2gA { font: 700 13px Inter, sans-serif; fill: #6E5B60; }
+          .a2gL { font: 700 12.5px Inter, sans-serif; fill: #241016; }
+          .a2gLw { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a2gZ { font: 700 13px Inter, sans-serif; fill: #6E5B60; }
+          .a2gN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <!-- quadrant backgrounds -->
+        <rect x="70" y="40" width="360" height="150" rx="10" fill="#FBEEF1"/>
+        <rect x="440" y="40" width="360" height="150" rx="10" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <rect x="70" y="200" width="360" height="150" rx="10" fill="#FBEEF1"/>
+        <rect x="440" y="200" width="360" height="150" rx="10" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <!-- axes -->
+        <line x1="70" y1="40" x2="70" y2="350" stroke="#A84C64" stroke-width="2"/>
+        <line x1="70" y1="350" x2="800" y2="350" stroke="#A84C64" stroke-width="2"/>
+        <!-- zone labels -->
+        <text class="a2gZ" x="200" y="30">QUICK WINS</text>
+        <text class="a2gZ" x="560" y="30">VERIFY-HEAVY</text>
+        <text class="a2gZ" x="215" y="374" text-anchor="middle">LOW PRIORITY</text>
+        <text class="a2gZ" x="605" y="374" text-anchor="middle">AVOID</text>
+        <!-- dots: high value low risk -->
+        <circle cx="180" cy="95" r="11" fill="#7B1E3B"/>
+        <text class="a2gL" x="180" y="128" text-anchor="middle">Summarize supplied docs</text>
+        <circle cx="330" cy="150" r="11" fill="#7B1E3B"/>
+        <text class="a2gL" x="330" y="183" text-anchor="middle">Draft from playbook</text>
+        <!-- dot: high value high risk -->
+        <circle cx="600" cy="110" r="11" fill="#B8860B"/>
+        <text class="a2gL" x="600" y="143" text-anchor="middle">Legal research (verify)</text>
+        <!-- dots: avoid -->
+        <circle cx="560" cy="255" r="11" fill="#4A0E1F"/>
+        <text class="a2gL" x="560" y="288" text-anchor="middle">Client data in consumer tool</text>
+        <circle cx="700" cy="300" r="11" fill="#4A0E1F"/>
+        <text class="a2gL" x="700" y="333" text-anchor="middle">AI as legal advice (UPL)</text>
+        <!-- axis titles -->
+        <text class="a2gA" x="40" y="200" transform="rotate(-90 40 200)" text-anchor="middle">VALUE  low -&gt; high</text>
+        <text class="a2gA" x="435" y="404" text-anchor="middle">RISK  low -&gt; high</text>
+        <rect x="70" y="392" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="a2gN" x="94" y="404">Start top-left. Verify-heavy needs a habit first. The avoid corner stays off the board.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the value-versus-risk grid: quick wins, verify-heavy bets, and the avoid corner</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Reading the grid - four zones, one order<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The grid is not a scoreboard, it is a sequence. Where a use-case lands tells you not just whether to do it but when.</p>
+        <ul>
+          <li><strong>Quick wins (high value, low risk).</strong> Summarizing documents your lawyers supply, drafting from a playbook over non-confidential text. Real leverage, contained downside, a human still reviews. Start here.</li>
+          <li><strong>Verify-heavy (high value, high risk).</strong> Legal research is the classic case - hugely valuable, and the exact place AI fabricates. Do it, but only once the verification habit is built and grounded tools are in place.</li>
+          <li><strong>Low priority (low value, low risk).</strong> Fine to let lawyers experiment, not worth a program.</li>
+          <li><strong>Avoid.</strong> Client-confidential data in a consumer tool (privilege), and AI as legal advice (UPL). These stay off the board regardless of how much time they might save.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The tempting bet in the wrong corner.</strong> The use-case leaders most want to start with is often research - it is visible, valuable, and demos beautifully. It is also the single highest-risk square on the board, because it is exactly where AI invents cases. Teams that start there before building the verification reflex are placing their biggest bet on their least-ready muscle. Start with summarizing and drafting; earn the research bet.</p>
+        </div>
+        <div class="callout tip">
+          <strong>★ Questions to ask your team</strong>
+          Which use-case are we most tempted to start with, and which zone does it actually sit in? Is anything we already do quietly in the avoid corner? What would move a verify-heavy bet into "ready"?
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The risk axis, unpacked - four distinct exposures<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Value is easy to feel. Risk in legal work is four separate things, and a use-case can be dangerous on any one of them. Score each explicitly rather than lumping them into a vague sense of unease.</p>
+        <table class="clean">
+          <thead><tr><th>Risk</th><th>What it is</th><th>Where it bites</th></tr></thead>
+          <tbody>
+            <tr><td>Hallucination</td><td>AI invents confident, real-looking law and citations</td><td>Research, memos, briefs</td></tr>
+            <tr><td>Privilege / confidentiality</td><td>Client data pasted into a tool that may retain or train on it</td><td>Any client-confidential input</td></tr>
+            <tr><td>UPL</td><td>AI output standing in for a lawyer's advice and judgment</td><td>Client-facing answers, self-serve tools</td></tr>
+            <tr><td>Malpractice tail</td><td>The liability behind all three when it reaches a client or court</td><td>Anything filed or relied on</td></tr>
+          </tbody>
+        </table>
+        <p>A2's job is to make these four visible on every bet. A3 goes deep on the ethics behind them, and a5 on the malpractice and governance tail.</p>
+        <div class="callout tip">
+          <strong>★ Questions to ask your team</strong>
+          For our top use-case, which of the four risks is highest - and do we all agree? Where does a single input carry more than one risk at once? Which risk are we currently not even tracking?
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE INVENTORY ============ -->
+  <section class="section" id="inventory">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the legal-work use-case inventory</span>
+      <h2>The use-case inventory <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Here is the map applied across the legal work your function actually does. Value and risk are directional, not absolute - your practice, data, and tools shift them - but the shape holds: drafting and summarizing over supplied text are the safe wins, research and diligence are high-value and high-risk, and client-facing advice is where the UPL line lives.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The nine use-cases, scored and verdicted<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Use-case</th><th>Value</th><th>Risk</th><th>Verdict</th></tr></thead>
+          <tbody>
+            <tr><td>Document summarization (supplied docs)</td><td>High</td><td>Low</td><td>Quick win - start here, human reviews</td></tr>
+            <tr><td>Contract drafting from a playbook</td><td>High</td><td>Low-mid</td><td>Quick win - non-confidential text, edit output</td></tr>
+            <tr><td>Contract review + redlining</td><td>High</td><td>Mid</td><td>Strong - vetted tool, lawyer owns the redline</td></tr>
+            <tr><td>Legal research</td><td>High</td><td>High</td><td>Verify-heavy - grounded tools, check every cite</td></tr>
+            <tr><td>Due diligence + doc review</td><td>High</td><td>Mid-high</td><td>Earn it - privilege review, vetted tool</td></tr>
+            <tr><td>Memos + briefs</td><td>High</td><td>High</td><td>Verify-heavy - citation discipline is everything</td></tr>
+            <tr><td>Client communication + intake</td><td>Mid</td><td>Mid-high</td><td>Careful - UPL line; a lawyer owns the advice</td></tr>
+            <tr><td>Litigation support</td><td>High</td><td>Mid</td><td>Promising - chronologies, discovery; verify facts</td></tr>
+            <tr><td>Compliance + policy drafting</td><td>Mid</td><td>Low-mid</td><td>Solid - draft-and-edit, jurisdiction check</td></tr>
+          </tbody>
+        </table>
+        <p>Notice the pattern. Everything safe shares one trait - a human supplies the source and reviews the output. Everything high-risk shares another - AI is being trusted for the law itself, or client-confidential data is in play, or AI is edging toward giving advice.</p>
+        <div class="callout tip">
+          <strong>★ Questions to ask your team</strong>
+          Where does our practice move a row up or down from this default? Which "quick win" row are we not yet capturing? Which high-risk row is someone already doing without rails?
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: SEQUENCING ============ -->
+  <section class="section" id="sequencing">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the order that earns trust</span>
+      <h2>Sequencing: earn trust before you climb <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The grid tells you where to start; sequencing tells you how to move. The rule is simple and it protects you: start in the quick-win corner, use those wins to build the verification habit across your lawyers, then climb into research and diligence with grounding and vetted tools. Never let client-confidential data touch a consumer tool, at any step. Trust is earned rung by rung - it is not granted by a vendor demo.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The climb - and the line that never moves<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Sequencing is where a2 connects back to the three eras from a1. Each step up the grid is a step up the eras, and each one is earned.</p>
+        <ul>
+          <li><strong>Step 1 - start in the quick-win corner.</strong> Drafting and summarizing over supplied, non-confidential text, with a human review every time. This is where the verification habit forms cheaply.</li>
+          <li><strong>Step 2 - build the habit into muscle.</strong> Make "verify every cite, own the output" the norm on low-risk work before it has to carry high-risk work.</li>
+          <li><strong>Step 3 - climb to research and diligence.</strong> Only with grounded, vetted tools and the habit already in place. This is where the biggest value sits and the biggest risk lives.</li>
+          <li><strong>The line that never moves.</strong> No client-confidential or privileged data in a consumer tool, ever, at any step. That is not a sequencing choice - it is rail two.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Why the boring first bet is the smart one.</strong> A function that spends its first quarter just letting lawyers summarize supplied documents looks unambitious next to one chasing autonomous research. But the first has quietly built the reflex - verify, own it - that makes the research bet survivable, while the second has trained its people to trust output at exactly the wrong altitude. The unglamorous corner is where trust is manufactured.</p>
+        </div>
+        <div class="callout tip">
+          <strong>★ Questions to ask your team</strong>
+          Are we trying to climb before the habit is built? What would prove the verification habit is real - not just written in a policy? Is our confidentiality line actually holding at every step, or only in principle?
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What "ready to climb" actually looks like<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Leaders ask when they are allowed to move up. The honest answer is behavioural, not calendar-based - you climb when the evidence says the habit holds, not when a quarter ends.</p>
+        <ul>
+          <li><strong>Verification is observed, not assumed.</strong> Lawyers are actually pulling and reading cited cases, and you can point to it, not just to a policy.</li>
+          <li><strong>Vetted tools are in place.</strong> For any higher-risk step, grounded and confidential legal tools are chosen and approved - a4 covers this.</li>
+          <li><strong>Accountability is clear.</strong> Everyone knows who owns the output when AI is in the loop - a5 makes this explicit.</li>
+          <li><strong>The confidentiality line is not being tested.</strong> No quiet workarounds pasting client data into consumer tools "just this once".</li>
+        </ul>
+        <div class="callout tip">
+          <strong>★ Questions to ask your team</strong>
+          Can we show evidence the verification habit is real? Have we approved the tools the next step needs? Who would be accountable if the next bet went wrong tomorrow?
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ EXERCISE ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Leader exercise</span>
+      <h2>Score five real use-cases and pick your first bet <span class="tag exercise">◐ 20-30 min · decide tonight</span></h2>
+    </div>
+    <p class="lede">Take the map you brought from a1 and turn it into a scored shortlist. The output is one decision: your first bet, and why it is defensible.</p>
+    <ul>
+      <li>Pick five real use-cases from your practice - use the inventory as a starting menu.</li>
+      <li>Score each on value (time saved, leverage) and on the four risks (hallucination, privilege, UPL, malpractice tail). One to five is enough.</li>
+      <li>Plot them on the grid. Circle anything that lands in the avoid corner and take it off the board now.</li>
+      <li>Choose your first bet from the quick-win corner - high value, low risk, human-reviewed - and write one sentence on why it is the right place to start.</li>
+      <li>Name the one condition that would let you climb to a verify-heavy bet next. Carry both into a3, where the ethics behind the risk axis get their full hour.</li>
+    </ul>
+    <div class="callout tip">
+      <strong>★ Questions to ask your team</strong>
+      Do we all agree on the first bet, or is someone quietly reaching for the research square? What is the single condition standing between us and the next bet? Which use-case did we score as "safe" that deserves a second look?
+    </div>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public legal-AI use-case guidance, industry practice, and the professional-responsibility canon. CLE credit and jurisdiction-specific rules stay with accredited providers and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GC AI - AI contract review + legal-workflow guides (2026)</span><span class="note">Part 1-2 · use-case value and in-house workflows</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The legal-AI use-case inventory (drafting to compliance)</span><span class="note">Part 2 · value / risk / verdict across legal work</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The hallucination + privilege + UPL risk canon</span><span class="note">Part 1 · the risk axis; full depth in a3 / a5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ABA Model Rules 1.6 (confidentiality) + UPL limits</span><span class="note">Part 1 + 3 · the avoid corner and the confidentiality line</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Which is the strongest FIRST bet for a legal function new to AI?</p>
+      <button class="qopt" type="button">A · Autonomous legal research - it is the most valuable, so start there</button>
+      <button class="qopt" type="button">B · A self-serve client advice tool - it saves the most lawyer time</button>
+      <button class="qopt" type="button">C · Summarizing supplied documents with a human review - high value, low risk, builds the verification habit</button>
+      <p class="qwhy">Start in the quick-win corner: high value, low risk, human-reviewed. Summarizing supplied docs builds the verification habit cheaply. Research is the highest-risk square (hallucination) and a self-serve advice tool edges into UPL - both are bets you earn, not start with.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why does the grid put risk on its own axis instead of folding it into value?</p>
+      <button class="qopt" type="button">A · Because legal risk is four distinct exposures - hallucination, privilege, UPL, and the malpractice tail - that value alone hides</button>
+      <button class="qopt" type="button">B · Because risk does not really matter once you buy a legal-specific tool</button>
+      <button class="qopt" type="button">C · Because risk only applies to litigation work</button>
+      <p class="qwhy">A high-value use-case can be dangerous on any of four separate risks. Scoring risk explicitly - hallucination, privilege / confidentiality, UPL, and the malpractice tail - stops a valuable-but-risky bet from hiding behind its upside.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What is the correct sequencing rule?</p>
+      <button class="qopt" type="button">A · Start with the highest-value use-case regardless of risk, then add rails later</button>
+      <button class="qopt" type="button">B · Start high-value low-risk, build the verification habit, then climb to research and diligence with grounded, vetted tools - never client data in a consumer tool</button>
+      <button class="qopt" type="button">C · Adopt every use-case at once so lawyers can choose what they like</button>
+      <p class="qwhy">Earn trust before you climb: quick wins first, build the verify-and-own habit, then move to verify-heavy work with grounding and vetted tools. The confidentiality line - no client-confidential data in consumer tools - never moves at any step.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The grid</b><span>value (time saved, leverage) on one axis, risk on the other. Where a use-case lands sets whether AND when.</span></div>
+      <div class="cheat-item"><b>The risk axis</b><span>four distinct exposures: hallucination, privilege / confidentiality, UPL, and the malpractice tail behind them.</span></div>
+      <div class="cheat-item"><b>Quick wins</b><span>summarize supplied docs, draft from a playbook. High value, low risk, human-reviewed. Start here.</span></div>
+      <div class="cheat-item"><b>Verify-heavy</b><span>legal research, memos, briefs. High value, high risk - grounded tools, check every cite. Earn this bet.</span></div>
+      <div class="cheat-item"><b>The avoid corner</b><span>client-confidential data in a consumer tool (privilege); AI as legal advice (UPL). Off the board.</span></div>
+      <div class="cheat-item"><b>Sequencing</b><span>quick win - build the verify-and-own habit - climb to research / diligence with vetted grounded tools.</span></div>
+      <div class="cheat-item"><b>The line that never moves</b><span>no client-confidential or privileged data in consumer tools, at any step. Rail two, not a phase.</span></div>
+      <div class="cheat-item"><b>Ready to climb</b><span>verification is observed not assumed, vetted tools in place, accountability clear. Not calendar-based.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 2 of 6 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a1-ai-first-legal.html">← Previous: The AI-first legal function</a> &nbsp;·&nbsp; <a href="a3-ethics-confidentiality.html">Next: Ethics, confidentiality &amp; professional responsibility →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

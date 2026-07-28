@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 3 · Contract drafting - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 3 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 3 of 10</div>
+    <h1>Contract drafting: <span class="accent">draft from your playbook, own every term</span></h1>
+    <p class="sub">AI can produce a clause or a short agreement in seconds - but a generic draft reflects the model's average, not your firm's positions. Tonight you learn to draft from YOUR standards: feed it your clause library, templates, and fallback positions, so the output starts where you want it, and you edit and own every term. Fast first draft, lawyer's judgment on top.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Practitioner track</span>
+      <span class="chip audience">Practitioners: transactional · in-house · commercial</span>
+      <span class="chip audience">Vetted AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-21 · Playbook drafting + clause libraries</span>
+      <span class="a3" style="flex:5">21-42 · Build-along: draft a clause + a prompt</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why draft from a playbook</h2>
+    </div>
+    <p class="lede">You already know AI drafts fast (b1) and that you verify everything (b1-b2). Contract drafting is where speed pays off most - and where a generic draft is most dangerous, because a plausible-looking clause can quietly give away a position you would never concede. The fix is not to draft less with AI; it is to draft from your own material. Feed the model your clause library and fallback positions, and it produces a first pass that already reflects your standards. Then you do the part only a lawyer can: edit, judge, and own each term. A reminder before we start: this is education for legal professionals, not legal advice, and professional-conduct rules vary by jurisdiction - verify against your bar.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A clause and a short agreement drafted from a supplied playbook - with you owning every term - plus a reusable drafting prompt that carries your clause library, fallback positions, and guardrails so your next draft starts from your standards, not the model's memory.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: DRAFT FROM YOUR PLAYBOOK ============ -->
+  <section class="section" id="playbook-drafting">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Research.com drafting + Spellbook playbook drafting</span>
+      <h2>Draft from your playbook, not the model's memory <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A model with no instructions drafts a clause that reads well and represents nobody in particular - a blend of every contract it has ever seen. That average is where overreaching or non-standard terms sneak in. Give it your standards - clause library, templates, fallback positions - and the draft starts from your firm's positions. The pipeline is simple, and the last step never moves: the lawyer owns the terms.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A drafting pipeline: your playbook and standards feed the AI draft, which the lawyer reviews and edits, then verifies against the playbook - the lawyer owns the terms">
+        <style>
+          .b3xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b3xI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b3xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b3xXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b3xN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+          .b3xA { font: 700 18px Inter, sans-serif; fill: #A84C64; }
+        </style>
+        <rect x="24" y="60" width="180" height="96" rx="12" fill="#7B1E3B"/>
+        <text class="b3xT" x="44" y="98">Playbook +</text>
+        <text class="b3xT" x="44" y="116">standards</text>
+        <text class="b3xX" x="44" y="138">clauses, templates,</text>
+        <text class="b3xX" x="44" y="154">fallbacks</text>
+        <text class="b3xA" x="214" y="114">-&gt;</text>
+        <rect x="244" y="60" width="180" height="96" rx="12" fill="#A84C64"/>
+        <text class="b3xT" x="264" y="98">AI draft</text>
+        <text class="b3xX" x="264" y="122">a first pass built</text>
+        <text class="b3xX" x="264" y="140">from your material</text>
+        <text class="b3xA" x="434" y="114">-&gt;</text>
+        <rect x="464" y="60" width="180" height="96" rx="12" fill="#E0B3C0"/>
+        <text class="b3xI" x="484" y="98">Lawyer review</text>
+        <text class="b3xXi" x="484" y="122">edit each term,</text>
+        <text class="b3xXi" x="484" y="140">exercise judgment</text>
+        <text class="b3xA" x="654" y="114">-&gt;</text>
+        <rect x="684" y="60" width="172" height="96" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b3xI" x="704" y="98">Verify vs</text>
+        <text class="b3xI" x="704" y="116">playbook</text>
+        <text class="b3xXi" x="704" y="140">no drift from</text>
+        <text class="b3xXi" x="704" y="156">your positions</text>
+        <rect x="24" y="250" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b3xN" x="48" y="262">The lawyer owns the terms. The AI drafts from your material; the judgment and the sign-off are yours.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the drafting pipeline: your standards in, a lawyer-owned draft out</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Generic draft vs playbook draft - the difference you can feel<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Ask a model to "draft a limitation-of-liability clause" and it returns something competent and unaligned - maybe a mutual cap, maybe a carve-out you never wanted, maybe a number pulled from nowhere. Now hand it your standard clause and your fallback, and ask it to draft to that. Same speed, completely different starting point: the output reflects your positions, and your edits are refinements, not rescues.</p>
+        <ul>
+          <li><strong>The average is not your position.</strong> Without your standards, the model drafts the internet's median clause - which represents neither side's interests, and quietly favors whoever the training data favored.</li>
+          <li><strong>Your material is the anchor.</strong> Provide the clause you want as the model, plus the fallback you would accept. The draft lands between them, on your terms.</li>
+          <li><strong>You own every term.</strong> The AI proposes; you decide. Read each clause as if you drafted it by hand - because for professional-responsibility purposes, you did.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (vetted tool, non-confidential) - anchor to your standard</span>Here is our standard mutual limitation-of-liability clause: [paste standard]. Here is the fallback we will accept: [paste fallback]. Draft a limitation-of-liability clause for a SaaS services agreement using our standard as the model. Do not add carve-outs or terms not present in either version. Flag anything you changed.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The clause that gave away the cap.</strong> A team asked an assistant for a "standard" indemnity clause and pasted it in with light edits. It read fluently - and it uncapped their client's liability, because the model's average indemnity favored the counterparty. Nobody chose that; the draft chose it. Drafting from the firm's own capped clause would have started the draft on the right side of the line.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What "your playbook" actually contains<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A drafting playbook is not a mystery - it is the material you already rely on, gathered so the model can use it.</p>
+        <ul>
+          <li><strong>Standard clauses:</strong> your preferred wording for the terms you draft most - liability, indemnity, IP, confidentiality, termination.</li>
+          <li><strong>Fallback positions:</strong> the version you will accept when you cannot get the standard, with the line you will not cross below it.</li>
+          <li><strong>Templates:</strong> the shape of the agreement - defined terms, party roles, governing law, structure you reuse.</li>
+          <li><strong>Notes on positions:</strong> which side you act for, and what "good" looks like for that party in each clause.</li>
+        </ul>
+        <p>Feed these as examples and the model drafts inside your lines. This is the setup for Demo 2, where you turn the playbook into a reusable prompt.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CLAUSE LIBRARIES + FALLBACKS ============ -->
+  <section class="section" id="clause-libraries">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers few-shot drafting with clause libraries</span>
+      <h2>Clause libraries + fallbacks <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The mechanism that makes playbook drafting work is few-shot: give the model examples of what good looks like, and it drafts in that shape. Supply your standard and fallback clauses as examples, name the governing law and defined terms, state which party you act for - and then watch the output, because the model still likes to add helpful-looking terms you did not ask for.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Feed examples, set the frame, then watch for overreach<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three moves make a draft yours, and one habit keeps it clean.</p>
+        <table class="clause">
+          <thead><tr><th>Move</th><th>What you give the model</th></tr></thead>
+          <tbody>
+            <tr><td>Few-shot the clauses</td><td>Your standard clause + fallback as worked examples - the model drafts in that voice and structure</td></tr>
+            <tr><td>Set governing law</td><td>Name the jurisdiction so terms and enforceability match - not a generic US-flavored default</td></tr>
+            <tr><td>Fix defined terms + parties</td><td>Give the defined terms and which party you act for, so the draft favors the right side consistently</td></tr>
+            <tr><td>Watch for non-standard adds</td><td>Read for terms the model invented - extra carve-outs, novel obligations, an "industry-standard" clause you never approved</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>The overreach check</strong>
+          After every draft, ask one question: "Is there anything here I did not ask for?" The model adds plausible-sounding terms to be helpful - a carve-out, a broader indemnity, a longer term. Strike anything that is not in your playbook or that you did not choose. Added-but-unnoticed is how a draft drifts off your positions.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Building a clause library you can reuse<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Start with your top ten.</strong> The clauses you draft most often carry the most leverage - capture the standard and fallback for each.</li>
+          <li><strong>Label the party.</strong> A liability clause "good for the customer" is different from one "good for the vendor" - keep both, labeled, so the model picks the right one.</li>
+          <li><strong>Keep it current.</strong> When a negotiation moves your position, update the library. A stale playbook drafts stale terms.</li>
+          <li><strong>Legal-specific tools help.</strong> Platforms like Spellbook can draft against a clause library and flag non-standard language - but the review and the ownership stay with you.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: GROUNDING + GUARDRAILS ============ -->
+  <section class="section" id="grounding-guardrails">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the guardrails every draft assumes</span>
+      <h2>Grounding + guardrails <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Playbook drafting only holds if the model stays on your material and flags when it strays. Three guardrails do that work - and one of them is the confidentiality rail you have carried since b1.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Approved language only, flag the invented, no confidential terms in consumer tools<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>State these in the prompt and hold them in the review.</p>
+        <ul>
+          <li><strong>Use only your approved language.</strong> Tell the model to draft from the clauses you supplied and not to substitute its own "standard" wording. Grounding it in your material is what keeps the draft yours.</li>
+          <li><strong>Flag anything invented or non-standard.</strong> Ask the model to mark any term it added or changed, so you can see what came from your playbook and what came from its memory. What is flagged, you can check; what is silent, you might miss.</li>
+          <li><strong>No confidential terms in consumer tools.</strong> Draft with non-confidential or synthetic examples in general assistants; put real client terms only in vetted legal tools with confidentiality terms. Rail two, unchanged.</li>
+        </ul>
+        <div class="prompt-box bad"><span class="label">The silent overreach to catch</span>...and to be comprehensive, we have added a broad mutual indemnification covering all third-party claims, and extended the survival period to five years, consistent with industry practice.</div>
+        <div class="callout tip">
+          <strong>The one-line guardrail</strong>
+          Add this to every drafting prompt: "Draft only from the clauses I supplied. Do not add terms, carve-outs, or obligations I did not include. Mark anything you changed or invented." It turns silent overreach into a flagged edit you control.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Draft from a playbook - and own each term <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The core skill of the session, done once so it becomes a habit. Take a supplied playbook, draft a clause or a short agreement from it, then edit until every term is one you would stand behind. Use only the non-confidential sample material provided - no client data.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open a vetted tool. Paste the supplied standard clause and its fallback as your examples, plus the governing law, defined terms, and which party you act for.</p></div>
+      <div class="step"><p>Ask the model to draft the clause (or a short two-to-three-clause agreement) using your standard as the model and staying inside your material. Tell it to flag anything it changed.</p></div>
+      <div class="step"><p>Read the draft as if you wrote it. Check every term against the playbook: is this our position, or the model's average?</p></div>
+      <div class="step"><p>Strike any non-standard or overreaching term the model added. Edit the wording to your voice. This is where you exercise judgment and take ownership.</p></div>
+      <div class="step"><p>Do a final pass against the fallback: nothing has drifted below the line you would accept. Now it is your draft, not the model's.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The playbook-drafting prompt</span>Draft a [clause type] for a [contract type] governed by [jurisdiction].
+Use these as your standards - draft in this voice and structure:
+- Our standard clause: [paste standard]
+- Our fallback (the least we will accept): [paste fallback]
+We act for the [party]. Defined terms: [list].
+Rules: draft only from the language I supplied; do not add terms, carve-outs, or
+obligations I did not include; mark anything you changed or invented.
+Output the clause, then a short list of what you changed and why.</div>
+
+    <div class="callout tip">
+      <strong>Why this is demo one</strong>
+      Drafting from a playbook is the move that makes AI safe for contracts. Do it once here on sample material and the reflex carries into b4 (review), b6 (memos), and every real draft: give the model your standards, own every term, verify against your positions.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Build a reusable drafting prompt <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Do the setup once, reuse it forever. Package your clause library, fallbacks, and guardrails into a prompt template you can point at any new drafting task - so tomorrow's draft starts from your standards without you rebuilding the frame.</p>
+
+    <div class="steps">
+      <div class="step"><p>Gather three or four of your most-used clauses - standard plus fallback for each - as your starter library. Use non-confidential wording for the template itself.</p></div>
+      <div class="step"><p>Write the frame around them: governing law placeholder, party placeholder, defined-terms placeholder, and the guardrail line (approved language only, flag anything invented, no confidential terms in consumer tools).</p></div>
+      <div class="step"><p>Test it: point the prompt at a fresh clause request and check the draft lands on your positions with the overreach flagged. Tune the wording until it does.</p></div>
+      <div class="step"><p>Save it as your team drafting prompt. You will extend it in b4 with review and redlining, and refine the guardrails again in the finale b10.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The reusable drafting-prompt template</span>You are drafting for our team. Draft only from our approved language below; do not
+substitute your own "standard" wording; mark anything you change or invent.
+
+Our clause library (standard + fallback):
+- [Clause 1]: standard [...] | fallback [...]
+- [Clause 2]: standard [...] | fallback [...]
+- [Clause 3]: standard [...] | fallback [...]
+
+For each task I will give you: clause type, contract type, governing law [__],
+party we act for [__], defined terms [__].
+Guardrails: approved language only; no added carve-outs, obligations, or terms;
+no confidential client data in this tool - synthetic or non-confidential examples only.
+Output: the draft, then a change-log of anything you altered.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The prompt that paid for itself by Tuesday.</strong> An in-house team saved one drafting prompt carrying their five core clauses and guardrails. Every new agreement started from their positions instead of a blank model, and the overreach-flag caught two invented carve-outs in the first week. The setup took an afternoon; it saved a redline war on every deal after. The lawyer still owned every term - the prompt just started the draft in the right place.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the playbook draft if you did not complete it live. Owning each term against a standard is the skill no summary replaces.</li>
+      <li>Build your starter clause library - three to five clauses you draft most, each with a standard and a fallback. Keep it non-confidential for now.</li>
+      <li>Draft the same clause twice: once with no instructions, once from your playbook. Compare how far the generic draft drifts from your positions.</li>
+      <li>Add the guardrail line to your drafting prompt and confirm it flags at least one non-standard term when the model tries to add one.</li>
+      <li>Confirm which vetted tool you are cleared to use for real client terms. Draft-along stays on sample material until that is settled.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public legal-AI drafting curricula and contract-tool documentation. CLE credit and jurisdiction-specific rules stay with accredited providers and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Research.com - AI for Legal Professionals: prompt engineering for drafting</span><span class="note">Part 1-2 · playbook drafting, clause libraries, few-shot examples</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Spellbook - AI contract drafting against a clause library</span><span class="note">Part 2 · standard + fallback clauses, non-standard flagging</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The rails - verify + own, confidentiality (Model Rule 1.6)</span><span class="note">Part 3 · approved language, guardrails; full depth in b10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why draft from your playbook instead of the model's memory?</p>
+      <button class="qopt" type="button">A · The model's default clauses are always neutral and safe to use</button>
+      <button class="qopt" type="button">B · A generic draft reflects the model's average, not your firm's positions - your playbook anchors it to your standards</button>
+      <button class="qopt" type="button">C · Playbook drafting is slower but produces identical output</button>
+      <p class="qwhy">Without your standards the model drafts the internet's median clause, which favors nobody in particular and quietly gives away positions. Feeding your standard and fallback as examples anchors the draft to your firm.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The AI drafts a clean-looking clause from your playbook. Whose terms are they?</p>
+      <button class="qopt" type="button">A · The model's - it drafted them, so it owns them</button>
+      <button class="qopt" type="button">B · Shared - the tool and the lawyer split responsibility</button>
+      <button class="qopt" type="button">C · Yours - the lawyer edits, judges, and owns every term that leaves the desk</button>
+      <p class="qwhy">Rail one for drafting. AI proposes; the lawyer decides. You read each clause as if you drafted it by hand, because for professional-responsibility purposes you did.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What guardrail catches the model quietly adding an overreaching term?</p>
+      <button class="qopt" type="button">A · Tell it to use only your approved language and to flag anything it changed or invented</button>
+      <button class="qopt" type="button">B · Trust that a legal-specific tool never adds anything unrequested</button>
+      <button class="qopt" type="button">C · Accept the draft as-is if it reads fluently</button>
+      <p class="qwhy">The model adds plausible-sounding terms to be helpful. Grounding it in your language and asking it to flag any change turns silent overreach into a marked edit you can strike.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Playbook, not memory</b><span>a generic draft is the model's average; feed your clauses + fallbacks so the draft starts from your positions.</span></div>
+      <div class="cheat-item"><b>The pipeline</b><span>playbook + standards -&gt; AI draft -&gt; lawyer review + edit -&gt; verify against playbook. Last step never moves.</span></div>
+      <div class="cheat-item"><b>Few-shot the clauses</b><span>give your standard + fallback as worked examples; the model drafts in that voice and structure.</span></div>
+      <div class="cheat-item"><b>Set the frame</b><span>name governing law, defined terms, and which party you act for, so the draft favors the right side.</span></div>
+      <div class="cheat-item"><b>Watch for overreach</b><span>ask "anything here I did not request?" - strike invented carve-outs, novel obligations, "industry-standard" adds.</span></div>
+      <div class="cheat-item"><b>Guardrail line</b><span>approved language only; do not add terms; mark anything changed or invented. Add it to every prompt.</span></div>
+      <div class="cheat-item"><b>Lawyer owns the terms</b><span>AI proposes, you decide. Read each clause as if you drafted it by hand - because you own it.</span></div>
+      <div class="cheat-item"><b>Confidentiality holds</b><span>synthetic or non-confidential examples in consumer tools; real client terms only in vetted tools. Not legal advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 3 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b2-legal-research.html">← Previous: Legal research with AI</a> &nbsp;·&nbsp; <a href="b4-contract-review-redlining.html">Next: Contract review &amp; redlining →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

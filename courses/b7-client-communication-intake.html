@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 7 · Client communication &amp; intake - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 7 of 10</div>
+    <h1>Client communication &amp; intake: <span class="accent">plain language the lawyer still owns</span></h1>
+    <p class="sub">Clients do not read case law - they read the letter you send. This session uses AI to turn dense legal analysis into a clear client update and to streamline intake, then keeps the loudest rail of the whole track front and centre: AI output is not legal advice, and a lawyer reviews and owns every word that reaches a client. By the end you can move faster on client communication without ever letting an unreviewed AI draft speak for you.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Practitioner track</span>
+      <span class="chip audience">Practitioners: client-facing · in-house · solo</span>
+      <span class="chip audience">Vetted AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-21 · Plain language, intake &amp; the UPL line</span>
+      <span class="a3" style="flex:5">21-42 · Build-along: client update + intake flow</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this session sits</h2>
+    </div>
+    <p class="lede">You have drafted, reviewed, done diligence, and written memos and briefs. Now the work faces the client. This is where speed helps most and where the risk is sharpest, because a client acts on what you tell them - and a non-client might too, which is exactly where the unauthorized-practice-of-law line lives. Tonight AI does the translation and the first-draft intake; you do the reviewing and the owning. A reminder before anything else: this is education for legal professionals, not legal advice, and the rules of professional conduct vary by jurisdiction - verify against your bar.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A plain-language client update translated from a dense (non-confidential) legal analysis and reviewed by you, plus a reusable intake questionnaire and first-response template with a lawyer-review gate built in - so the lawyer owns the advice every time.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: PLAIN LANGUAGE ============ -->
+  <section class="section" id="plain-language">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Research.com client comms - plain-language translation</span>
+      <h2>Turn dense law into plain language <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A client does not need the analysis - they need to know what it means for them and what happens next. AI is genuinely good at rewriting complex reasoning into clear, calm language and at streamlining intake questionnaires. What it is not is the author of the advice: the lawyer reviews every client-facing communication and owns what it says before it is sent.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Client communication flow: the lawyer's legal analysis goes to an AI plain-language draft, then through a lawyer review-and-own gate, and only then to the client">
+        <defs>
+          <marker id="b7xAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#D8C7CC"/>
+          </marker>
+        </defs>
+        <style>
+          .b7xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b7xI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b7xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b7xXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b7xN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="24" y="60" width="180" height="96" rx="12" fill="#7B1E3B"/>
+        <text class="b7xT" x="44" y="98">Legal analysis</text>
+        <text class="b7xX" x="44" y="120">dense reasoning, cites</text>
+        <text class="b7xX" x="44" y="138">- the lawyer's work</text>
+        <line x1="204" y1="108" x2="240" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b7xAh)"/>
+        <rect x="244" y="60" width="180" height="96" rx="12" fill="#A84C64"/>
+        <text class="b7xT" x="264" y="98">AI plain-language</text>
+        <text class="b7xT" x="264" y="116">draft</text>
+        <text class="b7xX" x="264" y="138">clear, calm, no jargon</text>
+        <line x1="424" y1="108" x2="460" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b7xAh)"/>
+        <rect x="464" y="60" width="180" height="96" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b7xI" x="484" y="94">Lawyer review</text>
+        <text class="b7xXi" x="484" y="116">reads, corrects, owns</text>
+        <text class="b7xXi" x="484" y="134">the advice - the gate</text>
+        <line x1="644" y1="108" x2="680" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b7xAh)"/>
+        <rect x="684" y="60" width="172" height="96" rx="12" fill="#E0B3C0"/>
+        <text class="b7xI" x="704" y="98">Client</text>
+        <text class="b7xXi" x="704" y="120">receives a clear,</text>
+        <text class="b7xXi" x="704" y="138">reviewed update</text>
+        <rect x="24" y="250" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b7xN" x="48" y="262">Nothing reaches the client un-reviewed. The lawyer owns the advice, always.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - AI translates, the lawyer reviews and owns, then the client hears from you</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Translation is the skill - the review is the duty<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The hard part of client communication is not the law - you already did that. It is saying it so a non-lawyer understands their position, their options, and the next step, without losing accuracy or overpromising. AI is a strong first translator: feed it your analysis and it returns a clear draft. Then you read it as the author, because the moment it goes out, it is your advice.</p>
+        <ul>
+          <li><strong>Clarity, not dumbing down.</strong> Plain language keeps the meaning and drops the jargon. AI is good at this; you confirm nothing was lost or softened into a wrong impression.</li>
+          <li><strong>No new promises.</strong> An AI rewrite can quietly add certainty you never gave - "you will win" where you said "you have a strong argument". Catch that on review.</li>
+          <li><strong>The lawyer owns the advice.</strong> A client-facing update is legal communication. You review and own every one - the AI drafted it, but it speaks for you.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (over non-confidential text) - the plain-language ask</span>Rewrite this legal analysis as a short client update in plain language a non-lawyer can follow.
+Keep the meaning exact. Do not add certainty I did not state. End with clear next steps.
+Flag anything you were unsure how to phrase so I can check it.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The update the client actually read.</strong> A three-page memo became a six-line email: here is where you stand, here are your two options, here is what we recommend and why, here is the next step. The client replied in an hour instead of calling confused a week later. The lawyer wrote none of the first draft and every bit of the judgment in it - and read every line before it sent.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Good plain-language client comms - a quick checklist<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Lead with the answer</strong> - where the client stands, in one line, before the reasoning.</li>
+          <li><strong>Options, then recommendation</strong> - lay out the choices, then say what you advise and why.</li>
+          <li><strong>Name the next step</strong> - what happens now, who does it, by when.</li>
+          <li><strong>No unstated certainty</strong> - "strong argument" is not "guaranteed win". Keep the hedge you meant.</li>
+          <li><strong>You review before it sends</strong> - every client-facing draft, no exceptions. The advice is yours.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: INTAKE + EFFICIENCY ============ -->
+  <section class="section" id="intake">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers Research.com client comms - intake + efficiency</span>
+      <h2>Intake + efficiency <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Intake is repetitive, structured, and slow - exactly what AI helps with. It can draft an intake questionnaire, surface issues from what a prospective client describes (as leads to investigate, never conclusions), and produce a first-response template. The guardrail: confidentiality of everything a prospective or actual client tells you, and a lawyer between the AI and any answer.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Where AI helps intake - and where the human check sits<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI can shorten every step of intake without ever making the call. Each task below pairs with a check the lawyer keeps.</p>
+        <table class="clean">
+          <thead><tr><th>AI-assisted intake task</th><th>The guardrail (what the lawyer keeps)</th></tr></thead>
+          <tbody>
+            <tr><td>Draft an intake questionnaire for a matter type</td><td>You approve the questions and what they capture</td></tr>
+            <tr><td>Spot issues from an intake description</td><td>Treat them as leads to investigate, never conclusions</td></tr>
+            <tr><td>Draft a first-response template to a prospect</td><td>You review and own it before it is sent</td></tr>
+            <tr><td>Summarize a long intake into a matter brief</td><td>You verify it against what the client actually said</td></tr>
+            <tr><td>Handle any client-provided information</td><td>Vetted tools with confidentiality terms only</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>Issue-spotting is a lead, not a diagnosis</strong>
+          When AI reads an intake and says "this looks like a limitations problem", that is a prompt for you to check the limitation period - not a finding to relay to the client. The lawyer confirms every issue before it becomes advice.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Confidentiality starts at hello<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Prospective-client duties apply early.</strong> Information a would-be client shares can carry confidentiality obligations before they ever become a client. Treat intake data as sensitive from the first message.</li>
+          <li><strong>Vetted tools only.</strong> If intake content goes near AI, it goes into a tool with confidentiality terms suited to client data - never a consumer chatbot.</li>
+          <li><strong>Conflicts before content.</strong> Intake is also where conflicts surface. AI can help organise the check; the lawyer runs and clears it.</li>
+          <li><strong>First response is not advice.</strong> A template acknowledging an inquiry is fine; a template that answers the legal question is not - route that to a lawyer.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE UPL + ADVICE LINE (LOUD) ============ -->
+  <section class="section" id="upl-line">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the loudest rail of the track</span>
+      <h2>The UPL + advice line - read this twice <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">This is the rail that matters most the instant AI faces a client. AI output is not legal advice. Never let an AI-generated communication stand as advice to a client - and never, ever to a non-client - without a lawyer's review. A lawyer reviews and owns every client-facing legal communication. No exceptions, no "it was just a draft".</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the client-facing line is the sharpest one<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Internally, an unverified AI draft is a mistake you can catch. Facing a client, it is advice the moment they read it - and they act on it. If it reaches a non-client, it can be unauthorized practice of law and the giving of legal advice by a machine no one is standing behind. That is why this rail is louder here than anywhere else in the course.</p>
+        <ul>
+          <li><strong>AI does not give legal advice.</strong> It generates text. Advice requires a lawyer's judgment applied to a specific client's facts - and a lawyer accountable for it.</li>
+          <li><strong>A client acts on what you send.</strong> "The AI drafted it" is no comfort to a client who relied on a wrong answer, and no defence to you.</li>
+          <li><strong>A non-client is the bright red line.</strong> Letting AI answer legal questions for people who are not your clients, with no lawyer reviewing, is unauthorized practice - the exact thing UPL rules exist to stop.</li>
+          <li><strong>The lawyer owns every client-facing word.</strong> Review, correct, and own it before it is sent. That ownership is the whole point of the rail.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "AI is not legal advice. A lawyer reviews and owns every client-facing communication - to a client, and never to a non-client without me." That sentence is the spine of this session.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the rail forbids, plainly<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Never</strong> let an AI-generated answer go to a client as advice without a lawyer reading and owning it.</li>
+          <li><strong>Never</strong> deploy an AI tool that answers legal questions for non-clients on its own - that is unauthorized practice of law.</li>
+          <li><strong>Never</strong> present an AI plain-language rewrite as final without confirming it did not add certainty or drop a caveat.</li>
+          <li><strong>Always</strong> keep a lawyer-review gate between any AI draft and any client-facing send.</li>
+          <li><strong>Always</strong> remember this is education for legal professionals, not legal advice; your bar's rules control.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Dense analysis to a plain-language client update <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Take a (non-confidential, synthetic) legal analysis and turn it into a client update anyone can follow - then review and own it as the lawyer. This is rail one and the plain-language skill in one build.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start from a short non-confidential or synthetic legal analysis - a paragraph or two of real legal reasoning with a conclusion. Nothing from a live client matter.</p></div>
+      <div class="step"><p>Ask the AI for a plain-language client update: lead with where the client stands, then options, then your recommendation and the next step.</p></div>
+      <div class="step"><p>Read it as the author. Check three things: is the meaning intact, did it add certainty you never gave, and did any caveat quietly disappear?</p></div>
+      <div class="step"><p>Edit hard. Restore the hedge you meant, fix the tone, add the specific next step. The AI draft is the scaffold; the judgment is yours.</p></div>
+      <div class="step"><p>Mark it "reviewed and owned by [lawyer]" in your process. That gate is what makes it safe to send.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">The rewrite to distrust (added certainty)</span>Good news - you are going to win this. There is nothing to worry about and the other side has no case, so we can proceed with full confidence. [The analysis said "a strong but not guaranteed argument" - the AI upgraded it.]</div>
+
+    <div class="prompt-box good"><span class="label">★ The client-update prompt</span>Rewrite this legal analysis as a short client update in plain language.
+- Lead with where the client stands (one line), then their options, then what we recommend and why.
+- Keep the meaning exact. Do NOT add certainty the analysis did not state - preserve every hedge and caveat.
+- End with a clear next step: what happens now, who does it, by when.
+- Flag any sentence you were unsure how to phrase so I can review it.
+This is a draft for a lawyer to review and own before it reaches the client.</div>
+
+    <div class="callout win">
+      <strong>★ You just built</strong>
+      A plain-language client update, translated by AI and reviewed and owned by you - with the added-certainty trap caught before it ever reached a client.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>An intake questionnaire + first-response template <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">A reusable pair you will keep: an intake questionnaire for a matter type and a first-response template - both with a lawyer-review gate written into them so no answer goes out un-reviewed.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick a common matter type in your practice. Ask the AI to draft an intake questionnaire that captures the facts you need before a first consultation.</p></div>
+      <div class="step"><p>Review the questions. Add what it missed, cut what invites privileged detail too early, and confirm nothing there gives advice.</p></div>
+      <div class="step"><p>Ask for a first-response template that acknowledges the inquiry, sets expectations, and routes the legal questions to a lawyer - it must not answer them.</p></div>
+      <div class="step"><p>Write the gate in explicitly: "a lawyer reviews and owns any substantive response before it is sent." Keep it at the top where no one can miss it.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The intake + first-response prompt</span>Draft two things for a legal intake process on [matter type]:
+1) An intake questionnaire capturing the facts we need before a first consultation.
+   Do not ask for privileged detail before we have cleared conflicts.
+2) A first-response template that acknowledges the inquiry and sets expectations.
+   It must NOT answer the legal question - route substantive questions to a lawyer.
+Put a line at the top of both: "A lawyer reviews and owns any substantive response before
+it is sent. AI output is not legal advice." Plain language.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The intake that never gave advice by accident.</strong> A solo practice let AI draft its intake flow and, at first, the auto-response cheerfully answered the legal question. One edit fixed it: the template now acknowledges, sets expectations, and hands every substantive question to the lawyer. Faster intake, zero unauthorized advice - because the gate was written in, not assumed.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the plain-language client update if you did not complete it live. Compare your reviewed version to the raw AI draft - note what you had to fix.</li>
+      <li>Build one intake questionnaire and one first-response template for a matter type you handle, each with the lawyer-review gate written in at the top.</li>
+      <li>Take one real (redacted, non-confidential) analysis you have on file and produce a plain-language version. Time how long the whole cycle takes.</li>
+      <li>Check your first-response template does not answer a legal question anywhere. If it does, route it to a lawyer instead.</li>
+      <li>Optional: draft a one-line house rule - "a lawyer reviews and owns every client-facing communication" - and put it where your team drafts client messages.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public legal-AI curricula on client communication and the professional-responsibility canon. CLE credit and jurisdiction-specific rules stay with accredited providers and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Research.com - AI for Legal Professionals: client communication</span><span class="note">Part 1-2 · plain-language translation, intake, efficiency</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Plain-language client-communication practice</span><span class="note">Part 1 · lead with the answer, options, recommendation, next step</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Unauthorized practice of law (UPL) + AI-is-not-advice canon</span><span class="note">Part 3 · the loud rail; a lawyer owns every client-facing word</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Confidentiality (Model Rule 1.6) + prospective-client duties</span><span class="note">Part 2 · vetted tools for intake data; conflicts first</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What is AI genuinely good at in client communication?</p>
+      <button class="qopt" type="button">A · Deciding what to advise the client</button>
+      <button class="qopt" type="button">B · Translating dense legal analysis into a clear plain-language draft for you to review</button>
+      <button class="qopt" type="button">C · Sending the final update directly to the client</button>
+      <p class="qwhy">AI is a strong first translator - it turns your analysis into clear language fast. It does not decide the advice or send it. You review, correct, and own the update before it reaches the client.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · An AI drafts a warm, clear reply that answers a client's legal question. What do you do before it goes out?</p>
+      <button class="qopt" type="button">A · Send it - it reads well and saves time</button>
+      <button class="qopt" type="button">B · Send it but add a disclaimer that AI wrote it</button>
+      <button class="qopt" type="button">C · Review and own it as the lawyer - it is your advice the moment the client reads it</button>
+      <p class="qwhy">A client-facing legal communication is advice the instant the client acts on it. The lawyer reviews and owns every one. "The AI drafted it" is no defence, and a disclaimer does not transfer the duty.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Where is the line the sharpest?</p>
+      <button class="qopt" type="button">A · Letting AI answer legal questions for non-clients with no lawyer reviewing - that is unauthorized practice</button>
+      <button class="qopt" type="button">B · Using AI to reword an internal draft</button>
+      <button class="qopt" type="button">C · Asking AI to draft an intake questionnaire</button>
+      <p class="qwhy">The UPL rail is loudest facing non-clients. AI output is not legal advice; letting it answer legal questions for people who are not your clients, unreviewed, is unauthorized practice of law. A lawyer must review and own it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Plain language</b><span>AI translates dense analysis into a clear client update - lead with the answer, then options, recommendation, next step.</span></div>
+      <div class="cheat-item"><b>No added certainty</b><span>an AI rewrite can upgrade "strong argument" to "you will win". Restore every hedge on review.</span></div>
+      <div class="cheat-item"><b>Intake</b><span>AI drafts questionnaires, first-response templates, matter summaries. You approve the questions and own the response.</span></div>
+      <div class="cheat-item"><b>Issue-spotting = leads</b><span>an AI-flagged issue is a prompt to investigate, never a conclusion to relay to the client.</span></div>
+      <div class="cheat-item"><b>Confidentiality from hello</b><span>prospective-client info is sensitive early. Vetted tools with confidentiality terms only - never a consumer chatbot.</span></div>
+      <div class="cheat-item"><b>AI is not advice</b><span>AI generates text; advice needs a lawyer's judgment and a lawyer accountable for it.</span></div>
+      <div class="cheat-item"><b>The UPL line (loud)</b><span>never let AI answer legal questions for a client - or worse a non-client - without a lawyer reviewing. That is unauthorized practice.</span></div>
+      <div class="cheat-item"><b>Lawyer owns every word</b><span>a lawyer reviews and owns every client-facing communication before it sends. Not legal advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 7 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-memos-briefs.html">← Previous: Legal memos &amp; briefs</a> &nbsp;·&nbsp; <a href="b8-litigation-support.html">Next: Litigation support →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

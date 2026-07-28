@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn AI + law with phoebe - a two-track course for lawyers who embrace AI</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(123,30,59,.15); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#F7E7EB); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .rail { margin-top: 1.4rem; border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: var(--radius); background: var(--amber-50); padding: 1rem 1.2rem; font-size: .9rem; }
+  .rail b { color: var(--amber-ink); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe</div>
+    <h1>Two tracks for lawyers who <span class="accent">embrace AI</span></h1>
+    <p class="sub">A leader track that teaches GCs and partners to steer AI in legal practice - ethics, risk, and legal ops - without a line of code, and a practitioner track that puts AI to work in the real craft of lawyering: research, contracts, review, memos, and litigation support. Around 80% of firms are investing in AI, but only about 35% of lawyers feel AI-ready. This closes that gap - carefully, with verification as a duty.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+      <div class="stat"><b data-count="35">35</b><span>% of lawyers feel AI-ready today</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for GCs, partners &amp; legal leaders · 6 x 45 min · no code, ever</span></h2>
+      <p class="plede">Thinking mode: where AI wins in legal work, the ethics and confidentiality lines that cannot be crossed, how to build the team, and how to govern the risk - each session ends with the questions to ask your team.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-ai-first-legal.html" style="--diff:#34D399">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>The AI-first legal function</h3>
+        <p>Where AI genuinely wins in legal work, the skills gap, and the competence duty that now includes technology.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-use-case-risk-map.html" style="--diff:#34D399">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>The use-case + risk map</h3>
+        <p>Score AI bets across legal work - weighed against hallucination, privilege, and unauthorized-practice risk.</p>
+        <span class="meta"><span class="pill light">Prioritization exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-ethics-confidentiality.html" style="--diff:#FBBF24">
+        <span class="cicon">🛡️</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Ethics, confidentiality &amp; professional responsibility</h3>
+        <p>The fabricated-citation sanctions, privilege and confidentiality, candor to the tribunal, UPL, and disclosure.</p>
+        <span class="meta"><span class="pill light">Ethics checklist</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-ai-ready-legal-team.html" style="--diff:#FBBF24">
+        <span class="cicon">👥</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>The AI-ready legal team &amp; legal ops</h3>
+        <p>New roles, the training that closes the skills gap, and choosing legal tech - build versus buy versus blend.</p>
+        <span class="meta"><span class="pill light">Skills-map exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-risk-malpractice-governance.html" style="--diff:#FB923C">
+        <span class="cicon">📋</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>Risk, malpractice &amp; governance</h3>
+        <p>The verification duty, malpractice exposure, client-data security, model risk, and the policy that holds up.</p>
+        <span class="meta"><span class="pill light">Governance checklist</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-strategy-future-legal.html" style="--diff:#FB923C">
+        <span class="cicon">🔭</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Strategy &amp; the future of legal work</h3>
+        <p>Agentic legal workflows, the impact on the billable hour, the 24-month roadmap, and the narrative for the partnership.</p>
+        <span class="meta"><span class="pill light">Roadmap exercise</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The practitioner track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for practising lawyers · 10 x 45 min · vetted AI tools, no code</span></h2>
+      <p class="plede">Hands on real legal work: research that cites real law, contract drafting and review, memos and briefs, due diligence, and litigation support - with verification and privilege guarding every step.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-ai-foundations-lawyers.html" style="--diff:#34D399">
+        <span class="cicon">🤖</span>
+        <span class="cnum">Practitioner 1 · easy</span>
+        <h3>AI foundations for lawyers</h3>
+        <p>What AI does well and dangerously for legal work, the tool landscape, and the rails that keep you out of trouble.</p>
+        <span class="meta"><span class="pill amber">▶ Practitioners start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-legal-research.html" style="--diff:#FBBF24">
+        <span class="cicon">🔍</span>
+        <span class="cnum">Practitioner 2 · medium</span>
+        <h3>Legal research with AI</h3>
+        <p>Grounded research that cites real, verified authority - with a live simulator that shows the fake-case trap and the fix.</p>
+        <span class="meta"><span class="pill light">★ interactive: law-live</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-contract-drafting.html" style="--diff:#FBBF24">
+        <span class="cicon">✍️</span>
+        <span class="cnum">Practitioner 3 · medium</span>
+        <h3>Contract drafting</h3>
+        <p>Draft from your playbook - clauses, templates, and standards - fast, with the lawyer owning every term.</p>
+        <span class="meta"><span class="pill light">Draft from playbook</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-contract-review-redlining.html" style="--diff:#FBBF24">
+        <span class="cicon">📑</span>
+        <span class="cnum">Practitioner 4 · medium</span>
+        <h3>Contract review &amp; redlining</h3>
+        <p>Spot risk against a playbook, draft redlines, and triage a stack of agreements - you make the call on each.</p>
+        <span class="meta"><span class="pill light">Review + redline</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-due-diligence-doc-review.html" style="--diff:#FB923C">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Practitioner 5 · hands-on</span>
+        <h3>Due diligence &amp; document review</h3>
+        <p>Extract, summarize, and triage large document sets - with privilege review and a human check on every conclusion.</p>
+        <span class="meta"><span class="pill light">Diligence triage</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-memos-briefs.html" style="--diff:#FBBF24">
+        <span class="cicon">📝</span>
+        <span class="cnum">Practitioner 6 · medium</span>
+        <h3>Legal memos &amp; briefs</h3>
+        <p>Structure analysis and draft memos and briefs faster - with citation discipline and independent verification.</p>
+        <span class="meta"><span class="pill light">Memo draft</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-client-communication-intake.html" style="--diff:#34D399">
+        <span class="cicon">💬</span>
+        <span class="cnum">Practitioner 7 · easy</span>
+        <h3>Client communication &amp; intake</h3>
+        <p>Turn dense law into plain-language client updates and streamline intake - the lawyer still owns the advice.</p>
+        <span class="meta"><span class="pill light">Client update</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-litigation-support.html" style="--diff:#FB923C">
+        <span class="cicon">⚔️</span>
+        <span class="cnum">Practitioner 8 · hands-on</span>
+        <h3>Litigation support</h3>
+        <p>Discovery triage, deposition prep, chronologies, and case analysis - AI drafts the scaffolding, you own strategy.</p>
+        <span class="meta"><span class="pill light">Case chronology</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-compliance-policy.html" style="--diff:#FB923C">
+        <span class="cicon">✅</span>
+        <span class="cnum">Practitioner 9 · hands-on</span>
+        <h3>Compliance &amp; policy work</h3>
+        <p>Draft policies, track regulatory change, and run compliance checks - grounded in the actual rules, not the model's memory.</p>
+        <span class="meta"><span class="pill light">Policy draft</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-governance-confidentiality.html" style="--diff:#F87171">
+        <span class="cicon">🔒</span>
+        <span class="cnum">Practitioner 10 · hardest</span>
+        <h3>Governance, confidentiality &amp; safe practice</h3>
+        <p>Privilege, data security, disclosure, and the safe-practice checklist before AI touches a real matter.</p>
+        <span class="meta"><span class="pill light">Practice checklist</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="rail">
+      <b>The one rule this whole course runs on:</b> AI assists, the licensed lawyer decides and owns it - and you verify every citation and fact against primary sources. Never put privileged or client-confidential information into a consumer tool. This course is education for legal professionals, not legal advice, and rules of professional conduct vary by jurisdiction.
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one course. Legal leaders set the guardrails; practitioners get the toolkit - and verification guards both.</p>
+      <div class="path"><b>🤝 Leader (no code, ever)</b>
+        <a class="pstep" href="courses/a1-ai-first-legal.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-use-case-risk-map.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-ethics-confidentiality.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-ai-ready-legal-team.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-risk-malpractice-governance.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-strategy-future-legal.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Practitioner (the toolkit)</b>
+        <a class="pstep" href="courses/b1-ai-foundations-lawyers.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-legal-research.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-contract-drafting.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-contract-review-redlining.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-due-diligence-doc-review.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-memos-briefs.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-client-communication-intake.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-litigation-support.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-compliance-policy.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-governance-confidentiality.html">b10</a>
+      </div>
+      <div class="path"><b>🌱 Curious follower (a taste)</b>
+        <a class="pstep" href="courses/a1-ai-first-legal.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-ethics-confidentiality.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-legal-research.html">b2</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (lead AND practise)</b>
+        <a class="pstep" href="courses/a1-ai-first-legal.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-ai-foundations-lawyers.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · education for legal professionals, not legal advice · sources: Research.com · GC AI · Spellbook + ABA Model Rules + the fabricated-citation canon</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "AI +\nLaw",
+  centerColor: "#4A0E1F",
+  sessions: [
+    { label: "AI-first\nlegal", href: "courses/a1-ai-first-legal.html", color: "#34D399",
+      concepts: [
+        { label: "Where AI wins", href: "courses/a1-ai-first-legal.html" },
+        { label: "Competence duty", href: "courses/a1-ai-first-legal.html" } ] },
+    { label: "Use-case +\nrisk map", href: "courses/a2-use-case-risk-map.html", color: "#34D399",
+      concepts: [
+        { label: "Score the bets", href: "courses/a2-use-case-risk-map.html" },
+        { label: "Privilege + UPL", href: "courses/a2-use-case-risk-map.html" } ] },
+    { label: "Ethics +\nconfidentiality", href: "courses/a3-ethics-confidentiality.html", color: "#FBBF24",
+      concepts: [
+        { label: "Fake-case sanctions", href: "courses/a3-ethics-confidentiality.html" },
+        { label: "Privilege + candor", href: "courses/a3-ethics-confidentiality.html" },
+        { label: "UPL", href: "courses/a3-ethics-confidentiality.html" } ] },
+    { label: "AI-ready\nlegal team", href: "courses/a4-ai-ready-legal-team.html", color: "#FBBF24",
+      concepts: [
+        { label: "Training the gap", href: "courses/a4-ai-ready-legal-team.html" },
+        { label: "Buy vs build", href: "courses/a4-ai-ready-legal-team.html" } ] },
+    { label: "Risk +\nmalpractice", href: "courses/a5-risk-malpractice-governance.html", color: "#FB923C",
+      concepts: [
+        { label: "Verification duty", href: "courses/a5-risk-malpractice-governance.html" },
+        { label: "Client data", href: "courses/a5-risk-malpractice-governance.html" } ] },
+    { label: "Strategy +\nfuture", href: "courses/a6-strategy-future-legal.html", color: "#FB923C",
+      concepts: [
+        { label: "Agentic workflows", href: "courses/a6-strategy-future-legal.html" },
+        { label: "Billing impact", href: "courses/a6-strategy-future-legal.html" } ] },
+    { label: "AI\nfoundations", href: "courses/b1-ai-foundations-lawyers.html", color: "#34D399",
+      concepts: [
+        { label: "Can vs can't", href: "courses/b1-ai-foundations-lawyers.html" },
+        { label: "Tool landscape", href: "courses/b1-ai-foundations-lawyers.html" },
+        { label: "The rails", href: "courses/b1-ai-foundations-lawyers.html" } ] },
+    { label: "Legal\nresearch", href: "courses/b2-legal-research.html", color: "#FBBF24",
+      concepts: [
+        { label: "Grounding", href: "courses/b2-legal-research.html" },
+        { label: "Verify citations", href: "courses/b2-legal-research.html" },
+        { label: "No fake cases", href: "courses/b2-legal-research.html" } ] },
+    { label: "Contract\ndrafting", href: "courses/b3-contract-drafting.html", color: "#FBBF24",
+      concepts: [
+        { label: "Playbook drafting", href: "courses/b3-contract-drafting.html" },
+        { label: "Clauses", href: "courses/b3-contract-drafting.html" } ] },
+    { label: "Contract\nreview", href: "courses/b4-contract-review-redlining.html", color: "#FBBF24",
+      concepts: [
+        { label: "Risk-spotting", href: "courses/b4-contract-review-redlining.html" },
+        { label: "Redlines", href: "courses/b4-contract-review-redlining.html" } ] },
+    { label: "Due\ndiligence", href: "courses/b5-due-diligence-doc-review.html", color: "#FB923C",
+      concepts: [
+        { label: "Doc extraction", href: "courses/b5-due-diligence-doc-review.html" },
+        { label: "Privilege review", href: "courses/b5-due-diligence-doc-review.html" } ] },
+    { label: "Memos &\nbriefs", href: "courses/b6-memos-briefs.html", color: "#FBBF24",
+      concepts: [
+        { label: "Structure", href: "courses/b6-memos-briefs.html" },
+        { label: "Citation discipline", href: "courses/b6-memos-briefs.html" } ] },
+    { label: "Client\ncomms", href: "courses/b7-client-communication-intake.html", color: "#34D399",
+      concepts: [
+        { label: "Plain language", href: "courses/b7-client-communication-intake.html" },
+        { label: "Own the advice", href: "courses/b7-client-communication-intake.html" } ] },
+    { label: "Litigation\nsupport", href: "courses/b8-litigation-support.html", color: "#FB923C",
+      concepts: [
+        { label: "Discovery triage", href: "courses/b8-litigation-support.html" },
+        { label: "Chronologies", href: "courses/b8-litigation-support.html" } ] },
+    { label: "Compliance\n& policy", href: "courses/b9-compliance-policy.html", color: "#FB923C",
+      concepts: [
+        { label: "Policy drafting", href: "courses/b9-compliance-policy.html" },
+        { label: "Reg tracking", href: "courses/b9-compliance-policy.html" } ] },
+    { label: "Governance +\nconfidentiality", href: "courses/b10-governance-confidentiality.html", color: "#F87171",
+      concepts: [
+        { label: "Privilege", href: "courses/b10-governance-confidentiality.html" },
+        { label: "Data security", href: "courses/b10-governance-confidentiality.html" },
+        { label: "Practice checklist", href: "courses/b10-governance-confidentiality.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

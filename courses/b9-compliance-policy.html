@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 9 · Compliance &amp; policy work - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 9 of 10</div>
+    <h1>Compliance &amp; policy work: <span class="accent">draft grounded in the actual rule, not the model's memory</span></h1>
+    <p class="sub">Compliance work is where AI is most tempting and most dangerous: it will happily summarize a regulation and draft a policy from what it half-remembers, and the half-remembered version is often wrong or out of date. Tonight you do it the safe way - draft policy and run gap-checks grounded in the actual regulation you supply, then verify every line against the source. AI surfaces; you confirm; you own the compliance conclusion.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">Practitioners: compliance · in-house · regulatory</span>
+      <span class="chip audience">Vetted AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-21 · Grounded drafting + tracking</span>
+      <span class="a3" style="flex:5">21-42 · Build-along: policy + gap-check</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">You have built research, drafting, review, diligence, memos, client comms, and litigation support. Compliance and policy work pulls them together - and adds a sharp new risk: the rule itself. An AI asked "what does regulation X require?" will answer fluently from memory, and that memory may be wrong, incomplete, or a version ago. The discipline tonight is grounding: never let AI draft policy or summarize an obligation from its own memory - feed it the actual text and verify against the source. This is education for legal professionals, not legal advice, and rules vary by jurisdiction - verify against your regulator and your bar.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A short policy or procedure drafted from a real regulation excerpt you supply and verified against it, plus a compliance gap-check of a sample policy run against supplied obligations - two artifacts you produced by grounding AI in the actual rule, not its memory, with you confirming and owning every conclusion.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: GROUNDED DRAFTING ============ -->
+  <section class="section" id="grounded-drafting">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the compliance-drafting canon</span>
+      <h2>Draft policy grounded in the actual rules <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">AI is genuinely fast at policies, procedures, and change summaries - but only when it is grounded in the regulation you supply, not the version it half-remembers. The move is always the same: paste the actual text, ask AI to draft or summarize from that text alone, then verify every clause back against the source. AI produces the draft; the lawyer verifies against the rule and owns it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Compliance drafting pipeline: the actual regulation you supply feeds an AI draft or summary, which the lawyer verifies against the source before it becomes a policy or finding">
+        <defs>
+          <marker id="b9xAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#D8C7CC"/></marker>
+        </defs>
+        <style>
+          .b9xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b9xI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b9xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b9xXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b9xN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="24" y="60" width="180" height="96" rx="12" fill="#4A0E1F"/>
+        <text class="b9xT" x="44" y="98">The actual rule</text>
+        <text class="b9xX" x="44" y="120">regulation excerpt</text>
+        <text class="b9xX" x="44" y="138">YOU supply</text>
+        <line x1="204" y1="108" x2="244" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b9xAh)"/>
+        <rect x="248" y="60" width="180" height="96" rx="12" fill="#7B1E3B"/>
+        <text class="b9xT" x="268" y="98">AI drafts</text>
+        <text class="b9xX" x="268" y="120">policy, procedure,</text>
+        <text class="b9xX" x="268" y="138">or change summary</text>
+        <line x1="428" y1="108" x2="468" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b9xAh)"/>
+        <rect x="472" y="60" width="180" height="96" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b9xI" x="492" y="90">Lawyer verifies</text>
+        <text class="b9xXi" x="492" y="112">vs the source -</text>
+        <text class="b9xXi" x="492" y="130">line by line</text>
+        <line x1="652" y1="108" x2="692" y2="108" stroke="#D8C7CC" stroke-width="2.5" marker-end="url(#b9xAh)"/>
+        <rect x="696" y="60" width="160" height="96" rx="12" fill="#A84C64"/>
+        <text class="b9xT" x="716" y="98">Policy / finding</text>
+        <text class="b9xX" x="716" y="120">you own it</text>
+        <rect x="24" y="250" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b9xN" x="48" y="262">Verify against the source. AI drafts from the text you supply - never from its own memory.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the grounded compliance pipeline: real rule in, verified policy out</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Grounding is the whole job - paste the rule, do not trust the memory<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The failure mode in compliance is quieter than a fabricated case, and just as damaging: AI writes a confident, professional policy based on a regulation it remembers slightly wrong, or as it stood two amendments ago. Nobody notices until an auditor does. The fix is grounding - give the model the actual regulatory text and instruct it to draft only from what you supplied.</p>
+        <ul>
+          <li><strong>Supply the text, always.</strong> Paste the actual regulation, standard, or obligation. "Draft from this text only - do not add requirements from memory" is the core instruction.</li>
+          <li><strong>Ask it to cite back.</strong> Have the draft point each policy statement to the specific clause it came from, so verification is a lookup, not a re-read of everything.</li>
+          <li><strong>Verify against the source.</strong> Read each drafted obligation against the clause it claims to implement. The draft is a strong first pass; the check is where you earn it.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now - grounded policy draft</span>Here is the actual regulatory text: [paste the excerpt].
+Draft a short internal policy that implements ONLY what this text requires.
+Do not add any requirement that is not in the text. For each policy statement,
+cite the specific clause it comes from. Flag anything the text leaves ambiguous.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The policy built on a remembered rule.</strong> A team asked AI to "write a data-retention policy per the regulation" with no text supplied. The draft was polished and cited a retention period the model invented from a similar rule in another jurisdiction. It sat in the handbook for months. Grounding it in the actual clause would have taken one paste and caught it on line one.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What AI drafts well in compliance - and the guardrail on each<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>AI drafts...</th><th>...grounded and verified how</th></tr></thead>
+          <tbody>
+            <tr><td>A policy from a regulation</td><td>Paste the actual text; draft from it only; verify each clause maps back</td></tr>
+            <tr><td>A step-by-step procedure</td><td>Ground in the policy + the real workflow; confirm it is operable, not just tidy</td></tr>
+            <tr><td>A plain-language summary of a rule</td><td>Verify against the primary text; summaries drift and drop exceptions</td></tr>
+            <tr><td>A regulatory-change note</td><td>Confirm currency and the actual amendment text; rules change constantly</td></tr>
+            <tr><td>A control-to-obligation mapping</td><td>Confirm each mapping against the obligation; AI over-matches loosely</td></tr>
+          </tbody>
+        </table>
+        <p>Every row is fast with AI and wrong without grounding. The left column is the leverage; the right column is why a lawyer stays in the loop on all of it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: TRACKING + GAP CHECKS ============ -->
+  <section class="section" id="tracking-gap">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers regulatory tracking + gap analysis</span>
+      <h2>Regulatory tracking + gap checks <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Two ongoing compliance jobs are natural fits for grounded AI: keeping up with regulatory change, and checking whether your policies actually cover your obligations. In both, AI does the surfacing - the reading-fast, the mapping, the "here are the likely gaps" - and the lawyer confirms every item against the primary text before it becomes a finding.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Regulatory tracking and gap-check: AI summarizes updates, maps obligations to controls, and surfaces likely gaps; the lawyer confirms each against the primary text">
+        <style>
+          .b9yT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b9yI { font: 700 15px Inter, sans-serif; fill: #241016; }
+          .b9yX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b9yXi { font: 400 12.5px Inter, sans-serif; fill: #3D2E05; }
+          .b9yN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+        </style>
+        <rect x="30" y="52" width="255" height="70" rx="12" fill="#7B1E3B"/>
+        <text class="b9yT" x="52" y="82">Summarize the update</text>
+        <text class="b9yX" x="52" y="104">AI surfaces the change - verify text</text>
+        <rect x="30" y="132" width="255" height="70" rx="12" fill="#A84C64"/>
+        <text class="b9yT" x="52" y="162">Map obligations to controls</text>
+        <text class="b9yX" x="52" y="184">AI drafts the map - confirm each</text>
+        <rect x="30" y="212" width="255" height="70" rx="12" fill="#4A0E1F"/>
+        <text class="b9yT" x="52" y="242">Run the gap-check</text>
+        <text class="b9yX" x="52" y="264">AI flags likely gaps - you confirm</text>
+        <rect x="330" y="118" width="240" height="100" rx="12" fill="#E0B3C0"/>
+        <text class="b9yI" x="352" y="150">AI surfaces</text>
+        <text class="b9yXi" x="352" y="174">summaries, maps, and</text>
+        <text class="b9yXi" x="352" y="192">candidate gaps - fast</text>
+        <rect x="616" y="118" width="240" height="100" rx="12" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b9yI" x="638" y="150">Lawyer confirms</text>
+        <text class="b9yXi" x="638" y="174">against the primary</text>
+        <text class="b9yXi" x="638" y="192">text - then it is a finding</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - AI surfaces the change and the gaps; the lawyer confirms each against the text</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The gap-check pattern - task then the check<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A compliance gap-check is a mapping problem: for each obligation, does a policy or control cover it, and is the coverage adequate? AI is fast at the first pass and the lawyer confirms each result - because "covered" is a legal judgment, not a keyword match.</p>
+        <table class="clean">
+          <thead><tr><th>The task AI runs</th><th>The check the lawyer owns</th></tr></thead>
+          <tbody>
+            <tr><td>List every obligation in the supplied regulation</td><td>Confirm the list is complete against the primary text</td></tr>
+            <tr><td>Match each obligation to a policy or control</td><td>Confirm the match is real, not a loose keyword overlap</td></tr>
+            <tr><td>Flag obligations with no matching control (gaps)</td><td>Confirm each flagged gap is genuine, not a wording mismatch</td></tr>
+            <tr><td>Rate coverage adequacy per obligation</td><td>Exercise the legal judgment on "adequate" - AI cannot</td></tr>
+            <tr><td>Draft remediation notes for each gap</td><td>Own the remediation plan and its priority</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>AI surfaces, the lawyer confirms</strong>
+          Treat every gap AI flags as a candidate to check, and every "covered" as a claim to test. The value you add is confirming which gaps are real and which coverage is genuinely adequate - that judgment is the compliance conclusion, and it is yours.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Regulatory tracking without trusting the memory<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Summarize the actual update text.</strong> Paste the amendment or guidance; ask for a plain summary of what changed - then verify it against the primary text before you act on it.</li>
+          <li><strong>Confirm currency.</strong> Ask AI when a rule applies and you may get last year's version. Check the effective date and the current consolidated text every time.</li>
+          <li><strong>Map change to impact.</strong> Have AI list which of your policies or controls the change touches - as leads to review, not a settled impact assessment.</li>
+          <li><strong>Keep the audit trail.</strong> Note what you asked, what AI surfaced, and what you confirmed. Compliance work has to be defensible after the fact.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: GROUNDING + VERIFICATION ============ -->
+  <section class="section" id="grounding-verification">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the duty that runs through compliance work</span>
+      <h2>Grounding + verification <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Compliance has its own version of the verify-and-own rail, sharpened by two facts: AI summaries of regulations are often subtly wrong, and regulations change. Never rely on either without checking the primary text - and the compliance conclusion is always yours.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Never rely on an AI summary of a regulation<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>An AI summary of a rule is a reading aid, not the rule. Summaries compress, and compression in regulation drops exceptions, thresholds, and defined terms - exactly the parts that decide compliance. Read the primary text before you draft policy, map a control, or advise on an obligation.</p>
+        <ul>
+          <li><strong>The summary hides the exceptions.</strong> "The rule requires X" often omits "unless Y", and Y is where the client sits. Only the primary text tells you.</li>
+          <li><strong>Regulations change - confirm currency.</strong> The model's training has a cutoff and rules move past it. Check the effective date and the current consolidated version.</li>
+          <li><strong>The lawyer owns the conclusion.</strong> "AI said the policy covers it" is not a compliance opinion. You confirm coverage against the text, and you own the finding.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "Ground it in the actual rule, verify the summary against the primary text, and I own the compliance conclusion." That sentence is the spine of every compliance workflow you will build.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The three grounding questions - before any compliance output ships<span class="mini">1 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Did I supply the actual text?</strong> If AI drafted from memory, start over with the real regulation pasted in.</li>
+          <li><strong>Is it current?</strong> Confirm the effective date and that no amendment supersedes what you used.</li>
+          <li><strong>Did I verify and do I own it?</strong> Every drafted obligation checked against its clause, every gap confirmed, the conclusion signed by a lawyer.</li>
+        </ul>
+        <p>Three questions, every time. They are cheaper than one wrong policy in a handbook or one missed obligation in an audit.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Draft a policy from a supplied regulation excerpt <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Grounding in action. You supply a short regulation excerpt, AI drafts a policy or procedure from that text alone, and you verify every drafted obligation back against the source - the exact loop from Part 1.</p>
+
+    <div class="steps">
+      <div class="step"><p>Take a short, real regulation or standard excerpt (nothing client-confidential in a consumer tool). Paste the actual text into the prompt.</p></div>
+      <div class="step"><p>Instruct AI to draft a short internal policy or procedure that implements only what the text requires - no requirements added from memory.</p></div>
+      <div class="step"><p>Require a clause citation on each policy statement, so you can trace every line back to the source.</p></div>
+      <div class="step"><p>Verify line by line: does each drafted obligation actually appear in the excerpt, and does the excerpt say what the draft claims? Delete or fix anything that does not map.</p></div>
+      <div class="step"><p>Confirm currency and note the effective date. You now own a policy grounded in the real rule, not the model's memory.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">The draft to distrust (ungrounded)</span>Write a policy that complies with the applicable data-breach regulation, including the standard 72-hour notification requirement and the usual exceptions. [No text supplied - the "standard" and "usual" are invented from memory.]</div>
+
+    <div class="prompt-box good"><span class="label">★ The grounded policy prompt</span>Here is the actual regulatory text: [paste the excerpt].
+Draft a short internal policy that implements ONLY what this text requires.
+Rules:
+1) Do not add any obligation that is not in the supplied text.
+2) After each policy statement, cite the exact clause it implements.
+3) Flag anything the text leaves ambiguous rather than guessing.
+I will verify each statement against the clause before this goes anywhere.</div>
+
+    <div class="callout tip">
+      <strong>Why this is demo one</strong>
+      Every compliance output you produce with AI - policy, procedure, summary, mapping - is only as good as its grounding. Feel the difference between the ungrounded draft and the grounded one once tonight, and you will never write compliance policy from the model's memory again.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Run a compliance gap-check <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">The mapping problem from Part 2, run for real. You give AI a sample policy and a supplied list of obligations, it flags likely gaps, and you confirm each one against the obligation text - because "covered" is your judgment, not the model's.</p>
+
+    <div class="steps">
+      <div class="step"><p>Supply two things: a sample policy, and the actual list of obligations from a regulation you paste (not from memory).</p></div>
+      <div class="step"><p>Ask AI to map each obligation to the part of the policy that covers it, and to flag any obligation with no matching coverage.</p></div>
+      <div class="step"><p>For each flagged gap, confirm it against the obligation text - is it a genuine gap, or a wording mismatch where coverage exists under a different label?</p></div>
+      <div class="step"><p>For each "covered", test the match: is the coverage real and adequate, or a loose keyword overlap? Downgrade anything that does not hold.</p></div>
+      <div class="step"><p>Write the confirmed gap list with a remediation note per gap. You own the finding - AI surfaced it, you confirmed it.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The gap-check prompt</span>Here is a sample policy: [paste]. Here are the actual obligations: [paste the list].
+For each obligation:
+1) Point to the exact part of the policy that covers it, or mark it a GAP.
+2) For covered items, note whether the coverage looks adequate or partial.
+3) List every GAP separately at the end with a one-line remediation suggestion.
+Do not assume coverage from wording alone - flag anything uncertain.
+I will confirm each gap and each match against the obligation text myself.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The gap the keyword match hid.</strong> An AI gap-check marked an obligation "covered" because the policy used the same term - but the policy applied it to a different process, so the obligation was actually unmet. A lawyer confirming the match against the obligation text caught it; the keyword overlap alone would have shipped a false clean bill. AI surfaced the candidate; the lawyer's confirmation was the compliance conclusion.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Draft a short policy from a real regulation excerpt you supply, then verify every line against the source. Note how many statements needed a fix - that is the grounding lesson.</li>
+      <li>Run a gap-check of one of your existing policies against the actual obligations. Confirm each flagged gap yourself before treating it as real.</li>
+      <li>Ask AI to summarize a recent regulatory change, then read the primary amendment text and mark what the summary dropped or got wrong.</li>
+      <li>Confirm the currency of one rule you rely on - effective date and current consolidated version - and note whether AI had it right.</li>
+      <li>Optional: write your one-line grounding rule ("no compliance draft without the actual text pasted in") and pin it above your desk.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public compliance and legal-AI curricula and the professional-responsibility canon. Regulator-specific rules, effective dates, and CLE credit stay with the primary sources and your bar. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Compliance-drafting canon (policy + procedure from a supplied rule)</span><span class="note">Part 1 · grounded drafting, cite-back, verify against source</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Regulatory tracking + gap-analysis practice</span><span class="note">Part 2 · summarize updates, map obligations to controls, gap-check</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The hallucination + currency canon (ungrounded rules go stale/wrong)</span><span class="note">Part 3 · never trust an AI summary of a regulation</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ABA Model Rules 1.1 / 5.3 (competence, supervision)</span><span class="note">Part 3 · the lawyer owns the compliance conclusion; full depth in a3/a5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · You need a policy that implements a specific regulation. What is the safe way to use AI?</p>
+      <button class="qopt" type="button">A · Ask AI to write a policy that complies with the regulation, from its own knowledge</button>
+      <button class="qopt" type="button">B · Trust the polished draft because it reads professionally</button>
+      <button class="qopt" type="button">C · Paste the actual regulatory text and have AI draft only from it, then verify each line</button>
+      <p class="qwhy">Ground it in the actual rule. AI drafting from memory produces confident policy built on a mis-remembered or outdated version - grounding in the supplied text and verifying each clause is the whole discipline.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · AI gives you a clean plain-language summary of a new regulation. What do you do before acting on it?</p>
+      <button class="qopt" type="button">A · Act on the summary - it is clear and well written</button>
+      <button class="qopt" type="button">B · Verify it against the primary text and confirm the rule is current</button>
+      <button class="qopt" type="button">C · Forward the summary as the compliance position</button>
+      <p class="qwhy">Never rely on an AI summary of a regulation without checking the primary text. Summaries drop exceptions and thresholds, and rules change - confirm currency and read the source before it becomes a finding.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · An AI gap-check marks every obligation "covered". What is your job?</p>
+      <button class="qopt" type="button">A · Confirm each match against the obligation text and own the compliance conclusion</button>
+      <button class="qopt" type="button">B · Sign off - the AI found no gaps</button>
+      <button class="qopt" type="button">C · Trust the coverage since the wording matched</button>
+      <p class="qwhy">AI surfaces, the lawyer confirms. "Covered" is a legal judgment, not a keyword match - a wording overlap can hide an unmet obligation. You confirm each match and own the conclusion.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Ground it, always</b><span>paste the actual regulation; draft from that text only, never the model's memory.</span></div>
+      <div class="cheat-item"><b>Cite back</b><span>make each policy statement point to the clause it implements, so verification is a lookup.</span></div>
+      <div class="cheat-item"><b>Summaries drift</b><span>an AI summary drops exceptions and thresholds. Verify against the primary text before you act.</span></div>
+      <div class="cheat-item"><b>Confirm currency</b><span>regulations change; the model's memory has a cutoff. Check the effective date and current version.</span></div>
+      <div class="cheat-item"><b>Gap-check pattern</b><span>AI maps obligations to controls and flags likely gaps; you confirm each one is real.</span></div>
+      <div class="cheat-item"><b>"Covered" is judgment</b><span>a keyword match is not coverage. Confirm each match against the obligation text.</span></div>
+      <div class="cheat-item"><b>AI surfaces, you confirm</b><span>AI does the reading-fast and the mapping; the lawyer confirms and owns the finding.</span></div>
+      <div class="cheat-item"><b>You own the conclusion</b><span>"AI said it complies" is not a compliance opinion. A lawyer verifies and signs. Not legal advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 9 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-litigation-support.html">← Previous: Litigation support</a> &nbsp;·&nbsp; <a href="b10-governance-confidentiality.html">Next: Governance, confidentiality &amp; safe practice →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

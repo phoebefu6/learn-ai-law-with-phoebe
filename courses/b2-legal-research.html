@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 2 · Legal research with AI - learn AI + law with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+<style>
+  /* ---- law-live simulator (scoped lw-*) ---- */
+  .lw-shell { display: grid; grid-template-columns: 15.5rem 1fr; gap: 1rem; border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#F7E7EB); padding: 1rem; margin: 1.2rem 0 .4rem; }
+  @media (max-width: 720px) { .lw-shell { grid-template-columns: 1fr; } }
+  .lw-ctitle { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: var(--indigo); margin-bottom: .5rem; }
+  .lw-q { font-size: .8rem; color: var(--muted); line-height: 1.5; margin-bottom: .7rem; }
+  .lw-q b { color: var(--ink); }
+  .lw-levers { display: flex; flex-direction: column; gap: .5rem; }
+  .lw-lever { display: flex; align-items: center; gap: .6rem; text-align: left; border: 1px solid var(--hairline); background: #fff; border-radius: 12px; padding: .55rem .7rem; cursor: pointer; transition: all .14s ease; font: inherit; color: var(--ink); }
+  .lw-lever:hover { border-color: var(--indigo-soft); }
+  .lw-lever.lw-active { border-color: var(--indigo); background: var(--indigo-50); }
+  .lw-sw { flex: none; width: 2rem; height: 1.15rem; border-radius: 999px; background: var(--faint); position: relative; transition: background .14s ease; }
+  .lw-sw::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.15rem - 4px); height: calc(1.15rem - 4px); border-radius: 50%; background: #fff; transition: transform .14s ease; box-shadow: 0 1px 2px rgba(36,16,22,.3); }
+  .lw-lever.lw-active .lw-sw { background: var(--indigo); }
+  .lw-lever.lw-active .lw-sw::after { transform: translateX(.85rem); }
+  .lw-ltext { display: flex; flex-direction: column; line-height: 1.25; }
+  .lw-ltext b { font-size: .84rem; font-weight: 700; }
+  .lw-ltext span { font-size: .72rem; color: var(--muted); }
+  .lw-modes { display: flex; gap: .4rem; margin-top: .9rem; }
+  .lw-mode { flex: 1; border: 1px solid var(--hairline); background: #fff; border-radius: 999px; padding: .38rem .5rem; font-size: .74rem; font-weight: 700; cursor: pointer; color: var(--muted); transition: all .14s ease; }
+  .lw-mode.lw-on { background: var(--indigo); color: #fff; border-color: var(--indigo); }
+  .lw-stage { min-width: 0; }
+  .lw-meters { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: .8rem; }
+  .lw-meter { flex: 1; min-width: 9rem; border: 1px solid var(--hairline); border-radius: 12px; background: #fff; padding: .6rem .8rem; }
+  .lw-mlabel { display: block; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--muted); }
+  .lw-mval { font-size: 1.7rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.2; color: var(--ink); }
+  .lw-mval.lw-good { color: var(--indigo); }
+  .lw-bar { height: 7px; border-radius: 999px; background: var(--hairline); margin-top: .35rem; overflow: hidden; }
+  .lw-bar i { display: block; height: 100%; background: linear-gradient(90deg,var(--indigo-mid),var(--indigo)); transition: width .3s ease; }
+  .lw-draftlabel, .lw-scorehead { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--indigo); margin-bottom: .4rem; }
+  .lw-scorehead { text-transform: none; font-size: .95rem; letter-spacing: 0; color: var(--ink); }
+  .lw-draft { border: 1px solid var(--hairline); border-left: 3px solid var(--indigo); border-radius: 10px; background: #fff; padding: .8rem 1rem; }
+  .lw-line { font-size: .89rem; margin: 0 0 .55rem; line-height: 1.6; }
+  .lw-line:last-child { margin-bottom: 0; }
+  .lw-line.lw-warn { color: var(--amber-ink); background: var(--amber-50); border-radius: 8px; padding: .5rem .65rem; }
+  .lw-tag { display: inline-block; font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--indigo); background: var(--indigo-50); border-radius: 5px; padding: .1rem .4rem; margin-right: .3rem; vertical-align: middle; }
+  .lw-table { width: 100%; border-collapse: collapse; margin: .3rem 0 .5rem; font-size: .86rem; }
+  .lw-table th { text-align: left; text-transform: uppercase; font-size: .66rem; letter-spacing: .07em; color: var(--muted); padding: .35rem .5rem; border-bottom: 1px solid var(--hairline); }
+  .lw-table td { padding: .4rem .5rem; border-bottom: .5px solid var(--hairline); }
+  .lw-rmark { font-weight: 800; text-align: center; }
+  .lw-r-ok .lw-rmark { color: var(--indigo); }
+  .lw-r-no .lw-rmark { color: var(--faint); }
+  .lw-note, .lw-rail { font-size: .78rem; color: var(--muted); line-height: 1.55; }
+  .lw-rail { margin-top: .8rem; border-top: 1px dashed var(--hairline); padding-top: .6rem; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-law-with-phoebe</a> / Practitioner session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Law with Phoebe · Practitioner track · Session 2 of 10</div>
+    <h1>Legal research with AI: <span class="accent">grounded, cited, verified</span></h1>
+    <p class="sub">Legal research was AI's first great use in law and its first public disaster. This session gives you the method that keeps you on the right side of that line: ground the AI in real authority, demand pinpoint citations, set the jurisdiction, and verify everything - then drive a live simulator where you watch a fabricated case appear, get caught, and give way to a defensible answer.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Practitioner track</span>
+      <span class="chip audience">Practitioners: lawyers · legal researchers</span>
+      <span class="chip audience">Vetted legal AI tools</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-17 · Grounded research</span>
+      <span class="a3" style="flex:5">17-42 · Simulator + build-along</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Grounding is the whole game</h2>
+    </div>
+    <p class="lede">Ask a general AI "what is the law on X" and it will answer from the average of everything it read - confidently, and sometimes with cases that do not exist. Ask it to reason only over authority you supply, cite pinpoints, respect a jurisdiction, and flag anything it cannot ground - and it becomes a genuine research accelerator. Same tool, opposite risk. The difference is grounding plus verification, and both are on you. (Reminder: this is education, not legal advice; your jurisdiction's rules control.)</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A grounded-research method that keeps citations real, hands-on time with the grounded-research simulator (including the fabricated-case trap and the fix), a reusable research-and-verify prompt, and a verification checklist you run before relying on any AI research.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: GROUNDED RESEARCH ============ -->
+  <section class="section" id="grounded">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers GC AI legal research + the hallucination canon</span>
+      <h2>Grounded, cited, and verified <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Reliable AI research follows a chain: start from real authority, tie every proposition to a pinpoint citation, respect the governing jurisdiction, and verify each cite against primary law before you rely on it. Skip any link and you are back to confident fiction.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The grounded research chain: a precise question, grounded in real authority, with pinpoint citations, set to a jurisdiction, then verified against primary law - the lawyer owns the answer">
+        <style>
+          .b2rT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b2rI { font: 700 13px Inter, sans-serif; fill: #241016; }
+          .b2rX { font: 400 11px Inter, sans-serif; fill: #F0D8DE; }
+          .b2rN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
+          .b2rArr { stroke: #D8C7CC; stroke-width: 2.5; fill: none; marker-end: url(#b2rAh); }
+        </style>
+        <defs>
+          <marker id="b2rAh" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#D8C7CC" stroke-width="1.5"/>
+          </marker>
+        </defs>
+        <rect x="14" y="80" width="150" height="60" rx="11" fill="#4A0E1F"/>
+        <text class="b2rT" x="32" y="106">Precise question</text>
+        <text class="b2rX" x="32" y="124">one issue</text>
+        <rect x="190" y="80" width="150" height="60" rx="11" fill="#7B1E3B"/>
+        <text class="b2rT" x="208" y="106">Ground in law</text>
+        <text class="b2rX" x="208" y="124">real authority</text>
+        <rect x="366" y="80" width="150" height="60" rx="11" fill="#7B1E3B"/>
+        <text class="b2rT" x="384" y="106">Pinpoint cites</text>
+        <text class="b2rX" x="384" y="124">+ jurisdiction</text>
+        <rect x="542" y="80" width="150" height="60" rx="11" fill="#A84C64"/>
+        <text class="b2rT" x="560" y="106">Verify vs law</text>
+        <text class="b2rX" x="560" y="124">the duty</text>
+        <rect x="718" y="80" width="148" height="60" rx="11" fill="#FBF1D5" stroke="#B8860B" stroke-width="1.5"/>
+        <text class="b2rI" x="736" y="106">Lawyer owns</text>
+        <text class="b2rI" x="736" y="124" font-weight="400" font-size="11">the answer</text>
+        <line class="b2rArr" x1="166" y1="110" x2="188" y2="110"/>
+        <line class="b2rArr" x1="342" y1="110" x2="364" y2="110"/>
+        <line class="b2rArr" x1="518" y1="110" x2="540" y2="110"/>
+        <line class="b2rArr" x1="694" y1="110" x2="716" y2="110"/>
+        <rect x="14" y="222" width="14" height="14" rx="3" fill="#B8860B"/>
+        <text class="b2rN" x="38" y="234">Break any link and you are back to confident fiction. Verification is a duty, not a step.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the grounded research chain, ending where it must: the lawyer owns it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Bring the authority to the AI, not the other way around<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The single biggest shift: stop asking AI to recall the law, and start asking it to reason over law you provide. Retrieval-grounded tools do this by searching a real database first; with a general tool you do it by pasting the actual statute or cases. Either way, the model works from real text, not its memory.</p>
+        <ul>
+          <li><strong>Provide the source.</strong> Give it the statute, the cases, the clause - or use a tool that retrieves them from a real database - so it has something true to reason over.</li>
+          <li><strong>Constrain it.</strong> "Use only the authorities provided", "cite pinpoints", "say 'not in the provided law' rather than guessing" - the constraints that stop invention.</li>
+          <li><strong>Then verify.</strong> Even grounded, pull and read each cited authority yourself before relying on it. Grounding lowers the risk; verification closes it.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now - grounded, not from memory</span>Here is the statute and two cases [paste real, non-confidential text]. Using ONLY these authorities, answer: [precise question]. Cite pinpoints to the provided text. If the authorities do not resolve it, say "not resolved by the provided law" - do not add outside cases.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Same tool, two outcomes.</strong> One associate asked a chatbot "what cases support rescission for mistake?" and got three fabrications. Another pasted the actual controlling cases and asked the tool to apply them to the facts - and got a clean, verifiable first-pass analysis in minutes. The tool did not change. The grounding did.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Verification is the non-negotiable step<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>For every authority an AI surfaces, run the three checks before it informs your work: does the case exist, does it hold what is claimed, and is it still good law in this jurisdiction. Legal-specific tools with real citations make this faster, but the duty is identical. A citation you have not personally confirmed is a citation you cannot rely on or file.</p>
+        <table class="clean">
+          <thead><tr><th>Check</th><th>What it prevents</th></tr></thead>
+          <tbody>
+            <tr><td>Does the case exist?</td><td>Filing a fabricated citation (sanctions)</td></tr>
+            <tr><td>Does it hold what is claimed?</td><td>Miscited authority for a proposition it never stood for</td></tr>
+            <tr><td>Is it still good law here?</td><td>Relying on overruled or out-of-jurisdiction authority</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ INTERACTIVE: THE SIMULATOR ============ -->
+  <section class="section" id="simulator">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the grounded-research simulator</span>
+      <h2>Drive it yourself: watch fiction turn into a defensible draft <span class="tag demo">★ 8 min · everyone plays</span></h2>
+    </div>
+    <p class="lede">Here is the whole lesson in one control panel. The AI is answering a legal-research query. With everything off, it confidently cites a case that does not exist - the exact 2023 trap. Turn on "verify against primary law" and watch it get caught; add the source law, pinpoint cites, and jurisdiction and watch it become a draft a lawyer could actually build on. Notice what the levers are: grounding and verification, not a bigger model.</p>
+
+    <div id="law-live"></div>
+
+    <div class="callout tip">
+      <strong>What the simulator is teaching</strong>
+      Start with everything off: a fabricated case, stated with total confidence - never file it. Turn on verification alone and it catches the fabrication and tells you that you have no supported answer yet. Provide the real authority, pinpoint cites, and jurisdiction and the answer becomes reliable. Grounding plus verification did that, and the lawyer still owns the result.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Run a grounded research query for real <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Now do it on a real (non-confidential) question, using the full chain from the simulator.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick a precise legal question and gather the real authority - statute and a couple of cases (public, non-confidential), or use a retrieval-grounded legal tool.</p></div>
+      <div class="step"><p>Prompt the AI to reason only over that authority, cite pinpoints, set the jurisdiction, and flag anything it cannot ground.</p></div>
+      <div class="step"><p>Verify: pull and read each cited authority. Confirm it exists, holds what is claimed, and is still good law here.</p></div>
+      <div class="step"><p>Write your answer from what survived verification. The AI accelerated the reasoning; you confirmed the law and own the conclusion.</p></div>
+      <div class="step"><p>Save the prompt as your grounded-research template. Every question now starts from authority, not from the model's memory.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The grounded-research prompt</span>Jurisdiction: [X]. Question (one issue): [precise question].
+Authorities to use (use ONLY these): [paste statute + cases, or "the retrieved results"].
+Instructions: apply only the provided authorities to the question; cite pinpoints
+(section / paragraph); note where authorities conflict; and if they do not resolve the
+question, say "not resolved by the provided law" - do NOT introduce outside cases.
+Flag any proposition you cannot tie to the provided text. I will verify every citation.</div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Build your verification checklist <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Turn the duty into a repeatable gate you run before any AI research informs your work.</p>
+
+    <div class="steps">
+      <div class="step"><p>Write the three checks as a short checklist: exists, holds-what-is-claimed, still-good-law-here.</p></div>
+      <div class="step"><p>Add a confidentiality check (was this run in a vetted tool for the data involved) and an ownership line (a named lawyer confirmed each cite).</p></div>
+      <div class="step"><p>Make it the last step before any AI-assisted research is relied on, cited, or filed.</p></div>
+      <div class="step"><p>Run it once on the Demo 1 output to prove the habit.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The checklist that became muscle memory.</strong> A litigation team put a five-line verification checklist at the top of every research doc. Within a month it was automatic, and an AI-suggested case that had been quietly overruled got caught before it reached a brief. The habit cost seconds; the miss it prevented could have cost the motion.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the grounded-research prompt on one real (non-confidential) question, then verify every cite. Note anything that failed a check.</li>
+      <li>Play the simulator again and predict the reliability score before each toggle - predicting it means you understand what makes AI research defensible.</li>
+      <li>Finalise your verification checklist and put it at the top of your research template.</li>
+      <li>Compare a general tool and a legal-specific tool on the same question; verify both and note the fabrication difference.</li>
+      <li>Optional: read your jurisdiction's guidance on AI in legal research. Bring one open question to session b3.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public legal-AI research guidance and the professional-responsibility canon. CLE and jurisdiction rules stay official. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GC AI - AI tools for legal research (2026)</span><span class="note">Parts 1-2 · retrieval-grounded research + tool grounding</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The fabricated-citation canon + the verification duty</span><span class="note">Part 1 + simulator · the trap and the fix</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ABA Model Rules 1.1 / 3.3 (competence, candor)</span><span class="note">Verification as a professional duty</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · In the simulator, turning on "verify against primary law" with no sources does what?</p>
+      <button class="qopt" type="button">A · Nothing - verification needs a bigger model</button>
+      <button class="qopt" type="button">B · Makes the answer longer</button>
+      <button class="qopt" type="button">C · Catches the fabricated case and tells you that you have no supported answer yet</button>
+      <p class="qwhy">Verification is the safety net. It catches the invented citation even before you supply real authority - which is exactly why it is a duty, not an optional step.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · What is the core shift for reliable AI legal research?</p>
+      <button class="qopt" type="button">A · Stop asking AI to recall the law; have it reason over real authority you supply, then verify</button>
+      <button class="qopt" type="button">B · Ask the question more times</button>
+      <button class="qopt" type="button">C · Trust legal-specific tools completely</button>
+      <p class="qwhy">Grounding the model in real authority (supplied or retrieved) plus verification is what keeps citations real. No tool - legal-specific included - is zero-risk.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Before relying on an AI-surfaced case, you confirm...</p>
+      <button class="qopt" type="button">A · That the citation is formatted correctly</button>
+      <button class="qopt" type="button">B · That it exists, holds what is claimed, and is still good law in this jurisdiction</button>
+      <button class="qopt" type="button">C · That it sounds persuasive</button>
+      <p class="qwhy">The three verification checks. A citation you have not personally confirmed on all three cannot be relied on or filed - and you own that check.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Grounding is the game</b><span>have AI reason over real authority you supply or a tool retrieves - not its memory.</span></div>
+      <div class="cheat-item"><b>The chain</b><span>precise question → ground in law → pinpoint cites + jurisdiction → verify → lawyer owns it.</span></div>
+      <div class="cheat-item"><b>Constrain it</b><span>"use only the provided authorities", "cite pinpoints", "say not-in-the-law rather than guess".</span></div>
+      <div class="cheat-item"><b>Verify - the duty</b><span>every cite: does it exist, hold what is claimed, and still good law here. The simulator's safety net.</span></div>
+      <div class="cheat-item"><b>Same tool, two outcomes</b><span>ungrounded = fabricated cases; grounded + verified = a defensible draft. The difference is you.</span></div>
+      <div class="cheat-item"><b>No tool is zero-risk</b><span>legal-specific tools cut hallucination, never remove it. Verify on every tool, every time.</span></div>
+      <div class="cheat-item"><b>Confidentiality</b><span>run client-confidential research only in vetted legal tools with proper terms.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b3 - contract drafting: draft from your playbook with the lawyer owning every term.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 2 of 10 · learn-ai-law-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-ai-foundations-lawyers.html">← Previous: AI foundations for lawyers</a> &nbsp;·&nbsp; <a href="b3-contract-drafting.html">Next: Contract drafting →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/law-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
