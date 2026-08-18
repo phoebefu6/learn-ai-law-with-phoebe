@@ -115,7 +115,7 @@
         <style>
           .b2rT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
           .b2rI { font: 700 13px Inter, sans-serif; fill: #241016; }
-          .b2rX { font: 400 11px Inter, sans-serif; fill: #F0D8DE; }
+          .b2rX { font: 400 11px Inter, sans-serif; fill: #FBEEF1; }
           .b2rN { font: 600 14px Inter, sans-serif; fill: #3D2E05; }
           .b2rArr { stroke: #D8C7CC; stroke-width: 2.5; fill: none; marker-end: url(#b2rAh); }
         </style>
@@ -162,6 +162,34 @@
         <div class="callout example">
           <span class="ex-pill">Real world</span>
           <p><strong>Same tool, two outcomes.</strong> One associate asked a chatbot "what cases support rescission for mistake?" and got three fabrications. Another pasted the actual controlling cases and asked the tool to apply them to the facts - and got a clean, verifiable first-pass analysis in minutes. The tool did not change. The grounding did.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A before-after comparison showing that asking an AI from memory what cases support rescission for mistake produced three fabricated cases, while pasting the actual controlling cases and asking the AI to apply them to the facts produced a clean, verifiable first-pass analysis, with the same tool used both times.">
+    <style>
+      .b2f1T { font: 700 13px Inter, sans-serif; fill: #241016; }
+      .b2f1H { font: 700 13px Inter, sans-serif; }
+      .b2f1B { font: 400 12px Inter, sans-serif; fill: #241016; }
+      .b2f1N { font: 400 12px Inter, sans-serif; fill: #6E5B60; }
+    </style>
+    <rect x="0" y="0" width="880" height="300" fill="#FFFFFF"/>
+    <text class="b2f1T" x="40" y="28">Same tool, two outcomes: memory versus grounded reasoning</text>
+
+    <rect x="40" y="50" width="390" height="180" rx="12" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+    <text class="b2f1H" x="58" y="84" fill="#991B1B">✗ Asked from memory</text>
+    <text class="b2f1B" x="58" y="114">What cases support rescission</text>
+    <text class="b2f1B" x="58" y="134">for mistake?</text>
+    <text class="b2f1B" x="58" y="154">Three fabricated cases returned</text>
+
+    <rect x="450" y="50" width="390" height="180" rx="12" fill="#FBEEF1" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b2f1H" x="468" y="84" fill="#4A0E1F">✓ Grounded in real cases</text>
+    <text class="b2f1B" x="468" y="114">Pasted the controlling cases</text>
+    <text class="b2f1B" x="468" y="134">and applied them to the facts</text>
+    <text class="b2f1B" x="468" y="154">Clean, verifiable first pass</text>
+
+    <text class="b2f1N" x="40" y="276">Same tool, two outcomes: the tool did not change, the grounding did.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - the tool did not change, the grounding did</figcaption>
+</figure>
+
         </div>
       </div>
     </details>
@@ -170,7 +198,46 @@
       <summary><span class="mode self">Self-study</span>Verification is the non-negotiable step<span class="mini">2 min read</span><span class="caret">▶</span></summary>
       <div class="body">
         <p>For every authority an AI surfaces, run the three checks before it informs your work: does the case exist, does it hold what is claimed, and is it still good law in this jurisdiction. Legal-specific tools with real citations make this faster, but the duty is identical. A citation you have not personally confirmed is a citation you cannot rely on or file.</p>
-        <table class="clean">
+        
+<figure class="zoomable">
+  <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A decision diagram showing three checks that must pass before relying on an AI-cited case: does the case exist, which stops a fabricated citation, does it hold what is claimed, which stops miscited authority, and is it still good law here, which stops reliance on overruled authority.">
+    <style>
+      .b2f2Q { font: 700 13px Inter, sans-serif; fill: #241016; }
+      .b2f2H { font: 700 12px Inter, sans-serif; fill: #4A0E1F; }
+      .b2f2S { font: 400 11px Inter, sans-serif; fill: #6E5B60; }
+      .b2f2N { font: 400 12px Inter, sans-serif; fill: #6E5B60; }
+    </style>
+    <defs>
+      <marker id="arrB2f2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#7B1E3B"/>
+      </marker>
+    </defs>
+    <rect x="0" y="0" width="880" height="340" fill="#FFFFFF"/>
+    <text class="b2f2Q" x="40" y="28">Three checks, three different failure points</text>
+
+    <rect x="40" y="125" width="240" height="56" rx="10" fill="#FFFFFF" stroke="#7B1E3B" stroke-width="2"/>
+    <text class="b2f2H" x="160" y="158" text-anchor="middle" fill="#241016">Before you rely on a citation</text>
+
+    <path d="M280,153 H460 V65 H640" fill="none" stroke="#7B1E3B" stroke-width="1.8" marker-end="url(#arrB2f2)"/>
+    <rect x="640" y="30" width="200" height="70" rx="10" fill="#FBEEF1" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b2f2H" x="660" y="60">Does the case exist?</text>
+    <text class="b2f2S" x="660" y="80">Stops a fabricated citation</text>
+
+    <path d="M280,153 H640" fill="none" stroke="#7B1E3B" stroke-width="1.8" marker-end="url(#arrB2f2)"/>
+    <rect x="640" y="118" width="200" height="70" rx="10" fill="#FBEEF1" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b2f2H" x="660" y="148">Holds what's claimed?</text>
+    <text class="b2f2S" x="660" y="168">Stops miscited authority</text>
+
+    <path d="M280,153 H460 V241 H640" fill="none" stroke="#7B1E3B" stroke-width="1.8" marker-end="url(#arrB2f2)"/>
+    <rect x="640" y="206" width="200" height="70" rx="10" fill="#FBEEF1" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b2f2H" x="660" y="236">Still good law here?</text>
+    <text class="b2f2S" x="660" y="256">Stops overruled authority</text>
+
+    <text class="b2f2N" x="40" y="316">Each check stops a different way a citation can hurt you - skip one and the risk returns.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - three checks, three different ways a bad citation gets through</figcaption>
+</figure>
+<table class="clean">
           <thead><tr><th>Check</th><th>What it prevents</th></tr></thead>
           <tbody>
             <tr><td>Does the case exist?</td><td>Filing a fabricated citation (sanctions)</td></tr>

@@ -184,6 +184,55 @@
       <h2>The human decides <span class="tag concept">4 min live</span></h2>
     </div>
     <p class="lede">AI surfaces and drafts. Everything that follows a flag - is it material, is it worth negotiating, what do we accept - is judgment, and judgment is the lawyer's. And because the model reviews imperfectly, part of your judgment is checking that it did not miss or misread.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A decision tree showing that for each AI-flagged deviation, an immaterial flag is let go, a material flag worth negotiating is pulled to the fallback position, and a material flag not worth negotiating is accepted as is.">
+    <style>
+      .b4dtT { font: 700 13px Inter, sans-serif; fill: #241016; }
+      .b4dtQ { font: 700 12px Inter, sans-serif; fill: #241016; }
+      .b4dtO { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+      .b4dtE { font: 600 11px Inter, sans-serif; fill: #6E5B60; }
+      .b4dtN { font: 400 12px Inter, sans-serif; fill: #6E5B60; }
+    </style>
+    <defs>
+      <marker id="arrB4dt" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" fill="#A84C64"/>
+      </marker>
+    </defs>
+    <rect x="0" y="0" width="880" height="340" fill="#FBEEF1"/>
+    <text class="b4dtT" x="40" y="28">Every flag needs a human call - material, negotiate, or accept</text>
+
+    <rect x="40" y="120" width="240" height="56" rx="10" fill="#FFFFFF" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b4dtQ" x="160" y="153" text-anchor="middle">Is this deviation material?</text>
+
+    <rect x="340" y="120" width="240" height="56" rx="10" fill="#FFFFFF" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b4dtQ" x="460" y="153" text-anchor="middle">Worth negotiating?</text>
+
+    <rect x="640" y="40" width="200" height="50" rx="10" fill="#B8860B"/>
+    <text class="b4dtO" x="740" y="70" text-anchor="middle">Let go</text>
+
+    <rect x="640" y="123" width="200" height="50" rx="10" fill="#B8860B"/>
+    <text class="b4dtO" x="740" y="153" text-anchor="middle">Negotiate to fallback</text>
+
+    <rect x="640" y="203" width="200" height="50" rx="10" fill="#B8860B"/>
+    <text class="b4dtO" x="740" y="233" text-anchor="middle">Accept as is</text>
+
+    <path d="M160,120 L160,66 L628,66" fill="none" stroke="#A84C64" stroke-width="1.6" marker-end="url(#arrB4dt)"/>
+    <text class="b4dtE" x="394" y="58" text-anchor="middle">no</text>
+
+    <line x1="280" y1="148" x2="332" y2="148" stroke="#A84C64" stroke-width="1.6" marker-end="url(#arrB4dt)"/>
+    <text class="b4dtE" x="310" y="142" text-anchor="middle">yes</text>
+
+    <line x1="580" y1="148" x2="632" y2="148" stroke="#A84C64" stroke-width="1.6" marker-end="url(#arrB4dt)"/>
+    <text class="b4dtE" x="610" y="142" text-anchor="middle">yes</text>
+
+    <line x1="580" y1="161" x2="631" y2="220" stroke="#A84C64" stroke-width="1.6" marker-end="url(#arrB4dt)"/>
+    <text class="b4dtE" x="610" y="188" text-anchor="middle">no</text>
+
+    <text class="b4dtN" x="40" y="316">Materiality, strategy, and the fallback line are yours to weigh - the model only supplies the flag.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - flagging is comparison, deciding is judgment</figcaption>
+</figure>
+
 
     <details class="card">
       <summary><span class="mode live">Live</span>Materiality, strategy, and verifying the review<span class="mini">2 min</span><span class="caret">▶</span></summary>
@@ -261,6 +310,35 @@ in negotiation. I will finalize the wording and the ask.</div>
     <div class="callout example">
       <span class="ex-pill">Real world</span>
       <p><strong>The surgical redline that closed faster.</strong> A team let AI draft two redlines to their fallbacks instead of rewriting the counterparty's clauses wholesale. Each change was small, marked, and justified in a line - the other side accepted both in one pass, because nothing looked like a power grab. The lawyer had decided what to fight for and finalized every word; the AI just drafted the markup to the fallback. Fast triage, surgical asks, lawyer's judgment on top.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A before and after comparison showing that rewriting a counterparty's whole clause looks like a power grab and invites a fight, while a small surgical redline to the fallback that keeps their structure was accepted in one pass.">
+    <style>
+      .b4baT { font: 700 13px Inter, sans-serif; fill: #241016; }
+      .b4baHW { font: 700 13px Inter, sans-serif; fill: #991B1B; }
+      .b4baHR { font: 700 13px Inter, sans-serif; fill: #4A0E1F; }
+      .b4baB { font: 400 12px Inter, sans-serif; fill: #241016; }
+      .b4baN { font: 400 12px Inter, sans-serif; fill: #6E5B60; }
+    </style>
+    <rect x="0" y="0" width="880" height="300" fill="#FBEEF1"/>
+    <text class="b4baT" x="40" y="28">The surgical redline that closed faster</text>
+
+    <rect x="40" y="50" width="390" height="180" rx="12" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+    <text class="b4baHW" x="58" y="84">&#10007; Rewrite the whole clause</text>
+    <text class="b4baB" x="58" y="114">Looks like a power grab</text>
+    <text class="b4baB" x="58" y="134">Invites a fight</text>
+    <text class="b4baB" x="58" y="154">Counterparty's structure lost</text>
+
+    <rect x="450" y="50" width="390" height="180" rx="12" fill="#E0B3C0" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b4baHR" x="468" y="84">&#10003; Redline to the fallback</text>
+    <text class="b4baB" x="468" y="114">Small, marked, and justified</text>
+    <text class="b4baB" x="468" y="134">Keeps their structure</text>
+    <text class="b4baB" x="468" y="154">Accepted in one pass</text>
+
+    <text class="b4baN" x="40" y="276">A redline that surgically pulls the term to your fallback moves faster than rewriting the whole clause.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - surgical redlines get accepted faster than wholesale rewrites</figcaption>
+</figure>
+
     </div>
   </section>
 

@@ -225,7 +225,55 @@
     <div class="steps">
       <div class="step"><p>Use the supplied synthetic document set - a handful of dated items: emails, a memo, a statement. Nothing from a live matter.</p></div>
       <div class="step"><p>Ask the AI to build a chronology: date, event, actor, and the source document for each entry, in order.</p></div>
-      <div class="step"><p>Verify against the record. Open each source and confirm the date, the event, and the quote. Watch for transposed dates and events attributed to the wrong document.</p></div>
+      <div class="step"><p>Verify against the record. Open each source and confirm the date, the event, and the quote. Watch for transposed dates and events attributed to the wrong document.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A decision tree showing that a chronology entry which traces back to its source document is marked verified with its date, event and quote confirmed, while an entry that cannot be traced to a source is treated as a gap to investigate rather than a fact to keep.">
+    <defs>
+      <marker id="arrB8ch" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#7B1E3B"/>
+      </marker>
+      <marker id="arrB8chR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#991B1B"/>
+      </marker>
+    </defs>
+    <style>
+      .b8chT { font: 700 13px Inter, sans-serif; fill: #241016; }
+      .b8chQ { font: 700 12.5px Inter, sans-serif; fill: #4A0E1F; }
+      .b8chP { font: 700 11px Inter, sans-serif; fill: #FFFFFF; }
+      .b8chO { font: 700 13px Inter, sans-serif; fill: #4A0E1F; }
+      .b8chC { font: 700 13px Inter, sans-serif; fill: #991B1B; }
+      .b8chS { font: 400 12px Inter, sans-serif; fill: #6E5B60; }
+    </style>
+    <rect x="0" y="0" width="880" height="340" fill="#FFFFFF"/>
+    <text class="b8chT" x="40" y="28">Every chronology entry must trace back to its source document</text>
+
+    <rect x="270" y="50" width="340" height="60" rx="10" fill="#FBEEF1" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b8chQ" x="440" y="86" text-anchor="middle">Can you trace it to its source?</text>
+
+    <rect x="150" y="150" width="110" height="30" rx="15" fill="#7B1E3B"/>
+    <text class="b8chP" x="205" y="170" text-anchor="middle">YES - SOURCED</text>
+
+    <rect x="610" y="150" width="140" height="30" rx="15" fill="#991B1B"/>
+    <text class="b8chP" x="680" y="170" text-anchor="middle">NO - NOT FOUND</text>
+
+    <rect x="75" y="210" width="260" height="76" rx="10" fill="#FBEEF1" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b8chO" x="205" y="242" text-anchor="middle">Mark it verified</text>
+    <text class="b8chS" x="205" y="262" text-anchor="middle">date, event, quote confirmed</text>
+
+    <rect x="550" y="210" width="260" height="76" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+    <text class="b8chC" x="680" y="242" text-anchor="middle">It's a gap, not a fact</text>
+    <text class="b8chS" x="680" y="262" text-anchor="middle">investigate, don't keep it</text>
+
+    <line x1="350" y1="110" x2="205" y2="150" stroke="#7B1E3B" stroke-width="1.6" marker-end="url(#arrB8ch)"/>
+    <line x1="530" y1="110" x2="680" y2="150" stroke="#991B1B" stroke-width="1.6" marker-end="url(#arrB8chR)"/>
+    <line x1="205" y1="180" x2="205" y2="210" stroke="#7B1E3B" stroke-width="1.6" marker-end="url(#arrB8ch)"/>
+    <line x1="680" y1="180" x2="680" y2="210" stroke="#991B1B" stroke-width="1.6" marker-end="url(#arrB8chR)"/>
+
+    <text class="b8chS" x="40" y="316">Two transposed dates were caught this way - the verification saved the argument.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - an entry AI could not source is a gap to investigate, not a fact to keep</figcaption>
+</figure>
+</div>
       <div class="step"><p>Mark each entry verified or corrected. An entry AI could not source is a gap to investigate, not a fact to keep.</p></div>
       <div class="step"><p>Note how much faster the assembly was - and that the verification is what makes the chronology usable in the matter.</p></div>
     </div>
@@ -270,6 +318,35 @@ This is a draft for a lawyer to refine for strategy and verify against the recor
     <div class="callout example">
       <span class="ex-pill">Real world</span>
       <p><strong>The outline that got the sequence right - after the lawyer resequenced it.</strong> AI produced a thorough, topic-ordered set of deposition questions in a minute. The lawyer kept the coverage, but moved the impeachment questions to the end, held back one document, and cut a line that would have tipped the theory early. The AI gave breadth; the strategy - the order and the restraint - was entirely human.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A before-after comparison showing that the AI's deposition outline was grouped only by topic with impeachment questions early and a line that tipped the theory, while the lawyer's resequenced outline moved impeachment to the end, held back one document, and cut the theory-tipping line.">
+    <style>
+      .b8dsT { font: 700 13px Inter, sans-serif; fill: #241016; }
+      .b8dsHw { font: 700 13.5px Inter, sans-serif; fill: #991B1B; }
+      .b8dsHr { font: 700 13.5px Inter, sans-serif; fill: #4A0E1F; }
+      .b8dsL { font: 400 12px Inter, sans-serif; fill: #241016; }
+      .b8dsN { font: 400 12px Inter, sans-serif; fill: #6E5B60; }
+    </style>
+    <rect x="0" y="0" width="880" height="300" fill="#FFFFFF"/>
+    <text class="b8dsT" x="40" y="28">The AI's outline order, and the lawyer's resequenced order</text>
+
+    <rect x="40" y="50" width="390" height="180" rx="12" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+    <text class="b8dsHw" x="58" y="84">✗ AI's topic-ordered outline</text>
+    <text class="b8dsL" x="58" y="114">Grouped only by topic</text>
+    <text class="b8dsL" x="58" y="136">Impeachment questions come early</text>
+    <text class="b8dsL" x="58" y="158">A line tips the theory early</text>
+
+    <rect x="450" y="50" width="390" height="180" rx="12" fill="#FBEEF1" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b8dsHr" x="468" y="84">✓ Lawyer's resequenced outline</text>
+    <text class="b8dsL" x="468" y="114">Impeachment moved to the end</text>
+    <text class="b8dsL" x="468" y="136">One document held back</text>
+    <text class="b8dsL" x="468" y="158">Theory-tipping line is cut</text>
+
+    <text class="b8dsN" x="40" y="276">The AI gave breadth - the order and restraint were entirely the lawyer's.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - the AI gave breadth, the lawyer supplied the order and the restraint</figcaption>
+</figure>
+
     </div>
   </section>
 

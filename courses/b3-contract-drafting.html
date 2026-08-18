@@ -106,6 +106,35 @@
       <summary><span class="mode live">Live</span>Generic draft vs playbook draft - the difference you can feel<span class="mini">3 min</span><span class="caret">▶</span></summary>
       <div class="body">
         <p>Ask a model to "draft a limitation-of-liability clause" and it returns something competent and unaligned - maybe a mutual cap, maybe a carve-out you never wanted, maybe a number pulled from nowhere. Now hand it your standard clause and your fallback, and ask it to draft to that. Same speed, completely different starting point: the output reflects your positions, and your edits are refinements, not rescues.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A before and after comparison showing that a generic AI draft with no playbook is competent but unaligned, producing a mutual cap, an unwanted carve-out, or a number pulled from nowhere, while a draft built from the supplied playbook starts from the standard and fallback so edits become refinements, not rescues.">
+    <style>
+      .b3baT { font: 700 13px Inter, sans-serif; fill: #241016; }
+      .b3baHW { font: 700 13px Inter, sans-serif; fill: #991B1B; }
+      .b3baHR { font: 700 13px Inter, sans-serif; fill: #4A0E1F; }
+      .b3baB { font: 400 12px Inter, sans-serif; fill: #241016; }
+      .b3baN { font: 400 12px Inter, sans-serif; fill: #6E5B60; }
+    </style>
+    <rect x="0" y="0" width="880" height="300" fill="#FBEEF1"/>
+    <text class="b3baT" x="40" y="28">Generic draft vs playbook draft - the difference you can feel</text>
+
+    <rect x="40" y="50" width="390" height="180" rx="12" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+    <text class="b3baHW" x="58" y="84">&#10007; Generic draft</text>
+    <text class="b3baB" x="58" y="114">Competent but unaligned, no owner</text>
+    <text class="b3baB" x="58" y="134">Maybe a mutual cap, unwanted carve-out</text>
+    <text class="b3baB" x="58" y="154">A number pulled from nowhere</text>
+
+    <rect x="450" y="50" width="390" height="180" rx="12" fill="#E0B3C0" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b3baHR" x="468" y="84">&#10003; Playbook draft</text>
+    <text class="b3baB" x="468" y="114">Starts from your standard + fallback</text>
+    <text class="b3baB" x="468" y="134">Output reflects your positions</text>
+    <text class="b3baB" x="468" y="154">Edits are refinements, not rescues</text>
+
+    <text class="b3baN" x="40" y="276">The average is not your position - draft from your standards, not the model's memory.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - the average is not your position, draft from your standards</figcaption>
+</figure>
+
         <ul>
           <li><strong>The average is not your position.</strong> Without your standards, the model drafts the internet's median clause - which represents neither side's interests, and quietly favors whoever the training data favored.</li>
           <li><strong>Your material is the anchor.</strong> Provide the clause you want as the model, plus the fallback you would accept. The draft lands between them, on your terms.</li>
@@ -182,6 +211,56 @@
       <h2>Grounding + guardrails <span class="tag concept">4 min live</span></h2>
     </div>
     <p class="lede">Playbook drafting only holds if the model stays on your material and flags when it strays. Three guardrails do that work - and one of them is the confidentiality rail you have carried since b1.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A decision tree showing that confidential client draft terms may proceed only in a firm-vetted tool whose terms fit and that does not retain or train on the data, must stay out if that is not confirmed, and are never allowed in a general consumer tool.">
+    <style>
+      .b3dtT { font: 700 13px Inter, sans-serif; fill: #241016; }
+      .b3dtQ { font: 700 12px Inter, sans-serif; fill: #241016; }
+      .b3dtO { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+      .b3dtS { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+      .b3dtE { font: 600 11px Inter, sans-serif; fill: #6E5B60; }
+      .b3dtN { font: 400 12px Inter, sans-serif; fill: #6E5B60; }
+    </style>
+    <defs>
+      <marker id="arrB3dt" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" fill="#A84C64"/>
+      </marker>
+    </defs>
+    <rect x="0" y="0" width="880" height="340" fill="#FBEEF1"/>
+    <text class="b3dtT" x="40" y="28">Confidential draft terms: which tool can take them</text>
+
+    <rect x="40" y="120" width="240" height="56" rx="10" fill="#FFFFFF" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b3dtQ" x="160" y="153" text-anchor="middle">Is this a firm-vetted tool?</text>
+
+    <rect x="340" y="120" width="240" height="56" rx="10" fill="#FFFFFF" stroke="#7B1E3B" stroke-width="1.5"/>
+    <text class="b3dtQ" x="460" y="153" text-anchor="middle">Terms fit, no data retention?</text>
+
+    <rect x="640" y="40" width="200" height="50" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.5"/>
+    <text class="b3dtS" x="740" y="70" text-anchor="middle">Never - full stop</text>
+
+    <rect x="640" y="123" width="200" height="50" rx="10" fill="#7B1E3B"/>
+    <text class="b3dtO" x="740" y="153" text-anchor="middle">Real client terms OK</text>
+
+    <rect x="640" y="203" width="200" height="50" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.5"/>
+    <text class="b3dtS" x="740" y="233" text-anchor="middle">Stays out - full stop</text>
+
+    <path d="M160,120 L160,66 L628,66" fill="none" stroke="#A84C64" stroke-width="1.6" marker-end="url(#arrB3dt)"/>
+    <text class="b3dtE" x="394" y="58" text-anchor="middle">no</text>
+
+    <line x1="280" y1="148" x2="332" y2="148" stroke="#A84C64" stroke-width="1.6" marker-end="url(#arrB3dt)"/>
+    <text class="b3dtE" x="310" y="142" text-anchor="middle">yes</text>
+
+    <line x1="580" y1="148" x2="632" y2="148" stroke="#A84C64" stroke-width="1.6" marker-end="url(#arrB3dt)"/>
+    <text class="b3dtE" x="610" y="142" text-anchor="middle">yes</text>
+
+    <line x1="580" y1="161" x2="631" y2="220" stroke="#A84C64" stroke-width="1.6" marker-end="url(#arrB3dt)"/>
+    <text class="b3dtE" x="610" y="188" text-anchor="middle">no</text>
+
+    <text class="b3dtN" x="40" y="316">Draft with non-confidential or synthetic examples in general tools; real client terms need a vetted tool.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - confidential terms proceed only through a vetted tool that fits the terms</figcaption>
+</figure>
+
 
     <details class="card">
       <summary><span class="mode live">Live</span>Approved language only, flag the invented, no confidential terms in consumer tools<span class="mini">2 min</span><span class="caret">▶</span></summary>
